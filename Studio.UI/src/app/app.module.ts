@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './features/carousel/carousel/carousel.component';
 import { AboutComponent } from './features/about/about.component';
+import { MomentComponent } from './features/moment/moment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { AboutComponent } from './features/about/about.component';
     FooterComponent,
     CarouselComponent,
     AboutComponent,
+    MomentComponent,
   ],
   imports: [
     BrowserModule,
