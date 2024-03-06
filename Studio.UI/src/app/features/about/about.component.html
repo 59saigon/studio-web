@@ -1,4 +1,7 @@
-<figure class="relative w-full" [ngClass]="{ hidden: currentUrl === '/home' }">
+<figure
+  class="relative w-full"
+  [ngClass]="{ hidden: currentUrl === '/home' || currentUrl === '/' }"
+>
   <img
     class="blur"
     src="../../../assets/coverwebngang7_fe595d1d5a.jpg"
@@ -99,7 +102,7 @@
     </div>
     <div
       class="flex flex-col items-center md:flex-row md:space-x-14 justify-evenly"
-      [ngClass]="{ hidden: currentUrl !== '/home' }"
+      [ngClass]="{ hidden: currentUrl !== '/home' && currentUrl !== '/' }"
     >
       <a href="/about"
         ><button
