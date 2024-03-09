@@ -1,0 +1,39 @@
+-- Tạo bảng Role
+CREATE TABLE [dbo].[Role](
+    [id] [int] IDENTITY(1,1) NOT NULL,
+    [roleId] [uniqueidentifier] NOT NULL DEFAULT NEWID(),
+    [title] [nvarchar](max) NOT NULL,
+    [roleName] [nvarchar](max) NOT NULL,
+    [createdBy] [nvarchar](36) NULL,
+    [createdDate] [datetime2](7) NOT NULL,
+    PRIMARY KEY CLUSTERED 
+    (
+        [id] ASC
+    )
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+-- Tạo bảng User
+CREATE TABLE [dbo].[User](
+    [id] [int] IDENTITY(1,1) NOT NULL,
+    [userId] [uniqueidentifier] NOT NULL DEFAULT NEWID(),
+    [fullName] [nvarchar](max) NOT NULL,
+    [email] [nvarchar](max) NOT NULL,
+    [dob] [date] NOT NULL,
+    [address] [nvarchar](max) NOT NULL,
+    [gender] [nvarchar](max) NOT NULL,
+    [phone] [nvarchar](max) NOT NULL,
+    [username] [nvarchar](max) NOT NULL,
+    [password] [nvarchar](max) NOT NULL,
+    [roleId] [int] NOT NULL,
+    [createdBy] [nvarchar](36) NULL,
+    [createdDate] [datetime2](7) NOT NULL,
+    [avatar] [nvarchar](max) NULL,
+    [Status] [nvarchar](max) NULL,
+    PRIMARY KEY CLUSTERED 
+    (
+        [id] ASC
+    ),
+    CONSTRAINT [FK_User_Role] FOREIGN KEY ([roleId]) REFERENCES [Role]([id])
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO

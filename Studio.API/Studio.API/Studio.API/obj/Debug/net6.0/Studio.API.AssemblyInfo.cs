@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Studio.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76b7fe0e8a4185101f9f470b1f2e8691d0868b34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+428bd11530b32bcb7d416305200393a3ed06b050")]
 [assembly: System.Reflection.AssemblyProductAttribute("Studio.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Studio.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
