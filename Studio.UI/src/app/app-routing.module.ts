@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './features/about/about.component';
+import { MomentComponent } from './features/moment/moment.component';
+import { ServiceComponent } from './features/service/service.component';
+import { ContactComponent } from './features/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -16,6 +19,18 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'moment',
+    component: MomentComponent,
+  },
+  {
+    path: 'service',
+    component: ServiceComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
 ];
 

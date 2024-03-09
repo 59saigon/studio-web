@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './features/carousel/carousel/carousel.component';
 import { AboutComponent } from './features/about/about.component';
 import { MomentComponent } from './features/moment/moment.component';
+import { ServiceComponent } from './features/service/service.component';
+import { ContactComponent } from './features/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import { MomentComponent } from './features/moment/moment.component';
     CarouselComponent,
     AboutComponent,
     MomentComponent,
+    ServiceComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
