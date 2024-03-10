@@ -1,4 +1,6 @@
-<div class="relative">
+<div class="relative"
+[ngClass]="{ hidden: currentUrl === '/test' }"
+>
   <nav
     class="w-screen absolute bg-black h-fit overflow-hidden border-gray-200 dark:bg-gray-900 z-50"
     [class.fixed]="isFixed"

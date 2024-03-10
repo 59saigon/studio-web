@@ -1,4 +1,6 @@
-<div class="mx-auto bg-gray-900 text-white">
+<div class="mx-auto bg-gray-900 text-white"
+[ngClass]="{ hidden: currentUrl === '/test' }"
+>
   <div class="flex justify-center">
     <!-- start  -->
     <div class="md:flex py-10 w-full justify-around items-center">
