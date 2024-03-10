@@ -6,6 +6,7 @@ namespace Studio.API.Models
     public partial class Moment
     {
         public int Id { get; set; }
+
         public string MomentId { get; set; } = null!;
         public string? Picture { get; set; }
         public DateTime Date { get; set; }
