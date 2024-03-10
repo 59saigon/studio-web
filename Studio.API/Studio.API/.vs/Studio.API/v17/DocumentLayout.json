@@ -1,50 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
+  "WorkspaceRootPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\dtos\\momentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\dtos\\momentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\services\\classes\\momentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\services\\classes\\momentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\models\\moment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\models\\moment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\mapper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\controllers\\momentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\controllers\\momentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\controllers\\momentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\models\\studiocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\models\\studiocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\repositories\\classes\\momentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\repositories\\classes\\momentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\repositories\\classes\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\repositories\\classes\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,145 +33,25 @@
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MomentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Repositories\\Classes\\MomentRepository.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Repositories\\Classes\\MomentRepository.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Repositories\\Classes\\MomentRepository.cs",
-              "RelativeToolTip": "Studio.API\\Repositories\\Classes\\MomentRepository.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T05:28:10.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Moment.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Models\\Moment.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Models\\Moment.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Models\\Moment.cs",
-              "RelativeToolTip": "Studio.API\\Models\\Moment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T05:26:22.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Models\\User.cs",
-              "RelativeToolTip": "Studio.API\\Models\\User.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T05:20:46.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StudioContext.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Models\\StudioContext.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Models\\StudioContext.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Models\\StudioContext.cs",
-              "RelativeToolTip": "Studio.API\\Models\\StudioContext.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAEwD8AAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T05:20:03.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MomentService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Services\\Classes\\MomentService.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Services\\Classes\\MomentService.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Services\\Classes\\MomentService.cs",
-              "RelativeToolTip": "Studio.API\\Services\\Classes\\MomentService.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAEwBYAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:21:46.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Mapper\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Mapper\\MappingProfiles.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Mapper\\MappingProfiles.cs",
-              "RelativeToolTip": "Studio.API\\Mapper\\MappingProfiles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:15:14.571Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MomentDto.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\MomentDto.cs",
-              "RelativeDocumentMoniker": "Studio.API\\DTOs\\MomentDto.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\MomentDto.cs",
-              "RelativeToolTip": "Studio.API\\DTOs\\MomentDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:13:08.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "Studio.API\\DTOs\\UserDto.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "Studio.API\\DTOs\\UserDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:13:03.509Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Repositories\\Classes\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Repositories\\Classes\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Repositories\\Classes\\UserRepository.cs",
-              "RelativeToolTip": "Studio.API\\Repositories\\Classes\\UserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:12:59.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "MomentController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
               "RelativeDocumentMoniker": "Studio.API\\Controllers\\MomentController.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
               "RelativeToolTip": "Studio.API\\Controllers\\MomentController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAiwCsAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:11:12.023Z",
+              "WhenOpened": "2024-03-10T08:26:42.542Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Program.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Program.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Program.cs",
-              "RelativeToolTip": "Studio.API\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T11:11:07.592Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

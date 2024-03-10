@@ -40,7 +40,6 @@ namespace Studio.API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] MomentDto value)
         {   
-            
             return _MomentService.CreateMoment(value);
         }
 
