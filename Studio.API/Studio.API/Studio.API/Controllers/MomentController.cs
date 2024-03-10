@@ -17,6 +17,8 @@ namespace Studio.API.Controllers
 
         public MomentController(I_MomentService momentService)
         {
+
+
             _MomentService = momentService;
         }
 
