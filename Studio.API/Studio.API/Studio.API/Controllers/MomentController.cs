@@ -20,8 +20,6 @@ namespace Studio.API.Controllers
             _MomentService = momentService;
         }
 
-
-
         // GET: api/<ValuesController>
         [HttpGet]
         public IEnumerable<string> Get()

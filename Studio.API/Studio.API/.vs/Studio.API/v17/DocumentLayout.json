@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,10 +33,6 @@
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MomentController.cs",
@@ -44,7 +40,7 @@
               "RelativeDocumentMoniker": "Studio.API\\Controllers\\MomentController.cs",
               "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
               "RelativeToolTip": "Studio.API\\Controllers\\MomentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-10T08:26:42.542Z",
               "EditorCaption": ""
