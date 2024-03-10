@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Studio.API.Models;
+using Studio.API.Context;
 using Studio.API.Repositories.Classes;
 using Studio.API.Repositories.Interfaces;
 using Studio.API.Services.Classes;

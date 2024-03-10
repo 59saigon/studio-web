@@ -1,4 +1,5 @@
-﻿using Studio.API.Models;
+﻿using Studio.API.Context;
+using Studio.API.Models;
 using Studio.API.Repositories.Interfaces;
 
 namespace Studio.API.Repositories.Classes

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Studio.API.Models;
 
-namespace Studio.API.Models
+namespace Studio.API.Context
 {
     public partial class StudioContext : DbContext
     {
