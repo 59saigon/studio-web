@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj": {}
+    "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj": {
+    "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
+        "projectUniqueName": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
         "projectName": "Studio.API",
-        "projectPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
+        "projectPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
         "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\obj\\",
+        "outputPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -89,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
