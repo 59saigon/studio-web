@@ -15,7 +15,15 @@ import { MomentComponent } from './features/moment/moment.component';
 import { ServiceComponent } from './features/service/service.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { TestComponent } from './features/test/test.component';
-import { RouterLink } from '@angular/router';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { PopUpComponent } from './features/pop-up/pop-up.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +36,7 @@ import { RouterLink } from '@angular/router';
     ServiceComponent,
     ContactComponent,
     TestComponent,
+    PopUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,9 +44,13 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
     FormsModule,
-    RouterLink
+    MatDialogModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent],
