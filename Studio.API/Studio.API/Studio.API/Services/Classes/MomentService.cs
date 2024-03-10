@@ -12,10 +12,12 @@ namespace Studio.API.Services.Classes
         private readonly I_MomentRepository _MomentRepository;
         private readonly I_UserRepository _UserRepository;
         private readonly IMapper _mapper;
-        public MomentService(I_MomentRepository momentRepository, I_UserRepository userRepository)
+
+        public MomentService(I_MomentRepository momentRepository, I_UserRepository userRepository, IMapper mapper)
         {
             _MomentRepository = momentRepository;
             _UserRepository = userRepository;
+            _mapper = mapper;
         }
 
         public IActionResult CreateMoment(MomentDto momentDto)
@@ -23,15 +25,22 @@ namespace Studio.API.Services.Classes
             BadRequestResult bad = new BadRequestResult();
             OkResult ok = new OkResult();
             // map thành moment (fix not yet)
-            Moment moment = _mapper.Map<Moment>(momentDto);
+            
 
 
-            bool isSuccess = _MomentRepository.CreateMoment(moment);
-            if(!isSuccess) 
+            if(momentDto != null)
             {
-                return bad;
+                Moment moment = _mapper.Map<Moment>(momentDto);
+                bool isSuccess = _MomentRepository.CreateMoment(moment);
+                if (!isSuccess)
+                {
+                    return bad;
+                }
+                return ok;
             }
-            return ok;
+            return bad;
+
+            
         }
 
 
