@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/m7mvefkO6C/6b8UTUHERQoWvPDHgeWXaRkYZ1Bw9Giv2Irle00HwzlEXc743AafkYDyA/+/a8FKQYtcLZaHzA==",
+  "dgSpecHash": "wZzC8gj8lhOPIdJcXJ8S3i0zlpRZl84s/D5CBsd8IejzQXMLKRkyr3A3BERJaRji9ADPWCfOiAFkGdeNCRukFg==",
   "success": true,
-  "projectFilePath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
+  "projectFilePath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nguye\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
