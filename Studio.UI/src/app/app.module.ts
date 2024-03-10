@@ -14,6 +14,7 @@ import { AboutComponent } from './features/about/about.component';
 import { MomentComponent } from './features/moment/moment.component';
 import { ServiceComponent } from './features/service/service.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { TestComponent } from './features/test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { ContactComponent } from './features/contact/contact.component';
     MomentComponent,
     ServiceComponent,
     ContactComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { AboutComponent } from './features/about/about.component';
 import { MomentComponent } from './features/moment/moment.component';
 import { ServiceComponent } from './features/service/service.component';
 import { ContactComponent } from './features/contact/contact.component';
+import { TestComponent } from './features/test/test.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'test',
+    component: TestComponent,
   },
 ];
 
