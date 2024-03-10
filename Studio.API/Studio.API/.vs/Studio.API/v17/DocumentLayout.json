@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\controllers\\momentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\controllers\\momentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\dtos\\momentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\dtos\\momentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,21 +33,21 @@
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MomentController.cs",
-              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Controllers\\MomentController.cs",
-              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Controllers\\MomentController.cs",
-              "RelativeToolTip": "Studio.API\\Controllers\\MomentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T08:26:42.542Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MomentDto.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\MomentDto.cs",
+              "RelativeDocumentMoniker": "Studio.API\\DTOs\\MomentDto.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\MomentDto.cs",
+              "RelativeToolTip": "Studio.API\\DTOs\\MomentDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T10:13:02.654Z",
+              "EditorCaption": ""
             }
           ]
         }

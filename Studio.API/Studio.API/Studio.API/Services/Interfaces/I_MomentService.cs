@@ -6,7 +6,7 @@ namespace Studio.API.Services.Interfaces
 {
     public interface I_MomentService
     {
-        IActionResult GetMoments();
-        IActionResult CreateMoment(MomentDto momentDto);
+        IEnumerable<MomentDto> GetMoments();
+        bool CreateMoment(MomentDto momentDto);
     }
 }

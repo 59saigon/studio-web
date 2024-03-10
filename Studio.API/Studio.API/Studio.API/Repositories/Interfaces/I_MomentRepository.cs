@@ -1,4 +1,5 @@
-﻿using Studio.API.Models;
+﻿using Studio.API.DTOs;
+using Studio.API.Models;
 
 namespace Studio.API.Repositories.Interfaces
 {

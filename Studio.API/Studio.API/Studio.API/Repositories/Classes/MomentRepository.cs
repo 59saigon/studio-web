@@ -1,4 +1,5 @@
-﻿using Studio.API.Models;
+﻿using Studio.API.Context;
+using Studio.API.Models;
 using Studio.API.Repositories.Interfaces;
 
 namespace Studio.API.Repositories.Classes
@@ -34,7 +35,24 @@ namespace Studio.API.Repositories.Classes
 
         public ICollection<Moment> GetMoments()
         {
-            throw new NotImplementedException();
+            List<Moment> list = new List<Moment>(); 
+            try
+            {
+                using (var _context = new StudioContext())
+                {
+                    list = _context.Moments.ToList();
+                    if(list.Count > 0)
+                    {
+                        return list;
+                    }
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return null;
         }
 
         public bool MomentExists(int pokeId)

@@ -4,6 +4,7 @@ using Studio.API.DTOs;
 using Studio.API.Models;
 using Studio.API.Repositories.Interfaces;
 using Studio.API.Services.Interfaces;
+using System.Diagnostics.CodeAnalysis;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -17,16 +18,18 @@ namespace Studio.API.Controllers
 
         public MomentController(I_MomentService momentService)
         {
-
-
             _MomentService = momentService;
         }
 
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public ActionResult<IEnumerable<MomentDto>> Get()
         {
-            return new List<string>();
+            if(_MomentService.GetMoments() != null)
+            {
+                return Ok(_MomentService.GetMoments());
+            }
+            return BadRequest("Can not get list");
         }
 
         // GET api/<ValuesController>/5
@@ -40,7 +43,12 @@ namespace Studio.API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] MomentDto value)
         {   
-            return _MomentService.CreateMoment(value);
+            if(_MomentService.CreateMoment(value))
+            {
+                return Ok("Good");
+            }
+            return BadRequest("Can not create moment");
+
         }
 
         // PUT api/<ValuesController>/5

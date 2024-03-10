@@ -2,6 +2,7 @@
 {
     public class MomentDto
     {
+        public string MomentId { get; set; }
         public string? Picture { get; set; }
         public DateTime Date { get; set; }
         public string Title { get; set; } = null!;

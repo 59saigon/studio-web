@@ -20,34 +20,17 @@ namespace Studio.API.Services.Classes
             _mapper = mapper;
         }
 
-        public IActionResult CreateMoment(MomentDto momentDto)
+        public bool CreateMoment(MomentDto momentDto)
         {
-            BadRequestResult bad = new BadRequestResult();
-            OkResult ok = new OkResult();
-            // map thành moment (fix not yet)
-            
-
-
-            if(momentDto != null)
-            {
-                Moment moment = _mapper.Map<Moment>(momentDto);
-                bool isSuccess = _MomentRepository.CreateMoment(moment);
-                if (!isSuccess)
-                {
-                    return bad;
-                }
-                return ok;
-            }
-            return bad;
-
-            
+            Moment moment = _mapper.Map<Moment>(momentDto);
+            bool isSuccess = _MomentRepository.CreateMoment(moment);
+            return isSuccess;
         }
 
-
-
-        IActionResult I_MomentService.GetMoments()
+        public IEnumerable<MomentDto> GetMoments()
         {
-            throw new NotImplementedException();
+            List<MomentDto> _list_momentDto = _mapper.Map<List<MomentDto>>(_MomentRepository.GetMoments());
+            return _list_momentDto;
         }
     }
 }
