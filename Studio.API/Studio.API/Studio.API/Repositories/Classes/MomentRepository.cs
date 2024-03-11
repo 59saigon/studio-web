@@ -1,21 +1,23 @@
-﻿using Studio.API.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using Studio.API.Context;
 using Studio.API.Models;
 using Studio.API.Repositories.Interfaces;
+using System.Collections.Generic;
 
 namespace Studio.API.Repositories.Classes
 {
     public class MomentRepository : I_MomentRepository
     {
-        public bool CreateMoment(Moment moment)
+        public async Task<bool> CreateMoment(Moment moment)
         {
             try
             {
                 using (var _context = new StudioContext())
                 {
-                    _context.Moments.Add(moment);
-                    _context.SaveChanges();
+                    await _context.Moments.AddAsync(moment);
+                    await _context.SaveChangesAsync();
                     return true;
-                }
+                }   
             } catch (Exception ex)
             {
                 
@@ -23,7 +25,7 @@ namespace Studio.API.Repositories.Classes
             return false;
         }
 
-        public bool DeleteMoment(Moment Moment)
+        public Task<bool> DeleteMoment(Moment Moment)
         {
             throw new NotImplementedException();
         }
@@ -33,14 +35,30 @@ namespace Studio.API.Repositories.Classes
             throw new NotImplementedException();
         }
 
-        public ICollection<Moment> GetMoments()
+        public async Task<Moment> GetMoment(Guid id)
         {
-            List<Moment> list = new List<Moment>(); 
             try
             {
                 using (var _context = new StudioContext())
                 {
-                    list = _context.Moments.ToList();
+                    return await _context.Moments.Where(p=>p.Equals(id)).SingleOrDefaultAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return null;
+        }
+
+        public async Task<ICollection<Moment>> GetMoments()
+        {
+            List<Moment> list =  new List<Moment>(); 
+            try
+            {
+                using (var _context = new StudioContext())
+                {
+                    list = await _context.Moments.ToListAsync();
                     if(list.Count > 0)
                     {
                         return list;
@@ -69,5 +87,9 @@ namespace Studio.API.Repositories.Classes
         {
             throw new NotImplementedException();
         }
+
+        
+
+       
     }
 }

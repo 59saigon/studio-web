@@ -12,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './features/carousel/carousel/carousel.component';
 import { AboutComponent } from './features/about/about.component';
 import { MomentComponent } from './features/moment/moment.component';
-import { ServiceComponent } from './features/service/service.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { TestComponent } from './features/test/test.component';
 
@@ -23,6 +22,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { PopUpComponent } from './features/pop-up/pop-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceComponent } from './features/service/service.component';
+import { AddMomentComponent } from './features/add-moment/add-moment.component';
 
 @NgModule({
   declarations: [
@@ -33,10 +34,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CarouselComponent,
     AboutComponent,
     MomentComponent,
-    ServiceComponent,
     ContactComponent,
     TestComponent,
     PopUpComponent,
+    ServiceComponent,
+    AddMomentComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

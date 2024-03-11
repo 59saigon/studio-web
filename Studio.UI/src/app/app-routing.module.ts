@@ -7,6 +7,7 @@ import { MomentComponent } from './features/moment/moment.component';
 import { ServiceComponent } from './features/service/service.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { TestComponent } from './features/test/test.component';
+import { AddMomentComponent } from './features/add-moment/add-moment.component';
 
 const routes: Routes = [
   {

@@ -6,7 +6,9 @@ namespace Studio.API.Services.Interfaces
 {
     public interface I_MomentService
     {
-        IEnumerable<MomentDto> GetMoments();
-        bool CreateMoment(MomentDto momentDto);
+        Task<IEnumerable<MomentDto>> GetMoments();
+        Task<bool> CreateMoment(MomentDto momentDto);
+        Task<bool> DeleteMoment(Guid id);
+        bool IsMomentDtoEmpty(MomentDto momentDto);
     }
 }

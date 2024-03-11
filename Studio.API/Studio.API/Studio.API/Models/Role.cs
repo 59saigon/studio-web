@@ -11,7 +11,7 @@ namespace Studio.API.Models
         }
 
         public int Id { get; set; }
-        public string RoleId { get; set; } = null!;
+        public Guid RoleId { get; set; }
         public string Title { get; set; } = null!;
         public string RoleName { get; set; } = null!;
         public string? CreatedBy { get; set; }

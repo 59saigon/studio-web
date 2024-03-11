@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\dtos\\momentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\dtos\\momentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,19 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MomentDto.cs",
-              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\MomentDto.cs",
-              "RelativeDocumentMoniker": "Studio.API\\DTOs\\MomentDto.cs",
-              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\DTOs\\MomentDto.cs",
-              "RelativeToolTip": "Studio.API\\DTOs\\MomentDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-10T10:13:02.654Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -5,15 +5,16 @@ namespace Studio.API.Repositories.Interfaces
 {
     public interface I_MomentRepository
     {
-        ICollection<Moment> GetMoments();
+        Task<ICollection<Moment>> GetMoments();
         Moment GetMoment(string tittle);
+        Task<Moment> GetMoment(Guid id);
         //Moment GetMoment(string name);
         //Moment GetMomentTrimToUpper(MomentDto MomentCreate);
         //decimal GetMomentRating(int pokeId);
         bool MomentExists(int pokeId);
-        bool CreateMoment(Moment Moment);
+        Task<bool> CreateMoment(Moment Moment);
         bool UpdateMoment(int ownerId, int categoryId, Moment Moment);
-        bool DeleteMoment(Moment Moment);
+        Task<bool> DeleteMoment(Moment Moment);
         bool Save();
     }
 }

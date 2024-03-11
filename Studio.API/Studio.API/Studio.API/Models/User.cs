@@ -11,7 +11,7 @@ namespace Studio.API.Models
         }
 
         public int Id { get; set; }
-        public string UserId { get; set; } = null!;
+        public Guid UserId { get; set; }
         public string FullName { get; set; } = null!;
         public string Email { get; set; } = null!;
         public DateTime Dob { get; set; }
@@ -20,7 +20,7 @@ namespace Studio.API.Models
         public string Phone { get; set; } = null!;
         public string Username { get; set; } = null!;
         public string Password { get; set; } = null!;
-        public string RoleId { get; set; } = null!;
+        public Guid RoleId { get; set; }
         public string? CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public string? Avatar { get; set; }

@@ -37,6 +37,9 @@ namespace Studio.API.Context
             {
                 entity.ToTable("Moment");
 
+                entity.HasIndex(e => e.MomentId, "UQ__Moment__B3D22B04D19E180D")
+                    .IsUnique();
+
                 entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Content).HasColumnName("content");
@@ -50,17 +53,14 @@ namespace Studio.API.Context
                 entity.Property(e => e.Date).HasColumnName("date");
 
                 entity.Property(e => e.MomentId)
-                    .HasMaxLength(36)
                     .HasColumnName("momentId")
-                    .HasDefaultValueSql("(CONVERT([nvarchar](36),newid()))");
+                    .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.Picture).HasColumnName("picture");
 
                 entity.Property(e => e.Title).HasColumnName("title");
 
-                entity.Property(e => e.UserId)
-                    .HasMaxLength(36)
-                    .HasColumnName("userId");
+                entity.Property(e => e.UserId).HasColumnName("userId");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Moments)
@@ -74,7 +74,7 @@ namespace Studio.API.Context
             {
                 entity.ToTable("Role");
 
-                entity.HasIndex(e => e.RoleId, "UQ__Role__CD98462BFA0C8F07")
+                entity.HasIndex(e => e.RoleId, "UQ__Role__CD98462BB936A7D2")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -86,9 +86,8 @@ namespace Studio.API.Context
                 entity.Property(e => e.CreatedDate).HasColumnName("createdDate");
 
                 entity.Property(e => e.RoleId)
-                    .HasMaxLength(36)
                     .HasColumnName("roleId")
-                    .HasDefaultValueSql("(CONVERT([nvarchar](36),newid()))");
+                    .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.RoleName).HasColumnName("roleName");
 
@@ -99,7 +98,7 @@ namespace Studio.API.Context
             {
                 entity.ToTable("User");
 
-                entity.HasIndex(e => e.UserId, "UQ__User__CB9A1CFE32F561FE")
+                entity.HasIndex(e => e.UserId, "UQ__User__CB9A1CFE904AE1B0")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -128,14 +127,11 @@ namespace Studio.API.Context
 
                 entity.Property(e => e.Phone).HasColumnName("phone");
 
-                entity.Property(e => e.RoleId)
-                    .HasMaxLength(36)
-                    .HasColumnName("roleId");
+                entity.Property(e => e.RoleId).HasColumnName("roleId");
 
                 entity.Property(e => e.UserId)
-                    .HasMaxLength(36)
                     .HasColumnName("userId")
-                    .HasDefaultValueSql("(CONVERT([nvarchar](36),newid()))");
+                    .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.Username).HasColumnName("username");
 

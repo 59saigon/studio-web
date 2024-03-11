@@ -23,13 +23,13 @@ namespace Studio.API.Controllers
 
         // GET: api/<ValuesController>
         [HttpGet]
-        public ActionResult<IEnumerable<MomentDto>> Get()
+        public async Task<ActionResult<IEnumerable<MomentDto>>> Get()
         {
-            if(_MomentService.GetMoments() != null)
+            if(await _MomentService.GetMoments() != null)
             {
-                return Ok(_MomentService.GetMoments());
+                return Ok(await _MomentService.GetMoments());
             }
-            return BadRequest("Can not get list");
+            return BadRequest(ModelState);
         }
 
         // GET api/<ValuesController>/5
@@ -41,13 +41,27 @@ namespace Studio.API.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
-        public IActionResult Post([FromBody] MomentDto value)
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> Post([FromBody] MomentDto value)
         {   
-            if(_MomentService.CreateMoment(value))
+            if(!ModelState.IsValid)
             {
-                return Ok("Good");
+                return BadRequest(ModelState);
             }
-            return BadRequest("Can not create moment");
+
+            //check empty or null
+            if (_MomentService.IsMomentDtoEmpty(value))
+            {
+                return BadRequest(ModelState);
+            }
+
+            if(await _MomentService.CreateMoment(value))
+            {
+                return Ok(ModelState);
+            }
+            
+            return BadRequest(ModelState);
 
         }
 
@@ -58,9 +72,26 @@ namespace Studio.API.Controllers
         }
 
         // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{id:guid}")]
+        public async Task<IActionResult> Delete([FromRoute]Guid id)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            //check empty or null
+            if (id == Guid.Empty)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (await _MomentService.DeleteMoment(id))
+            {
+                return Ok(ModelState);
+            }
+
+            return BadRequest(ModelState);
         }
     }
 }
