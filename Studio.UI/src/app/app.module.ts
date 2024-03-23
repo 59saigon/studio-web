@@ -20,7 +20,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { PopUpComponent } from './features/pop-up/pop-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceComponent } from './features/service/service.component';
 import { AddMomentComponent } from './features/add-moment/add-moment.component';
@@ -36,7 +35,6 @@ import { AddMomentComponent } from './features/add-moment/add-moment.component';
     MomentComponent,
     ContactComponent,
     TestComponent,
-    PopUpComponent,
     ServiceComponent,
     AddMomentComponent,
   ],

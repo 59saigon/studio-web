@@ -22,4 +22,7 @@ export class MomentServiceService {
       addMomentRequest
     );
   }
+  deleteMoment(id: string): Observable<any> {
+    return this.http.delete(`${this.baseApiUrl}/api/moment/${id}`);
+  }
 }

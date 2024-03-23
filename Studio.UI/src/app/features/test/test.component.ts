@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { PopUpComponent } from '../pop-up/pop-up.component';
 import { Moment } from 'src/app/models/add-moment.model';
 import { MomentServiceService } from 'src/app/core/services/admin/moment/moment-service.service';
 import { AddMomentComponent } from '../add-moment/add-moment.component';
