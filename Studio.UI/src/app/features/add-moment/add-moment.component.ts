@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MomentServiceService } from 'src/app/core/services/admin/moment/moment-service.service';
 import { Moment } from 'src/app/models/add-moment.model';
 import Swal from 'sweetalert2';
 import { v4 as uuidv4 } from 'uuid';
@@ -21,7 +20,6 @@ export class AddMomentComponent implements OnInit {
   };
   constructor(
     public dialog: MatDialog,
-    private momentService: MomentServiceService
   ) {}
 
   ngOnInit(): void {}
@@ -35,17 +33,7 @@ export class AddMomentComponent implements OnInit {
     return 'EBA2E72E-9139-4E82-A3D7-218E78CCAF31' || '';
   }
   addMoment() {
-    this.momentService.createMoment(this.addMomentRequest).subscribe({
-      next: (moment) => {
-        console.log(moment);
-        this.onClose();
-        this.alertWithSuccess(this.addMomentRequest);
-      },
-      error: (response) => {
-        console.log(response);
-        this.alertWithFail(this.addMomentRequest);
-      },
-    });
+    
     //console.log(this.addMomentRequest);
   }
 
