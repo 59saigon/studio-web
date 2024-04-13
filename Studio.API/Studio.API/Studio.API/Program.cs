@@ -1,32 +1,59 @@
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Studio.API.Context;
-using Studio.API.Repositories.Classes;
-using Studio.API.Repositories.Interfaces;
-using Studio.API.Services.Classes;
-using Studio.API.Services.Interfaces;
+using Serilog;
+using Studio.API.Business.Domain.Configs.Mapping;
+using Studio.API.Business.Domain.Contracts.Repositories.Weddings;
+using Studio.API.Business.Domain.Contracts.Services.Weddings;
+using Studio.API.Business.Domain.Contracts.UnitOfWorks;
+using Studio.API.Business.Services.Weddings;
+using Studio.API.Data.Context;
+using Studio.API.Data.Repositories.Weddings;
+using Studio.API.Data.UnitOfWorks;
+using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-// Add services to the container.
+#region Add-DbContext
 builder.Services.AddDbContext<StudioContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+#endregion
+
 builder.Services.AddControllers();
+
+#region Config-Json
 builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+#endregion
+
+#region Add-AutoMapper
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+#endregion
+
+#region Add-MediaR
+
+//After 12.0.0
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+////Before 12.0.0
+//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
+#endregion
+
+#region Add-Scoped
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IWeddingRepository, WeddingRepository>();
 
 
-//Add scope
-builder.Services.AddScoped<I_MomentRepository, MomentRepository>();
-builder.Services.AddScoped<I_RoleRepository, RoleRepository>();
-builder.Services.AddScoped<I_UserRepository, UserRepository>();
+#endregion
 
-//Add service
-builder.Services.AddTransient<I_MomentService, MomentService>();
+#region Add-Transient
 
-// Authentication
+builder.Services.AddTransient<IWeddingService, WeddingService>();
+
+#endregion
+
+#region Config-Authentication_Authorization
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -50,17 +77,17 @@ builder.Services.AddAuthentication(x =>
     });
 
 builder.Services.AddAuthorization();
+#endregion
 
+#region Add-Cors
 
-// Add cors
 builder.Services.AddCors(p => p.AddPolicy("admin", build =>
 {
     build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 
+#endregion
 
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -71,12 +98,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
+
 app.UseCors("admin");
+
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

@@ -7,7 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <Compile Remove="Validator\**" />
+    <Content Remove="Validator\**" />
+    <EmbeddedResource Remove="Validator\**" />
+    <None Remove="Validator\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -17,12 +30,31 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    </PackageReference> 
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Validator\" />
+    <Folder Include="APIs\Controllers\Weddings\Events\" />
+    <Folder Include="APIs\Controllers\Weddings\Locations\" />
+    <Folder Include="Business\Domain\Contracts\Repositories\Weddings\Locations\" />
+    <Folder Include="Business\Domain\Contracts\Repositories\Weddings\Events\" />
+    <Folder Include="Business\Domain\Contracts\Services\Weddings\Events\" />
+    <Folder Include="Business\Domain\Contracts\Services\Weddings\Locations\" />
+    <Folder Include="Business\Domain\CQRS\Commands\Base\" />
+    <Folder Include="Business\Domain\CQRS\Queries\Weddings\Locations\" />
+    <Folder Include="Business\Domain\Enums\" />
+    <Folder Include="Business\Domain\Models\Weddings\Events\" />
+    <Folder Include="Business\Domain\Models\Weddings\Locations\" />
+    <Folder Include="Business\Handler\Queries\Weddings\Events\" />
+    <Folder Include="Business\Handler\Queries\Weddings\Locations\" />
+    <Folder Include="Business\Services\Weddings\Events\" />
+    <Folder Include="Business\Services\Weddings\Locations\" />
+    <Folder Include="Business\Validations\" />
+    <Folder Include="Business\Handler\Commands\" />
   </ItemGroup>
 
 </Project>
