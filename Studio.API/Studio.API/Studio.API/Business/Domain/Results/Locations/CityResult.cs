@@ -1,7 +1,6 @@
-﻿using Studio.API.Business.Domain.Entities.Weddings.Locations;
-using Studio.API.Business.Domain.Results.Bases;
+﻿using Studio.API.Business.Domain.Results.Bases;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace Studio.API.Business.Domain.Results.Weddings.Locations
+namespace Studio.API.Business.Domain.Results.Locations
 {
     public class CityResult : BaseResult
     {

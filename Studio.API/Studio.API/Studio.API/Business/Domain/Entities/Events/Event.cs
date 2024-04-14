@@ -1,9 +1,9 @@
 ﻿using Studio.API.Business.Domain.Entities.Bases;
+using Studio.API.Business.Domain.Entities.Locations;
 using Studio.API.Business.Domain.Entities.Weddings;
-using Studio.API.Business.Domain.Entities.Weddings.Locations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Studio.API.Business.Domain.Entities.Weddings.Events
+namespace Studio.API.Business.Domain.Entities.Events
 {
     [Table("Event")]
     public class Event : BaseEntity

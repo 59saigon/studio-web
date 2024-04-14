@@ -38,23 +38,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="APIs\Controllers\Weddings\Events\" />
-    <Folder Include="APIs\Controllers\Weddings\Locations\" />
-    <Folder Include="Business\Domain\Contracts\Repositories\Weddings\Locations\" />
-    <Folder Include="Business\Domain\Contracts\Repositories\Weddings\Events\" />
+    <Folder Include="APIs\Controllers\Events\" />
+    <Folder Include="APIs\Controllers\Locations\" />
+    <Folder Include="Business\Domain\Contracts\Repositories\Locations\" />
+    <Folder Include="Business\Domain\Contracts\Repositories\Events\" />
     <Folder Include="Business\Domain\Contracts\Services\Weddings\Events\" />
     <Folder Include="Business\Domain\Contracts\Services\Weddings\Locations\" />
-    <Folder Include="Business\Domain\CQRS\Commands\Base\" />
-    <Folder Include="Business\Domain\CQRS\Queries\Weddings\Locations\" />
+    <Folder Include="Business\Domain\CQRS\Queries\Locations\" />
     <Folder Include="Business\Domain\Enums\" />
-    <Folder Include="Business\Domain\Models\Weddings\Events\" />
-    <Folder Include="Business\Domain\Models\Weddings\Locations\" />
-    <Folder Include="Business\Handler\Queries\Weddings\Events\" />
-    <Folder Include="Business\Handler\Queries\Weddings\Locations\" />
-    <Folder Include="Business\Services\Weddings\Events\" />
-    <Folder Include="Business\Services\Weddings\Locations\" />
+    <Folder Include="Business\Domain\Models\Events\" />
+    <Folder Include="Business\Domain\Models\Locations\" />
+    <Folder Include="Business\Handler\Commands\Events\" />
+    <Folder Include="Business\Handler\Commands\Locations\" />
+    <Folder Include="Business\Handler\Queries\Events\" />
+    <Folder Include="Business\Handler\Queries\Locations\" />
+    <Folder Include="Business\Services\Events\" />
+    <Folder Include="Business\Services\Locations\" />
     <Folder Include="Business\Validations\" />
-    <Folder Include="Business\Handler\Commands\" />
   </ItemGroup>
 
 </Project>

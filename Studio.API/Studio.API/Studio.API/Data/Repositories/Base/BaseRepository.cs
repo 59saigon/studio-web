@@ -5,7 +5,7 @@ using Studio.API.Business.Domain.CQRS.Queries.Common;
 using Studio.API.Business.Domain.Entities.Bases;
 using System.Linq.Expressions;
 
-namespace Studio.API.Data.Repositories
+namespace Studio.API.Data.Repositories.Base
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity
     {
@@ -30,7 +30,7 @@ namespace Studio.API.Data.Repositories
                 return dbSet;
             }
         }
-        
+
         #region Check(Guid) + CheckCancellationToken(CancellationToken)
         public async Task<bool> Check(Guid id)
         {
@@ -47,7 +47,7 @@ namespace Studio.API.Data.Repositories
         #region Add(TEntity) + AddRange(IEnumerable<TEntity>)
         public void Add(TEntity entity)
         {
-            DbSet.Add(entity);  
+            DbSet.Add(entity);
         }
 
         public void AddRange(IEnumerable<TEntity> entities)
@@ -123,7 +123,7 @@ namespace Studio.API.Data.Repositories
             IQueryable<TEntity> queryable = GetQueryable<TEntity>();
             return queryable;
         }
-        public IQueryable<T> GetQueryable<T>() 
+        public IQueryable<T> GetQueryable<T>()
             where T : BaseEntity
         {
             IQueryable<T> queryable = GetDbSet<T>(); // like DbSet in this
@@ -133,7 +133,7 @@ namespace Studio.API.Data.Repositories
         public IQueryable<TEntity> GetQueryable(Expression<Func<TEntity, bool>> predicate)
         {
             IQueryable<TEntity> queryable = GetQueryable<TEntity>();
-            if(predicate != null)
+            if (predicate != null)
             {
                 queryable = queryable.Where(predicate);
             }
@@ -141,8 +141,8 @@ namespace Studio.API.Data.Repositories
         }
 
         #endregion
-        
-        
+
+
 
 
         #region Other

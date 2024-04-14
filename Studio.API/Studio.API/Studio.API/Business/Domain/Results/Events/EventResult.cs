@@ -1,11 +1,10 @@
-﻿using Studio.API.Business.Domain.Entities.Weddings.Events;
-using Studio.API.Business.Domain.Entities.Weddings.Locations;
-using Studio.API.Business.Domain.Entities.Weddings;
+﻿using Studio.API.Business.Domain.Entities.Weddings;
 using Studio.API.Business.Domain.Results.Bases;
 using System.ComponentModel.DataAnnotations.Schema;
-using Studio.API.Business.Domain.Results.Weddings.Locations;
+using Studio.API.Business.Domain.Results.Weddings;
+using Studio.API.Business.Domain.Results.Locations;
 
-namespace Studio.API.Business.Domain.Results.Weddings.Events
+namespace Studio.API.Business.Domain.Results.Events
 {
     public class EventResult : BaseResult
     {

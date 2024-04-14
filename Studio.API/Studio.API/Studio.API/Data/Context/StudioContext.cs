@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Studio.API.Business.Domain.Entities.Events;
+using Studio.API.Business.Domain.Entities.Locations;
 using Studio.API.Business.Domain.Entities.Users;
 using Studio.API.Business.Domain.Entities.Weddings;
-using Studio.API.Business.Domain.Entities.Weddings.Events;
-using Studio.API.Business.Domain.Entities.Weddings.Locations;
 
 namespace Studio.API.Data.Context
 {

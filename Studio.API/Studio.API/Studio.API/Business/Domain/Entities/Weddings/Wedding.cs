@@ -1,5 +1,5 @@
 ﻿using Studio.API.Business.Domain.Entities.Bases;
-using Studio.API.Business.Domain.Entities.Weddings.Events;
+using Studio.API.Business.Domain.Entities.Events;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Studio.API.Business.Domain.Entities.Weddings

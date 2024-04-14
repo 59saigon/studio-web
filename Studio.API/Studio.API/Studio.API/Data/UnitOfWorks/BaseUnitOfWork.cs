@@ -4,6 +4,7 @@ using Studio.API.Business.Domain.Contracts.UnitOfWorks;
 using Studio.API.Business.Domain.Entities.Bases;
 using Studio.API.Data.Context;
 using Studio.API.Data.Repositories;
+using Studio.API.Data.Repositories.Base;
 using System.Reflection;
 
 namespace Studio.API.Data.UnitOfWorks

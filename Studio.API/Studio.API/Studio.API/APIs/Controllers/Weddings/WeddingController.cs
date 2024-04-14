@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
+using Studio.API.Business.Domain.CQRS.Commands.Weddings;
 using Studio.API.Business.Domain.CQRS.Queries.Weddings;
+using Studio.API.Business.Domain.Models.Messages;
 using Studio.API.Business.Domain.Models.Weddings;
 using Studio.API.Business.Domain.Results.Messages;
 using Studio.API.Business.Domain.Results.Weddings;
@@ -11,7 +13,7 @@ using Studio.API.Business.Domain.Results.Weddings;
 namespace Studio.API.APIs.Controllers.Weddings
 {
     [Route("api/wedding")]
-    public class WeddingController : BaseController<WeddingView>
+    public class WeddingController : BaseController
     {
         public WeddingController(IMediator mediator) : base(mediator)
         {
@@ -19,34 +21,42 @@ namespace Studio.API.APIs.Controllers.Weddings
 
         [HttpPost("get-wedding-list")]
         public async Task<IActionResult> GetAll([FromBody] WeddingGetAllQuery weddingGetAllQuery)
-        {
+        {   
             MessageResults<WeddingResult> messageResult = await _mediator.Send(weddingGetAllQuery);
             return Ok(messageResult);
         }
 
         // GET api/<WeddingController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpPost("get-by-id")]
+        public async Task<IActionResult> GetById([FromBody] WeddingGetByIdQuery weddingGetByIdQuery)
         {
-            return "value";
+            MessageResult<WeddingResult> messageResult = await _mediator.Send(weddingGetByIdQuery);
+            return Ok(messageResult);
         }
 
         // POST api/<WeddingController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("create-wedding")]
+        public async Task<IActionResult> Create([FromBody] WeddingCreateCommand weddingCreateCommand)
         {
+            MessageView<WeddingView> messageView = await _mediator.Send(weddingCreateCommand);
+            return Ok(messageView);
         }
 
         // PUT api/<WeddingController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("update-wedding")]
+        public async Task<IActionResult> Update([FromBody] WeddingUpdateCommand weddingUpdateCommand)
         {
+            MessageView<WeddingView> messageView = await _mediator.Send(weddingUpdateCommand);
+            return Ok(messageView);
         }
 
+
         // DELETE api/<WeddingController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("delete-wedding")]
+        public async Task<IActionResult> Delete([FromBody] WeddingDeleteCommand weddingDeleteCommand)
         {
+            MessageView<WeddingView> messageView = await _mediator.Send(weddingDeleteCommand);
+            return Ok(messageView);
         }
     }
 }

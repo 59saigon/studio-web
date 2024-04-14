@@ -1,5 +1,4 @@
-﻿using Studio.API.Business.Domain.Entities.Weddings.Events;
-using Studio.API.Business.Domain.Models.Base;
+﻿using Studio.API.Business.Domain.Models.Base;
 
 namespace Studio.API.Business.Domain.Models.Weddings
 {

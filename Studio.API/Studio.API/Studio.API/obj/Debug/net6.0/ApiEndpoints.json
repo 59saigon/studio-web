@@ -1,100 +1,51 @@
 [
   {
     "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
-    "Method": "Post",
-    "RelativePath": "api/wedding",
+    "Method": "Create",
+    "RelativePath": "api/wedding/create-wedding",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "value",
-        "Type": "System.String",
+        "Name": "weddingCreateCommand",
+        "Type": "Studio.API.Business.Domain.CQRS.Commands.Weddings.WeddingCreateCommand",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
-    "Method": "Get",
-    "RelativePath": "api/wedding/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
-    "Method": "Put",
-    "RelativePath": "api/wedding/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "value",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
     "Method": "Delete",
-    "RelativePath": "api/wedding/{id}",
+    "RelativePath": "api/wedding/delete-wedding",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "weddingDeleteCommand",
+        "Type": "Studio.API.Business.Domain.CQRS.Commands.Weddings.WeddingDeleteCommand",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "GetById",
+    "RelativePath": "api/wedding/get-by-id",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 200
+        "Name": "weddingGetByIdQuery",
+        "Type": "Studio.API.Business.Domain.CQRS.Queries.Weddings.WeddingGetByIdQuery",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
@@ -107,6 +58,22 @@
       {
         "Name": "weddingGetAllQuery",
         "Type": "Studio.API.Business.Domain.CQRS.Queries.Weddings.WeddingGetAllQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "Update",
+    "RelativePath": "api/wedding/update-wedding",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weddingUpdateCommand",
+        "Type": "Studio.API.Business.Domain.CQRS.Commands.Weddings.WeddingUpdateCommand",
         "IsRequired": true
       }
     ],

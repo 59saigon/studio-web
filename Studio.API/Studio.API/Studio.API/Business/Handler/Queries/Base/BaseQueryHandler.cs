@@ -8,7 +8,7 @@ namespace Studio.API.Business.Handler.Queries.Base
 {
     public abstract class BaseQueryHandler
     {
-        
+
     }
     public abstract class BaseQueryHandler<TView> : BaseQueryHandler
         where TView : BaseView
