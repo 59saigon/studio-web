@@ -4,11 +4,23 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using Studio.API.Business.Domain.Configs.Mapping;
+using Studio.API.Business.Domain.Contracts.Repositories.Events;
+using Studio.API.Business.Domain.Contracts.Repositories.Locations;
+using Studio.API.Business.Domain.Contracts.Repositories.Users;
 using Studio.API.Business.Domain.Contracts.Repositories.Weddings;
+using Studio.API.Business.Domain.Contracts.Services.Events;
+using Studio.API.Business.Domain.Contracts.Services.Locations;
+using Studio.API.Business.Domain.Contracts.Services.Users;
 using Studio.API.Business.Domain.Contracts.Services.Weddings;
 using Studio.API.Business.Domain.Contracts.UnitOfWorks;
+using Studio.API.Business.Services.Events;
+using Studio.API.Business.Services.Locations;
+using Studio.API.Business.Services.Users;
 using Studio.API.Business.Services.Weddings;
 using Studio.API.Data.Context;
+using Studio.API.Data.Repositories.Events;
+using Studio.API.Data.Repositories.Locations;
+using Studio.API.Data.Repositories.Users;
 using Studio.API.Data.Repositories.Weddings;
 using Studio.API.Data.UnitOfWorks;
 using System.Reflection;
@@ -44,12 +56,28 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.Get
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IWeddingRepository, WeddingRepository>();
 
+builder.Services.AddScoped<ILocationRepository, LocationRepository>();
+builder.Services.AddScoped<ICityRepository, CityRepository>();
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IEventService_Repository, Event_ServiceRepository>();
+builder.Services.AddScoped<IEvent_ImageRepository, Event_ImageRepository>();
+
 
 #endregion
 
 #region Add-Transient
 
 builder.Services.AddTransient<IWeddingService, WeddingService>();
+
+builder.Services.AddScoped<ILocationService, LocationService>();
+
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddScoped<IEventService, EventService>();
 
 #endregion
 

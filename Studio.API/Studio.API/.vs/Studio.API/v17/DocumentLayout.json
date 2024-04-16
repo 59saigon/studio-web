@@ -1,44 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingupdatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingupdatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingcreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingcreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\domain\\cqrs\\commands\\base\\basecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\domain\\cqrs\\commands\\base\\basecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\services\\bases\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\services\\bases\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\handler\\commands\\weddings\\weddingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\handler\\commands\\weddings\\weddingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\domain\\configs\\mapping\\mappingprofile.wedding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\domain\\configs\\mapping\\mappingprofile.wedding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\domain\\configs\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\domain\\configs\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\apis\\controllers\\weddings\\weddingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\apis\\controllers\\weddings\\weddingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|c:\\users\\nguye\\onedrive\\m\u00E1y t\u00EDnh\\working\\nhumystudio_webapi\\studio.api\\studio.api\\studio.api\\business\\domain\\entities\\weddings\\wedding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B61D4BD8-C9A6-4243-BB71-3182582531F5}|Studio.API\\Studio.API.csproj|solutionrelative:studio.api\\business\\domain\\entities\\weddings\\wedding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\nguye\\Desktop\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,123 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:55:09.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WeddingUpdateCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAgwA4AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:52:10.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MappingProfile.Wedding.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.Wedding.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.Wedding.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.Wedding.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.Wedding.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAApwBAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:48:47.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Services\\Bases\\BaseService.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Services\\Bases\\BaseService.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Services\\Bases\\BaseService.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Services\\Bases\\BaseService.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAApwDQAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:48:00.793Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BaseCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Base\\BaseCommand.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Domain\\CQRS\\Commands\\Base\\BaseCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Base\\BaseCommand.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Domain\\CQRS\\Commands\\Base\\BaseCommand.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAApwBEAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:45:39.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeddingCreateCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAApwAoAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:44:19.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeddingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAjwCAAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:42:10.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Wedding.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\Entities\\Weddings\\Wedding.cs",
-              "RelativeDocumentMoniker": "Studio.API\\Business\\Domain\\Entities\\Weddings\\Wedding.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Business\\Domain\\Entities\\Weddings\\Wedding.cs",
-              "RelativeToolTip": "Studio.API\\Business\\Domain\\Entities\\Weddings\\Wedding.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:41:32.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WeddingController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "RelativeDocumentMoniker": "Studio.API\\APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "ToolTip": "C:\\Users\\nguye\\OneDrive\\M\u00E1y t\u00EDnh\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "RelativeToolTip": "Studio.API\\APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAAwC4AAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T11:40:06.791Z",
-              "EditorCaption": ""
             }
           ]
         }

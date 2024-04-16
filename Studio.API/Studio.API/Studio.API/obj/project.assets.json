@@ -3334,11 +3334,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
+      "projectUniqueName": "C:\\Users\\nguye\\Desktop\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
       "projectName": "Studio.API",
-      "projectPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
+      "projectPath": "C:\\Users\\nguye\\Desktop\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
       "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\obj\\",
+      "outputPath": "C:\\Users\\nguye\\Desktop\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3456,7 +3456,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   },

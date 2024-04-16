@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zrcTv+fvNib0cvg3FTs/gmqCIKBH7h70jez69wElq3daMFLoqjL1DVx4JTI1Vw4gMiJaHH5RfDT6QtfsV0I8hA==",
+  "dgSpecHash": "Sxf97C/hOwBL8rkVWwlgoyxg4yO8ZepItbrFz8/h1T2YycEGupjdTRThpUVhjdPJ+ilquNEblhiTSRYnKohUcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
+  "projectFilePath": "C:\\Users\\nguye\\Desktop\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API\\Studio.API\\Studio.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nguye\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

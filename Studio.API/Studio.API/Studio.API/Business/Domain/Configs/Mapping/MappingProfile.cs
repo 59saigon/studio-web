@@ -9,6 +9,9 @@ namespace Studio.API.Business.Domain.Configs.Mapping
         public MappingProfile()
         {
             WeddingMapping();
+            LocationMapping();
+            EventMapping();
+            UserMapping();
         }
         
     }

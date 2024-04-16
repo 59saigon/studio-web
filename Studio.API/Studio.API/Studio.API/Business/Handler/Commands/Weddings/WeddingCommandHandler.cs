@@ -14,7 +14,8 @@ namespace Studio.API.Business.Handler.Commands.Weddings
 {
     public class WeddingCommandHandler : BaseCommandHandler<WeddingView>,
         IRequestHandler<WeddingCreateCommand, MessageView<WeddingView>>,
-        IRequestHandler<WeddingUpdateCommand, MessageView<WeddingView>>
+        IRequestHandler<WeddingUpdateCommand, MessageView<WeddingView>>,
+        IRequestHandler<WeddingDeleteCommand, MessageView<WeddingView>>
     {
         protected readonly IWeddingService _weddingService;
         public WeddingCommandHandler(IWeddingService weddingService) : base(weddingService)
@@ -31,6 +32,12 @@ namespace Studio.API.Business.Handler.Commands.Weddings
         public async Task<MessageView<WeddingView>> Handle(WeddingUpdateCommand request, CancellationToken cancellationToken)
         {
             var msgView = await _baseService.CreateOrUpdate<WeddingView>(request);
+            return msgView;
+        }
+
+        public async Task<MessageView<WeddingView>> Handle(WeddingDeleteCommand request, CancellationToken cancellationToken)
+        {
+            var msgView = await _baseService.DeleteById<WeddingView>(request.Id);
             return msgView;
         }
     }
