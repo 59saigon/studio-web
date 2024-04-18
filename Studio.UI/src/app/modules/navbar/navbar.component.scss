@@ -1,0 +1,19 @@
+.fixed {
+  position: fixed;
+  animation: fadeInDownBig 0.4s ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+.hidden {
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
