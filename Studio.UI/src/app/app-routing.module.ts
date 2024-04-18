@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './features/home/home.component';
+import { HomeComponent } from './modules/home/home.component';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './features/about/about.component';
-import { MomentComponent } from './features/moment/moment.component';
-import { ContactComponent } from './features/contact/contact.component';
-import { AddMomentComponent } from './features/add-moment/add-moment.component';
-import { ServiceComponent } from './features/service/service.component';
-import { LoginComponent } from './features/login/login.component';
-import { RegisterComponent } from './features/register/register.component';
-import { LayoutComponent } from './features/layout/layout.component';
-import { AuthGuard } from './guard/auth.guard';
+import { AboutComponent } from './modules/about/about.component';
+import { MomentComponent } from './modules/moment/moment.component';
+import { ContactComponent } from './modules/contact/contact.component';
+import { AddMomentComponent } from './modules/add-moment/add-moment.component';
+import { ServiceComponent } from './modules/service/service.component';
+import { LoginComponent } from './modules/login/login.component';
+import { RegisterComponent } from './modules/register/register.component';
+import { LayoutComponent } from './modules/layout/layout.component';
+import { AuthGuard } from './core/guard/auth.guard';
 
 const routes: Routes = [
 
