@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './modules/home/home.component';
+import { HomeComponent } from './modules/client/home/home.component';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './modules/about/about.component';
-import { MomentComponent } from './modules/moment/moment.component';
-import { ContactComponent } from './modules/contact/contact.component';
-import { ServiceComponent } from './modules/service/service.component';
-import { LoginComponent } from './modules/login/login.component';
-import { RegisterComponent } from './modules/register/register.component';
-import { LayoutComponent } from './modules/layout/layout.component';
+import { AboutComponent } from './modules/client/about/about.component';
+import { ContactComponent } from './modules/client/contact/contact.component';
+import { ServiceComponent } from './modules/client/service/service.component';
+import { LoginComponent } from './modules/client/login/login.component';
+import { RegisterComponent } from './modules/client/register/register.component';
+import { LayoutComponent } from './modules/client/layout/layout.component';
 import { AuthGuard } from './core/guard/auth.guard';
-import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { DashboardComponent } from './modules/admin/dashboard/dashboard.component';
+import { EventComponent } from './modules/client/event/event.component';
+import { WeddingListComponent } from './layout/dashboard/wedding/wedding-list/wedding-list.component';
+import { WeddingManagementComponent } from './modules/admin/wedding-management/wedding-management.component';
+import { EventManagementComponent } from './modules/admin/event-management/event-management.component';
+import { DashboardManagementComponent } from './modules/admin/dashboard-management/dashboard-management.component';
+import { UserManagementComponent } from './modules/admin/user-management/user-management.component';
 
 const routes: Routes = [
   {
@@ -26,16 +31,38 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    
-  },
+  
 
   {
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+        children:[
+          {
+            path: 'dashboard-management',
+            component: DashboardManagementComponent,
+            //canActivate: [AuthGuard]
+          },
+          {
+            path: 'wedding-management',
+            component: WeddingManagementComponent,
+            //canActivate: [AuthGuard]
+          },
+          {
+            path: 'event-management',
+            component: EventManagementComponent,
+            //canActivate: [AuthGuard]
+          },
+          {
+            path: 'user-management',
+            component: UserManagementComponent,
+            //canActivate: [AuthGuard]
+          },
+        ]
+      },
       {
         path: 'home',
         component: HomeComponent,
@@ -47,8 +74,8 @@ const routes: Routes = [
         //canActivate: [AuthGuard]
       },
       {
-        path: 'moment',
-        component: MomentComponent,
+        path: 'event',
+        component: EventComponent,
         //canActivate: [AuthGuard]
       },
       {
