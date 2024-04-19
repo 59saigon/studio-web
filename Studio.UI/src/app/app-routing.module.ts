@@ -5,34 +5,37 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './modules/about/about.component';
 import { MomentComponent } from './modules/moment/moment.component';
 import { ContactComponent } from './modules/contact/contact.component';
-import { AddMomentComponent } from './modules/add-moment/add-moment.component';
 import { ServiceComponent } from './modules/service/service.component';
 import { LoginComponent } from './modules/login/login.component';
 import { RegisterComponent } from './modules/register/register.component';
 import { LayoutComponent } from './modules/layout/layout.component';
 import { AuthGuard } from './core/guard/auth.guard';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
 
 const routes: Routes = [
-
   {
-    path:'login',
-    component: LoginComponent
+    path: 'login',
+    component: LoginComponent,
   },
   {
-    path:'register',
-    component: RegisterComponent
+    path: 'register',
+    component: RegisterComponent,
   },
   {
-    path:'',
+    path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
-
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    
+  },
 
   {
     path: '',
     component: LayoutComponent,
-    children:[
+    children: [
       {
         path: 'home',
         component: HomeComponent,
@@ -57,15 +60,13 @@ const routes: Routes = [
         path: 'contact',
         component: ContactComponent,
         //canActivate: [AuthGuard]
-      }
-    ]
+      },
+    ],
   },
   {
     path: '**',
-    component: LoginComponent
-  }
-
-  
+    component: LoginComponent,
+  },
 ];
 
 @NgModule({
