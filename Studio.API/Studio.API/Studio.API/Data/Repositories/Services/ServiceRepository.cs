@@ -5,11 +5,11 @@ using Studio.API.Business.Domain.Entities.Events;
 using Studio.API.Data.Context;
 using Studio.API.Data.Repositories.Base;
 
-namespace Studio.API.Data.Repositories.Events
+namespace Studio.API.Data.Repositories.Services
 {
-    public class Event_ServiceRepository : BaseRepository<Event_Service>, IEventService_Repository
+    public class ServiceRepository : BaseRepository<Event_Service>, IEventService_Repository
     {
-        public Event_ServiceRepository(StudioContext dbContext, IMapper mapper) : base(dbContext, mapper)
+        public ServiceRepository(StudioContext dbContext, IMapper mapper) : base(dbContext, mapper)
         {
         }
     }
