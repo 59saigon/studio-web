@@ -5,9 +5,15 @@ namespace Studio.API.Business.Domain.CQRS.Commands.Events
 {
     public class EventUpdateCommand : UpdateCommand<EventView>
     {
-        public string Event_name { get; set; } = null!;
-        public Guid Wedding_Id { get; set; }
-        public Guid Location_Id { get; set; }
+        public string EventTittle { get; set; }
+        
+        public string? EventDescription { get; set; } 
+        
+        public Guid? WeddingId { get; set; }
+        
+        public Guid? LocationId { get; set; }
+        
+        public string? Status { get; set; }
 
         public string LastUpdatedBy { get; set; }
         public DateTime? LastUpdatedDate { get; set; }

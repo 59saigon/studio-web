@@ -43,7 +43,7 @@ namespace Studio.API.APIs.Controllers.Locations
         }
 
         // PUT api/<LocationController>/5
-        [HttpPut("update-location")]
+        [HttpPost("update-location")]
         public async Task<IActionResult> Update([FromBody] LocationUpdateCommand locationUpdateCommand)
         {
             MessageView<LocationView> messageView = await _mediator.Send(locationUpdateCommand);
@@ -52,7 +52,7 @@ namespace Studio.API.APIs.Controllers.Locations
 
 
         // DELETE api/<LocationController>/5
-        [HttpDelete("delete-location")]
+        [HttpPost("delete-location")]
         public async Task<IActionResult> Delete([FromBody] LocationDeleteCommand locationDeleteCommand)
         {
             MessageView<LocationView> messageView = await _mediator.Send(locationDeleteCommand);

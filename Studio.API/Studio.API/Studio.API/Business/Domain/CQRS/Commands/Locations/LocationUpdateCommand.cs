@@ -7,8 +7,8 @@ namespace Studio.API.Business.Domain.CQRS.Commands.Locations
 {
     public class LocationUpdateCommand : UpdateCommand<LocationView>
     {
-        public string Location_Name { get; set; }
-        public Guid City_Id { get; set; }
+        public string LocationName { get; set; }
+        public Guid CityId { get; set; }
 
         public string LastUpdatedBy { get; set; }
         public DateTime? LastUpdatedDate { get; set; }

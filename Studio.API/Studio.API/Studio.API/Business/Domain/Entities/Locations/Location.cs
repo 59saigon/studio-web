@@ -8,10 +8,12 @@ namespace Studio.API.Business.Domain.Entities.Locations
     public class Location : BaseEntity
     {
         [Column(TypeName = "nvarchar(255)")]
-        public string Location_Name { get; set; }
-        [ForeignKey("_City")]
-        public Guid City_Id { get; set; }
-        public virtual City _City { get; set; }
+        public string LocationName { get; set; }
+        
+        [ForeignKey("City")]
+        public Guid CityId { get; set; }
+        
+        public virtual City City { get; set; }
         public virtual IList<Event> Events { get; set; }
     }
 }

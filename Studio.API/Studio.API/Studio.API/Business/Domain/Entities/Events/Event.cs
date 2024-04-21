@@ -2,6 +2,8 @@
 using Studio.API.Business.Domain.Entities.Locations;
 using Studio.API.Business.Domain.Entities.Weddings;
 using System.ComponentModel.DataAnnotations.Schema;
+using Studio.API.Business.Domain.Entities.Photos;
+using Studio.API.Business.Domain.Entities.Services;
 
 namespace Studio.API.Business.Domain.Entities.Events
 {
@@ -9,17 +11,26 @@ namespace Studio.API.Business.Domain.Entities.Events
     public class Event : BaseEntity
     {
         [Column(TypeName = "nvarchar(255)")]
-        public string Event_name { get; set; } = null!;
-        [ForeignKey("_Wedding")]
-        public Guid Wedding_Id { get; set; }
-        [ForeignKey("_Location")]
-        public Guid Location_Id { get; set; }
+        public string EventTittle { get; set; }
+        
+        [Column(TypeName = "nvarchar(255)")]
+        public string? EventDescription { get; set; } 
+        
+        [ForeignKey("Wedding")]
+        public Guid? WeddingId { get; set; }
+        
+        [ForeignKey("Location")]
+        public Guid? LocationId { get; set; }
+        
+        public string? Status { get; set; }
 
-        public virtual Wedding _Wedding { get; set; }
-        public virtual Location _Location { get; set; }
+        public virtual Wedding Wedding { get; set; }
+        
+        public virtual Location Location { get; set; }
 
-        public virtual IList<Event_Image> Event_Images { get; set; }
-        public virtual IList<Event_Service> Event_Services { get; set; }
+        public virtual IList<Photo> Photos { get; set; }
+        
+        public virtual IList<Service> Services { get; set; }
 
     }
 }

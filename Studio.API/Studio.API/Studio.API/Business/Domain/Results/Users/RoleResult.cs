@@ -1,6 +1,12 @@
-﻿namespace Studio.API.Business.Domain.Results.Users;
+﻿using Studio.API.Business.Domain.Results.Bases;
 
-public class RoleResult
+namespace Studio.API.Business.Domain.Results.Users;
+
+public class RoleResult : BaseResult
 {
-    
+    public string Title { get; set; } = null!;
+        
+    public string RoleName { get; set; } = null!;
+        
+    public ICollection<UserResult> Users { get; set; }
 }

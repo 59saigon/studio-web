@@ -4,6 +4,6 @@ namespace Studio.API.Business.Domain.Models.Locations
 {
     public class CountryView : BaseView
     {
-        public string Country_Name { get; set; }
+        public string CountryName { get; set; }
     }
 }

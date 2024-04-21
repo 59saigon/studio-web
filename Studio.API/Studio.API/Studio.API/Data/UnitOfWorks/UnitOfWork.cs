@@ -1,5 +1,7 @@
 ﻿using Studio.API.Business.Domain.Contracts.Repositories.Events;
 using Studio.API.Business.Domain.Contracts.Repositories.Locations;
+using Studio.API.Business.Domain.Contracts.Repositories.Photos;
+using Studio.API.Business.Domain.Contracts.Repositories.Services;
 using Studio.API.Business.Domain.Contracts.Repositories.Users;
 using Studio.API.Business.Domain.Contracts.Repositories.Weddings;
 using Studio.API.Business.Domain.Contracts.UnitOfWorks;
@@ -25,8 +27,8 @@ namespace Studio.API.Data.UnitOfWorks
 
         public IEventRepository EventRepository => GetRepository<IEventRepository>();
 
-        public IEvent_ImageRepository EventImageRepository => GetRepository<IEvent_ImageRepository>();
+        public IPhotoRepository PhotoRepository => GetRepository<IPhotoRepository>();
 
-        public IEventService_Repository EventServiceRepository => GetRepository<IEventService_Repository>();
+        public IServiceRepository ServiceRepository => GetRepository<IServiceRepository>();
     }
 }

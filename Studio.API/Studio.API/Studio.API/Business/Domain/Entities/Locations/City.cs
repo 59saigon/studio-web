@@ -7,11 +7,13 @@ namespace Studio.API.Business.Domain.Entities.Locations
     public class City : BaseEntity
     {
         [Column(TypeName = "nvarchar(255)")]
-        public string City_Name { get; set; }
-        [ForeignKey("_Country")]
-        public Guid Country_Id { get; set; }
+        public string CityName { get; set; }
+        
+        [ForeignKey("Country")]
+        public Guid CountryId { get; set; }
 
-        public virtual Country _Country { get; set; }
+        public virtual Country Country { get; set; }
+        
         public virtual IList<Location> Locations { get; set; }
     }
 }

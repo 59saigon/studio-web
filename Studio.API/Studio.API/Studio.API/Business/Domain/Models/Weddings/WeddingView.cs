@@ -4,9 +4,15 @@ namespace Studio.API.Business.Domain.Models.Weddings
 {
     public class WeddingView : BaseView
     {
-        public string Wedding_Name { get; set; }
+        public string WeddingTittle { get; set; }
+        
+        public string? WeddingDescription { get; set; }
+        
+        public string? Status { get; set; }
+        
         public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
+        
+        public DateTime EndDate { get; set; }   
 
     }
 }

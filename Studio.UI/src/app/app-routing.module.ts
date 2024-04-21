@@ -16,6 +16,7 @@ import { WeddingManagementComponent } from './modules/admin/wedding-management/w
 import { EventManagementComponent } from './modules/admin/event-management/event-management.component';
 import { DashboardManagementComponent } from './modules/admin/dashboard-management/dashboard-management.component';
 import { UserManagementComponent } from './modules/admin/user-management/user-management.component';
+import { WeddingCreateComponent } from './layout/dashboard/wedding/wedding-create/wedding-create.component';
 
 const routes: Routes = [
   {
@@ -31,38 +32,53 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  
-
+  // {
+  //   path: 'wedding-create',
+  //   component: WeddingCreateComponent,
+  //   //canActivate: [AuthGuard]
+  // },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: [
+      {
+        path: 'dashboard-management',
+        component: DashboardManagementComponent,
+        //canActivate: [AuthGuard]
+      },
+      {
+        path: 'wedding-management',
+        component: WeddingManagementComponent,
+         children:[
+          {
+            path: 'wedding-list',
+            component: WeddingListComponent,
+            //canActivate: [AuthGuard]
+          },
+          {
+            path: 'wedding-create',
+            component: WeddingCreateComponent,
+            //canActivate: [AuthGuard]
+          },
+         ]
+        //canActivate: [AuthGuard]
+      },
+      {
+        path: 'event-management',
+        component: EventManagementComponent,
+        //canActivate: [AuthGuard]
+      },
+      {
+        path: 'user-management',
+        component: UserManagementComponent,
+        //canActivate: [AuthGuard]
+      },
+    ],
+  },
   {
     path: '',
     component: LayoutComponent,
     children: [
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-        children:[
-          {
-            path: 'dashboard-management',
-            component: DashboardManagementComponent,
-            //canActivate: [AuthGuard]
-          },
-          {
-            path: 'wedding-management',
-            component: WeddingManagementComponent,
-            //canActivate: [AuthGuard]
-          },
-          {
-            path: 'event-management',
-            component: EventManagementComponent,
-            //canActivate: [AuthGuard]
-          },
-          {
-            path: 'user-management',
-            component: UserManagementComponent,
-            //canActivate: [AuthGuard]
-          },
-        ]
-      },
       {
         path: 'home',
         component: HomeComponent,

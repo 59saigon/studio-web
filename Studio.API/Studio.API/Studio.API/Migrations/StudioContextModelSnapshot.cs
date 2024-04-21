@@ -22,6 +22,251 @@ namespace Studio.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Events.Event", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EventDescription")
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("EventTittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LocationId")
+                        .IsRequired()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("WeddingId")
+                        .IsRequired()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LocationId");
+
+                    b.HasIndex("WeddingId");
+
+                    b.ToTable("Event");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.City", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CityName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<Guid>("CountryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("City");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.Country", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CountryName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Country");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.Location", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CityId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LocationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.ToTable("Location");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Photos.Photo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("EventId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PhotoName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.ToTable("Photo");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Services.Service", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("EventId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ServiceDescription")
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("ServiceTittle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.ToTable("Service");
+                });
+
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Users.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -65,7 +310,6 @@ namespace Studio.API.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Avatar")
@@ -82,7 +326,6 @@ namespace Studio.API.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
@@ -90,7 +333,6 @@ namespace Studio.API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -128,235 +370,6 @@ namespace Studio.API.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Event_name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("Location_Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("Wedding_Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Location_Id");
-
-                    b.HasIndex("Wedding_Id");
-
-                    b.ToTable("Event");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event_Image", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("Event_Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Event_Image_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Event_Image_Url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Event_Id");
-
-                    b.ToTable("Event_Image");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event_Service", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("Event_Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Event_Service_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<double>("Price")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Event_Id");
-
-                    b.ToTable("Event_Service");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.City", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("City_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<Guid>("Country_Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Country_Id");
-
-                    b.ToTable("City");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.Country", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Country_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Country");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.Location", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("City_Id")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastUpdatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastUpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Location_Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("City_Id");
-
-                    b.ToTable("Location");
-                });
-
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Wedding", b =>
                 {
                     b.Property<Guid>("Id")
@@ -386,13 +399,82 @@ namespace Studio.API.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Wedding_Name")
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WeddingDescription")
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("WeddingTittle")
                         .IsRequired()
                         .HasColumnType("nvarchar(255)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Wedding");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Events.Event", b =>
+                {
+                    b.HasOne("Studio.API.Business.Domain.Entities.Locations.Location", "Location")
+                        .WithMany("Events")
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Wedding", "Wedding")
+                        .WithMany("Events")
+                        .HasForeignKey("WeddingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Location");
+
+                    b.Navigation("Wedding");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.City", b =>
+                {
+                    b.HasOne("Studio.API.Business.Domain.Entities.Locations.Country", "Country")
+                        .WithMany("Cities")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.Location", b =>
+                {
+                    b.HasOne("Studio.API.Business.Domain.Entities.Locations.City", "City")
+                        .WithMany("Locations")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Photos.Photo", b =>
+                {
+                    b.HasOne("Studio.API.Business.Domain.Entities.Events.Event", "Event")
+                        .WithMany("Photos")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Services.Service", b =>
+                {
+                    b.HasOne("Studio.API.Business.Domain.Entities.Events.Event", "Event")
+                        .WithMany("Services")
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Event");
                 });
 
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Users.User", b =>
@@ -406,94 +488,31 @@ namespace Studio.API.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event", b =>
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Events.Event", b =>
                 {
-                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Locations.Location", "_Location")
-                        .WithMany("Events")
-                        .HasForeignKey("Location_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Photos");
 
-                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Wedding", "_Wedding")
-                        .WithMany("Events")
-                        .HasForeignKey("Wedding_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("_Location");
-
-                    b.Navigation("_Wedding");
+                    b.Navigation("Services");
                 });
 
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event_Image", b =>
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.City", b =>
                 {
-                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Events.Event", "_Event")
-                        .WithMany("Event_Images")
-                        .HasForeignKey("Event_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("_Event");
+                    b.Navigation("Locations");
                 });
 
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event_Service", b =>
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.Country", b =>
                 {
-                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Events.Event", "_Event")
-                        .WithMany("Event_Services")
-                        .HasForeignKey("Event_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("_Event");
+                    b.Navigation("Cities");
                 });
 
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.City", b =>
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.Location", b =>
                 {
-                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Locations.Country", "_Country")
-                        .WithMany("Cities")
-                        .HasForeignKey("Country_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("_Country");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.Location", b =>
-                {
-                    b.HasOne("Studio.API.Business.Domain.Entities.Weddings.Locations.City", "_City")
-                        .WithMany("Locations")
-                        .HasForeignKey("City_Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("_City");
+                    b.Navigation("Events");
                 });
 
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Users.Role", b =>
                 {
                     b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Events.Event", b =>
-                {
-                    b.Navigation("Event_Images");
-
-                    b.Navigation("Event_Services");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.City", b =>
-                {
-                    b.Navigation("Locations");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.Country", b =>
-                {
-                    b.Navigation("Cities");
-                });
-
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Locations.Location", b =>
-                {
-                    b.Navigation("Events");
                 });
 
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Weddings.Wedding", b =>

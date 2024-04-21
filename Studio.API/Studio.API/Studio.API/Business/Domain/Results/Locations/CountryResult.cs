@@ -4,8 +4,8 @@ namespace Studio.API.Business.Domain.Results.Locations
 {
     public class CountryResult : BaseResult
     {
-        public string Country_Name { get; set; }
+        public string CountryName { get; set; }
 
-        public IList<CityResult> Citys { get; set; }
+        public IList<CityResult> Cities { get; set; }
     }
 }

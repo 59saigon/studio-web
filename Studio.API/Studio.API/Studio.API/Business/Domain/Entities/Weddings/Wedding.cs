@@ -8,8 +8,15 @@ namespace Studio.API.Business.Domain.Entities.Weddings
     public class Wedding : BaseEntity
     {
         [Column(TypeName = "nvarchar(255)")]
-        public string Wedding_Name { get; set; }
+        public string WeddingTittle { get; set; }
+        
+        [Column(TypeName = "nvarchar(255)")]
+        public string? WeddingDescription { get; set; }
+        
+        public string? Status { get; set; }
+        
         public DateTime StartDate { get; set; }
+        
         public DateTime EndDate { get; set; }   
 
         public virtual IList<Event> Events { get; set; }

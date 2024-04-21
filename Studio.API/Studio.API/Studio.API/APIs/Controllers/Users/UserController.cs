@@ -43,7 +43,7 @@ namespace Studio.API.APIs.Controllers.Users
         }
 
         // PUT api/<UserController>/5
-        [HttpPut("update-user")]
+        [HttpPost("update-user")]
         public async Task<IActionResult> Update([FromBody] UserUpdateCommand userUpdateCommand)
         {
             MessageView<UserView> messageView = await _mediator.Send(userUpdateCommand);
@@ -52,7 +52,7 @@ namespace Studio.API.APIs.Controllers.Users
 
 
         // DELETE api/<UserController>/5
-        [HttpDelete("delete-user")]
+        [HttpPost("delete-user")]
         public async Task<IActionResult> Delete([FromBody] UserDeleteCommand userDeleteCommand)
         {
             MessageView<UserView> messageView = await _mediator.Send(userDeleteCommand);

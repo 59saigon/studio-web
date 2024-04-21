@@ -6,7 +6,8 @@ namespace Studio.API.Business.Domain.Models.Locations
 {
     public class LocationView : BaseView
     {
-        public string Location_Name { get; set; }
-        public Guid City_Id { get; set; }
+        public string LocationName { get; set; }
+        
+        public Guid CityId { get; set; }
     }
 }

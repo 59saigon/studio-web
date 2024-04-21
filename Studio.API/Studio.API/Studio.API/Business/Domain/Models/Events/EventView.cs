@@ -5,8 +5,14 @@ namespace Studio.API.Business.Domain.Models.Events
 {
     public class EventView : BaseView
     {
-        public string Event_name { get; set; }
-        public Guid Wedding_Id { get; set; }
-        public Guid Location_Id { get; set; }
+        public string EventTittle { get; set; }
+        
+        public string? EventDescription { get; set; } 
+        
+        public Guid? WeddingId { get; set; }
+        
+        public Guid? LocationId { get; set; }
+        
+        public string? Status { get; set; }
     }
 }

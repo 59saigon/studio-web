@@ -43,7 +43,7 @@ namespace Studio.API.APIs.Controllers.Weddings
         }
 
         // PUT api/<WeddingController>/5
-        [HttpPut("update-wedding")]
+        [HttpPost("update-wedding")]
         public async Task<IActionResult> Update([FromBody] WeddingUpdateCommand weddingUpdateCommand)
         {
             MessageView<WeddingView> messageView = await _mediator.Send(weddingUpdateCommand);
@@ -52,7 +52,7 @@ namespace Studio.API.APIs.Controllers.Weddings
 
 
         // DELETE api/<WeddingController>/5
-        [HttpDelete("delete-wedding")]
+        [HttpPost("delete-wedding")]
         public async Task<IActionResult> Delete([FromBody] WeddingDeleteCommand weddingDeleteCommand)
         {
             MessageView<WeddingView> messageView = await _mediator.Send(weddingDeleteCommand);

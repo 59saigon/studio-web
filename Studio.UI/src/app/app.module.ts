@@ -7,20 +7,24 @@ import { HomeComponent } from './modules/client/home/home.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './layout/carousel/carousel.component';
 import { AboutComponent } from './modules/client/about/about.component';
 import { ContactComponent } from './modules/client/contact/contact.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './modules/client/layout/layout.component';
-import { CustomeInterceptor } from './data/services/custome/custome.interceptor';
+import { CustomeInterceptor } from './core/services/custome/custome.interceptor';
 import { ServiceComponent } from './modules/client/service/service.component';
 import { LoginComponent } from './modules/client/login/login.component';
 import { RegisterComponent } from './modules/client/register/register.component';
@@ -33,6 +37,11 @@ import { DashboardManagementComponent } from './modules/admin/dashboard-manageme
 import { UserManagementComponent } from './modules/admin/user-management/user-management.component';
 import { UserListComponent } from './layout/dashboard/user/user-list/user-list.component';
 import { UserCreateComponent } from './layout/dashboard/user/user-create/user-create.component';
+import { WeddingManagementComponent } from './modules/admin/wedding-management/wedding-management.component';
+import { WeddingCreateComponent } from './layout/dashboard/wedding/wedding-create/wedding-create.component';
+import { BaseComponent } from './core/component/base/base.component';
+import { CommonModule, JsonPipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -56,8 +65,20 @@ import { UserCreateComponent } from './layout/dashboard/user/user-create/user-cr
     UserManagementComponent,
     UserListComponent,
     UserCreateComponent,
+    WeddingManagementComponent,
+    WeddingCreateComponent,
+    BaseComponent,
   ],
   imports: [
+    MatNativeDateModule,
+    MatRippleModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    JsonPipe,
+    CommonModule,
+    RouterModule,
+    MatIconModule,
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -71,11 +92,13 @@ import { UserCreateComponent } from './layout/dashboard/user/user-create/user-cr
     MatFormFieldModule,
     MatIconModule,
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: CustomeInterceptor,
-    multi: true
-  }],
+  providers: [
+    {
+      provide: [HTTP_INTERCEPTORS],
+      useClass: CustomeInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

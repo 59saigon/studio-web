@@ -7,7 +7,7 @@ namespace Studio.API.Business.Domain.Entities.Locations
     public class Country : BaseEntity
     {
         [Column(TypeName = "nvarchar(255)")]
-        public string Country_Name { get; set; }
+        public string CountryName { get; set; }
 
         public virtual IList<City> Cities { get; set; }
     }

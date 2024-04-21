@@ -43,7 +43,7 @@ namespace Studio.API.APIs.Controllers.Events
         }
 
         // PUT api/<EventController>/5
-        [HttpPut("update-event")]
+        [HttpPost("update-event")]
         public async Task<IActionResult> Update([FromBody] EventUpdateCommand eventUpdateCommand)
         {
             MessageView<EventView> messageView = await _mediator.Send(eventUpdateCommand);
@@ -52,7 +52,7 @@ namespace Studio.API.APIs.Controllers.Events
 
 
         // DELETE api/<EventController>/5
-        [HttpDelete("delete-event")]
+        [HttpPost("delete-event")]
         public async Task<IActionResult> Delete([FromBody] EventDeleteCommand eventDeleteCommand)
         {
             MessageView<EventView> messageView = await _mediator.Send(eventDeleteCommand);

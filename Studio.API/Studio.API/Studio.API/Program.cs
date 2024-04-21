@@ -26,6 +26,10 @@ using Studio.API.Data.UnitOfWorks;
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
+using Studio.API.Business.Domain.Contracts.Repositories.Photos;
+using Studio.API.Business.Domain.Contracts.Repositories.Services;
+using Studio.API.Data.Repositories.Photos;
+using Studio.API.Data.Repositories.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 #region Add-DbContext
@@ -63,8 +67,8 @@ builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
-builder.Services.AddScoped<IEventService_Repository, Event_ServiceRepository>();
-builder.Services.AddScoped<IEvent_ImageRepository, Event_ImageRepository>();
+builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
+builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 
 
 #endregion
