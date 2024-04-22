@@ -1,0 +1,82 @@
+[
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "Create",
+    "RelativePath": "api/wedding/create-wedding",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weddingCreateCommand",
+        "Type": "Studio.API.Business.Domain.CQRS.Commands.Weddings.WeddingCreateCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "Delete",
+    "RelativePath": "api/wedding/delete-wedding",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weddingDeleteCommand",
+        "Type": "Studio.API.Business.Domain.CQRS.Commands.Weddings.WeddingDeleteCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "GetById",
+    "RelativePath": "api/wedding/get-by-id",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weddingGetByIdQuery",
+        "Type": "Studio.API.Business.Domain.CQRS.Queries.Weddings.WeddingGetByIdQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "GetAll",
+    "RelativePath": "api/wedding/get-wedding-list",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weddingGetAllQuery",
+        "Type": "Studio.API.Business.Domain.CQRS.Queries.Weddings.WeddingGetAllQuery",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Studio.API.APIs.Controllers.Weddings.WeddingController",
+    "Method": "Update",
+    "RelativePath": "api/wedding/update-wedding",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "weddingUpdateCommand",
+        "Type": "Studio.API.Business.Domain.CQRS.Commands.Weddings.WeddingUpdateCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
