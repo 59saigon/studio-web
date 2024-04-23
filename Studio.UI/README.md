@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## How to create module + routing
+
+(--flat) : to use create without folder
+cmd: ng g m [module-name] --routing 
+
+## How to create component + module + routing
+ ng g c wedding-list  && ng g m wedding-list --routing

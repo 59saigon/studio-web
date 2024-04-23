@@ -3772,11 +3772,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
+      "projectUniqueName": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
       "projectName": "Studio.API",
-      "projectPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
+      "projectPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
       "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\obj\\",
+      "outputPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
