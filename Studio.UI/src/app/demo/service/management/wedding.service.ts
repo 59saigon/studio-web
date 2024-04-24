@@ -1,11 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { BaseService } from 'src/app/core/services/baseService/base.service';
-import { WeddingResult } from 'src/app/data/results/WeddingResult';
-import { WeddingView } from 'src/app/data/views/WeddingView';
+import { Wedding } from 'src/app/data/entity/Wedding';
 
 @Injectable()
-export class WeddingService extends BaseService<WeddingResult, WeddingView> {
+export class WeddingService extends BaseService<Wedding> {
     
 }

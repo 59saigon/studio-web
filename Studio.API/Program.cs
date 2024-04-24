@@ -30,6 +30,8 @@ using Studio.API.Business.Domain.Contracts.Repositories.Photos;
 using Studio.API.Business.Domain.Contracts.Repositories.Services;
 using Studio.API.Data.Repositories.Photos;
 using Studio.API.Data.Repositories.Services;
+using Studio.API.Business.Domain.Contracts.Services.Services;
+using Studio.API.Business.Services.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 #region Add-DbContext
@@ -82,6 +84,8 @@ builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IEventService, EventService>();
+
+builder.Services.AddScoped<IServiceService, ServiceService>();
 
 #endregion
 

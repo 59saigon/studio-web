@@ -5,48 +5,88 @@ import { BaseCommand, CreateCommand, DeleteCommand, UpdateCommand } from 'src/ap
 import { GetAllQuery } from 'src/app/data/queries/BaseQuery';
 import { MessageResults } from 'src/app/data/results/MessageResult';
 import { MessageView } from 'src/app/data/views/MessageView';
+import { Constants } from 'src/app/shared/Constants';
+import { ConstantService } from 'src/app/shared/constant.service';
 
 @Injectable({
   providedIn: 'root',
 })
   //https://localhost:7099/api/wedding/get-wedding-list
 
-export class BaseService<TResult, TView>{
+export class BaseService<T>{
   constructor(
     private http: HttpClient,
+    private constantService: ConstantService
   ) {}
 
-  getListData(dataQuery: any): Observable<any> {
-    return this.http.post<MessageResults<TResult>>(
-      'https://localhost:7099/api/wedding/get-wedding-list',
-      dataQuery
+  getListData(entity: string, data: any): Observable<any> {
+    return this.http.post(
+      this.constantService.receiveInstanceAPI(entity, Constants.GET_LIST),
+      data
     );
   }
-  getByValueData(dataQuery: any): Observable<any> {
-    return this.http.post<MessageResults<TResult>>(
-      'https://localhost:7099/api/wedding/get-by-id',
-      dataQuery
-    );
-  }
-
-  postData(dataCommand: any): Observable<any> {
-    return this.http.post<MessageView<TView>>(
-      'https://localhost:7099/api/wedding/create-wedding',
-      dataCommand
+  getByValueData(entity: string, data: any, valueGetBy: string): Observable<any> {
+    return this.http.post(
+      this.constantService.receiveInstanceAPI(entity, Constants.GET_BY, valueGetBy),
+      data
     );
   }
 
-  putData(dataCommand: any): Observable<any> {
-    return this.http.post<MessageView<TView>>(
-      'https://localhost:7099/api/wedding/update-wedding',
-      dataCommand
+  postData(entity: string, data: any): Observable<any> {
+    return this.http.post(
+      this.constantService.receiveInstanceAPI(entity, Constants.CREATE),
+      data
     );
   }
 
-  deleteData(dataCommand: any): Observable<any> {
-    return this.http.post<MessageView<TView>>(
-      'https://localhost:7099/api/wedding/delete-wedding',
-      dataCommand
+  putData(entity: string, data: any): Observable<any> {
+    return this.http.post(
+      this.constantService.receiveInstanceAPI(entity, Constants.UPDATE),
+      data
     );
   }
+
+  deleteData(entity: string, data: any): Observable<any> {
+    return this.http.post(
+      this.constantService.receiveInstanceAPI(entity, Constants.DELETE),
+      data
+    );
+  }
+  // constructor(
+  //   private http: HttpClient,
+  // ) {}
+
+  // getListData(dataQuery: any, ): Observable<any> {
+  //   return this.http.post<MessageResults<T>>(
+  //     '/api/wedding/get-wedding-list',
+  //     dataQuery
+  //   );
+  // }
+  // getByValueData(dataQuery: any): Observable<any> {
+  //   return this.http.post<MessageResults<T>>(
+  //     'https://localhost:7099/api/wedding/get-by-id',
+  //     dataQuery
+  //   );
+  // }
+
+  // postData(dataCommand: any): Observable<any> {
+  //   return this.http.post<MessageView<T>>(
+  //     'https://localhost:7099/api/wedding/create-wedding',
+  //     dataCommand
+  //   );
+  // }
+
+  // putData(dataCommand: any): Observable<any> {
+  //   return this.http.post<MessageView<T>>(
+  //     'https://localhost:7099/api/wedding/update-wedding',
+  //     dataCommand
+  //   );
+  // }
+
+  // deleteData(dataCommand: any): Observable<any> {
+  //   return this.http.post<MessageView<T>>(
+  //     'https://localhost:7099/api/wedding/delete-wedding',
+  //     dataCommand
+  //   );
+  // }
 }

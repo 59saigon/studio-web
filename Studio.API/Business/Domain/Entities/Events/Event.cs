@@ -30,7 +30,7 @@ namespace Studio.API.Business.Domain.Entities.Events
 
         public virtual IList<Photo> Photos { get; set; }
         
-        public virtual IList<Service> Services { get; set; }
+        public virtual IList<EventXService> EventXServices { get; set; }
 
     }
 }

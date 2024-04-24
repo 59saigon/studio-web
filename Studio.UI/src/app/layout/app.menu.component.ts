@@ -23,7 +23,9 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Management',
                 items:[
-                    {label: 'Wedding Management', icon: 'pi pi-fw pi-pencil', routerLink: ['/management/wedding']}
+                    {label: 'Wedding Management', icon: 'pi pi-heart', routerLink: ['/management/wedding']},
+                    {label: 'Service Management', icon: 'pi pi-cog', routerLink: ['/management/service']},
+                    {label: 'Event Management', icon: 'pi pi-calendar', routerLink: ['/management/event']}
                 ]
             },
             {

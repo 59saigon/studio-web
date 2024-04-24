@@ -36,8 +36,6 @@ export class WeddingListComponent implements OnInit {
     cols: any[] = [];
 
     statuses: any[] = [];
-    isDeletedes: any[] = [];
-    selectedIsDeleted: string;
 
     rowsPerPageOptions = [5, 10, 20];
 
@@ -67,13 +65,9 @@ export class WeddingListComponent implements OnInit {
             { label: 'COMPLETED', value: 'completed' },
             { label: 'DELETED', value: 'deleted' },
         ];
-        this.isDeletedes = [
-            { label: 'Deleted', value: 'deleted' },
-            { label: 'Not deleted', value: 'not deleted' },
-        ];
     }
     getListWedding() {
-        this.weddingService.getListData(this.wedding).subscribe({
+        this.weddingService.getListData('wedding', this.wedding).subscribe({
             next: (response) => {
                 this.messageResults = response;
                 this.weddings = this.messageResults.results;
@@ -113,7 +107,7 @@ export class WeddingListComponent implements OnInit {
         this.deleteWeddingsDialog = false;
         console.table(this.selectedWeddings);
         this.selectedWeddings.forEach((w) =>{
-            this.weddingService.deleteData(w).subscribe({
+            this.weddingService.deleteData('wedding',w).subscribe({
                 next: (response) => {
                     // Handle the successful response here
                     this.ngOnInit();
@@ -142,7 +136,7 @@ export class WeddingListComponent implements OnInit {
     confirmDelete() {
         this.deleteWeddingDialog = false;
 
-        this.weddingService.deleteData(this.wedding).subscribe({
+        this.weddingService.deleteData('wedding',this.wedding).subscribe({
             next: (response) => {
                 // Handle the successful response here
                 this.ngOnInit();
@@ -182,13 +176,9 @@ export class WeddingListComponent implements OnInit {
         this.submitted = true;
 
         if (this.wedding.weddingTittle?.trim()) {
-            console.log(this.selectedIsDeleted);
-            console.log(this.isDeletedes)
             if (this.wedding.id) {
                 this.setWedding();
-                this.wedding.isDeleted = this.selectedIsDeleted.toLowerCase() == "deleted" ? true : false;
-                console.table(this.wedding);
-                this.weddingService.putData(this.wedding).subscribe({
+                this.weddingService.putData('wedding',this.wedding).subscribe({
                     next: (response) => {
                         // Handle the successful response here
                         this.ngOnInit();
@@ -212,9 +202,8 @@ export class WeddingListComponent implements OnInit {
                 });
             } else {
                 this.setWedding();
-                this.wedding.isDeleted = this.selectedIsDeleted === "deleted" ? true : false;
                 // add and map from MessageView to MessageResult
-                this.weddingService.postData(this.wedding).subscribe({
+                this.weddingService.postData('wedding',this.wedding).subscribe({
                     next: (response) => {
                         this.ngOnInit();
                         this.messageService.add({

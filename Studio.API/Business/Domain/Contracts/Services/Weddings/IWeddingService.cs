@@ -7,6 +7,5 @@ namespace Studio.API.Business.Domain.Contracts.Services.Weddings
 {
     public interface IWeddingService : IBaseService
     {
-        Task<MessageResults<WeddingResult>> GetAll(WeddingGetAllQuery weddingGetAllQuery, CancellationToken cancellationToken = default);
     }
 }

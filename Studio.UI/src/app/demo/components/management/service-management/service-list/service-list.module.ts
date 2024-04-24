@@ -18,6 +18,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { ServiceListComponent } from './service-list.component';
+import { CalendarModule } from 'primeng/calendar';
 @NgModule({
     declarations: [ServiceListComponent],
     imports: [
@@ -37,6 +38,8 @@ import { ServiceListComponent } from './service-list.component';
         RadioButtonModule,
         InputNumberModule,
         DialogModule,
+        CalendarModule,
+        ToastModule
     ],
 })
 export class ServiceListModule {}

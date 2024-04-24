@@ -12,6 +12,7 @@ namespace Studio.API.Business.Domain.Configs.Mapping
             LocationMapping();
             EventMapping();
             UserMapping();
+            ServiceMapping();
         }
         
     }

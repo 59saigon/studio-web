@@ -92,7 +92,7 @@ namespace Studio.API.Data.Repositories.Base
         public async Task<IList<TEntity>> GetAll(CancellationToken cancellationToken = default)
         {
             var queryable = GetQueryable(cancellationToken);
-            var result = await queryable.ToListAsync();
+            var result = await queryable.Where(entity => !entity.IsDeleted).ToListAsync();
             return result;
         }
         #endregion

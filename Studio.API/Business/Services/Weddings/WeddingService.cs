@@ -22,9 +22,6 @@ namespace Studio.API.Business.Services.Weddings
             _weddingRepository = _unitOfWork.WeddingRepository;
         }
 
-        public Task<MessageResults<WeddingResult>> GetAll(WeddingGetAllQuery weddingGetAllQuery, CancellationToken cancellationToken = default)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

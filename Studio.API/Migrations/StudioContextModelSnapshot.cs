@@ -72,6 +72,45 @@ namespace Studio.API.Migrations
                     b.ToTable("Event");
                 });
 
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.EventXService", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("EventId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastUpdatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastUpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("ServiceId")
+                        .IsRequired()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EventId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("EventXService");
+                });
+
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.City", b =>
                 {
                     b.Property<Guid>("Id")
@@ -231,9 +270,6 @@ namespace Studio.API.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("EventId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -261,8 +297,6 @@ namespace Studio.API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("EventId");
 
                     b.ToTable("Service");
                 });
@@ -433,6 +467,23 @@ namespace Studio.API.Migrations
                     b.Navigation("Wedding");
                 });
 
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.EventXService", b =>
+                {
+                    b.HasOne("Studio.API.Business.Domain.Entities.Events.Event", "Event")
+                        .WithMany("EventXServices")
+                        .HasForeignKey("EventId");
+
+                    b.HasOne("Studio.API.Business.Domain.Entities.Services.Service", "Service")
+                        .WithMany("EventXServices")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+
+                    b.Navigation("Service");
+                });
+
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.City", b =>
                 {
                     b.HasOne("Studio.API.Business.Domain.Entities.Locations.Country", "Country")
@@ -466,17 +517,6 @@ namespace Studio.API.Migrations
                     b.Navigation("Event");
                 });
 
-            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Services.Service", b =>
-                {
-                    b.HasOne("Studio.API.Business.Domain.Entities.Events.Event", "Event")
-                        .WithMany("Services")
-                        .HasForeignKey("EventId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Event");
-                });
-
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Users.User", b =>
                 {
                     b.HasOne("Studio.API.Business.Domain.Entities.Users.Role", "Role")
@@ -490,9 +530,9 @@ namespace Studio.API.Migrations
 
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Events.Event", b =>
                 {
-                    b.Navigation("Photos");
+                    b.Navigation("EventXServices");
 
-                    b.Navigation("Services");
+                    b.Navigation("Photos");
                 });
 
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.City", b =>
@@ -508,6 +548,11 @@ namespace Studio.API.Migrations
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Locations.Location", b =>
                 {
                     b.Navigation("Events");
+                });
+
+            modelBuilder.Entity("Studio.API.Business.Domain.Entities.Services.Service", b =>
+                {
+                    b.Navigation("EventXServices");
                 });
 
             modelBuilder.Entity("Studio.API.Business.Domain.Entities.Users.Role", b =>

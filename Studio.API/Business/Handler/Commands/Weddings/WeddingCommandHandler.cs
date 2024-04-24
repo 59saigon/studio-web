@@ -8,7 +8,6 @@ using Studio.API.Business.Domain.Models.Weddings;
 using Studio.API.Business.Domain.Results.Messages;
 using Studio.API.Business.Domain.Results.Weddings;
 using Studio.API.Business.Handler.Commands.Base;
-using Studio.API.Business.Services.Weddings;
 
 namespace Studio.API.Business.Handler.Commands.Weddings
 {
