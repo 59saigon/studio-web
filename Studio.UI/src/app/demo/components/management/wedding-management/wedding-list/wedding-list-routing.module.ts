@@ -6,7 +6,8 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forChild([
-		{ path: '', component: WeddingListComponent }
+		{ path: '', component: WeddingListComponent },
+    { path: '**', redirectTo: '/notfound' }
 	])],
   exports: [RouterModule]
 })

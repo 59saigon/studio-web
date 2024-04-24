@@ -7,3 +7,4 @@ export interface WeddingGetByIdQuery extends GetByIdQuery{
 export interface WeddingGetAllQuery extends GetAllQuery{
     
 }
+

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ServiceListRoutingModule } from './service-list-routing.module';
+
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { FileUploadModule } from 'primeng/fileupload';
@@ -15,15 +17,12 @@ import { DropdownModule } from 'primeng/dropdown';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
-import {CalendarModule} from 'primeng/calendar';
-
-import { WeddingListRoutingModule } from './wedding-list-routing.module';
-import { WeddingListComponent } from './wedding-list.component';
-
+import { ServiceListComponent } from './service-list.component';
 @NgModule({
+    declarations: [ServiceListComponent],
     imports: [
         CommonModule,
-        WeddingListRoutingModule,
+        ServiceListRoutingModule,
         TableModule,
         FileUploadModule,
         FormsModule,
@@ -38,9 +37,6 @@ import { WeddingListComponent } from './wedding-list.component';
         RadioButtonModule,
         InputNumberModule,
         DialogModule,
-        CalendarModule,
-        ToastModule
     ],
-    declarations: [WeddingListComponent]
 })
-export class WeddingListModule {}
+export class ServiceListModule {}

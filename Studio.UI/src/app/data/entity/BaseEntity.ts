@@ -1,7 +1,7 @@
 import { Guid } from "guid-typescript";
 
-export interface BaseResult{
-    id?: Guid;
+export interface BaseEntity{
+    id: Guid;
     createdBy: string;
     createdDate: Date;
     lastUpdatedBy: string;

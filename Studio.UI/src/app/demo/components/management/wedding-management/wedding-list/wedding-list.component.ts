@@ -1,166 +1,297 @@
+import { DatePipe, formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/demo/api/product';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
-import { ProductService } from 'src/app/demo/service/product.service';
+import { Wedding } from 'src/app/data/entity/Wedding';
+import {
+    MessageResult,
+    MessageResults,
+} from 'src/app/data/results/MessageResult';
+import { MessageView, MessageViews } from 'src/app/data/views/MessageView';
 import { WeddingService } from 'src/app/demo/service/management/wedding.service';
-import { WeddingGetAllQuery } from 'src/app/data/queries/WeddingQuery';
-import { MessageResults } from 'src/app/data/results/MessageResult';
-import { WeddingResult } from 'src/app/data/results/WeddingResult';
 @Component({
-  selector: 'app-wedding-list',
-  templateUrl: './wedding-list.component.html',
-  styleUrl: './wedding-list.component.scss',
-  providers: [MessageService, WeddingService]
+    selector: 'app-wedding-list',
+    templateUrl: './wedding-list.component.html',
+    styleUrl: './wedding-list.component.scss',
+    providers: [MessageService, WeddingService, DatePipe],
 })
 export class WeddingListComponent implements OnInit {
-  productDialog: boolean = false;
+    weddingDialog: boolean = false;
 
-  deleteProductDialog: boolean = false;
+    deleteWeddingDialog: boolean = false;
 
-  deleteProductsDialog: boolean = false;
+    deleteWeddingsDialog: boolean = false;
 
-  products: Product[] = [];
+    weddings: Wedding[] = [];
 
-  product: Product = {};
+    wedding: Wedding = {} as Wedding;
 
-  selectedProducts: Product[] = [];
+    startDateNG: Date;
+    endDateNG: Date;
 
-  submitted: boolean = false;
+    selectedWeddings: Wedding[] = [];
 
-  cols: any[] = [];
+    submitted: boolean = false;
 
-  statuses: any[] = [];
+    cols: any[] = [];
 
-  rowsPerPageOptions = [5, 10, 20];
+    statuses: any[] = [];
+    isDeletedes: any[] = [];
+    selectedIsDeleted: string;
 
-  constructor(private productService: ProductService, private messageService: MessageService
-    , private weddingService: WeddingService
-  ) { }
+    rowsPerPageOptions = [5, 10, 20];
 
-  weddingGetAllCommand: WeddingGetAllQuery = {} as WeddingGetAllQuery;
-  messageResut!: MessageResults<WeddingResult>;
-  weddings!: WeddingResult[];
-  ngOnInit() {
-      this.getListWedding();
+    constructor(
+        private weddingService: WeddingService,
+        private messageService: MessageService,
+        private datePipe: DatePipe
+    ) {}
 
-      this.cols = [
-          { field: 'product', header: 'Product' },
-          { field: 'price', header: 'Price' },
-          { field: 'category', header: 'Category' },
-          { field: 'rating', header: 'Reviews' },
-          { field: 'inventoryStatus', header: 'Status' }
-      ];
+    messageResults!: MessageResults<Wedding>;
+    messageResult!: MessageResult<Wedding>;
+    messageView!: MessageView<Wedding>;
+    messageViews!: MessageViews<Wedding>;
+    ngOnInit() {
+        this.getListWedding();
 
-      this.statuses = [
-          { label: 'OPEN', value: 'open' },
-          { label: 'COMPLETED', value: 'completed' },
-          { label: 'DELETED', value: 'deleted' }
-      ];
-  }
-  getListWedding() {
-    this.weddingService
-      .getListData(this.weddingGetAllCommand)
-      .subscribe({
-        next: (response) => {
-          this.messageResut = response;
-          this.weddings = this.messageResut.results;
-          console.table(this.weddings)
-          // Handle the successful response here
-        },
-        error: (err) => {
-          console.error('Error occurred:', err);
-          // Handle the error here
-        },
-      });
-  }
+        this.cols = [
+            { field: 'wedding', header: 'Wedding' },
+            { field: 'price', header: 'Price' },
+            { field: 'category', header: 'Category' },
+            { field: 'rating', header: 'Reviews' },
+            { field: 'inventoryStatus', header: 'Status' },
+        ];
 
-  openNew() {
-      this.product = {};
-      this.submitted = false;
-      this.productDialog = true;
-  }
+        this.statuses = [
+            { label: 'OPEN', value: 'open' },
+            { label: 'COMPLETED', value: 'completed' },
+            { label: 'DELETED', value: 'deleted' },
+        ];
+        this.isDeletedes = [
+            { label: 'Deleted', value: 'deleted' },
+            { label: 'Not deleted', value: 'not deleted' },
+        ];
+    }
+    getListWedding() {
+        this.weddingService.getListData(this.wedding).subscribe({
+            next: (response) => {
+                this.messageResults = response;
+                this.weddings = this.messageResults.results;
+                // Handle the successful response here
+            },
+            error: (err) => {
+                console.error('Error occurred:', err);
+                // Handle the error here
+            },
+        });
+    }
 
-  deleteSelectedProducts() {
-      this.deleteProductsDialog = true;
-  }
+    openNew() {
+        this.wedding = {} as Wedding;
+        this.submitted = false;
+        this.weddingDialog = true;
+    }
 
-  editProduct(product: Product) {
-      this.product = { ...product };
-      this.productDialog = true;
-  }
+    deleteSelectedWeddings() {
+        this.deleteWeddingsDialog = true;
+    }
 
-  deleteProduct(product: Product) {
-      this.deleteProductDialog = true;
-      this.product = { ...product };
-  }
+    editWedding(wedding: Wedding) {
+        this.wedding = { ...wedding };
 
-  confirmDeleteSelected() {
-      this.deleteProductsDialog = false;
-      this.products = this.products.filter(val => !this.selectedProducts.includes(val));
-      this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Products Deleted', life: 3000 });
-      this.selectedProducts = [];
-  }
+        // Config to view edit
+        this.convertDateWeddingFromDbToView();
+        this.weddingDialog = true;
+    }
 
-  confirmDelete() {
-      this.deleteProductDialog = false;
-      this.products = this.products.filter(val => val.id !== this.product.id);
-      this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Deleted', life: 3000 });
-      this.product = {};
-  }
+    deleteWedding(wedding: Wedding) {
+        this.deleteWeddingDialog = true;
+        this.wedding = { ...wedding };
+    }
 
-  hideDialog() {
-      this.productDialog = false;
-      this.submitted = false;
-  }
+    confirmDeleteSelected() {
+        this.deleteWeddingsDialog = false;
+        console.table(this.selectedWeddings);
+        this.selectedWeddings.forEach((w) =>{
+            this.weddingService.deleteData(w).subscribe({
+                next: (response) => {
+                    // Handle the successful response here
+                    this.ngOnInit();
+                    this.messageService.add({
+                        severity: 'success',
+                        summary: 'Successful',
+                        detail: 'Wedding Deleted',
+                        life: 3000,
+                    });
+                },
+                error: (err) => {
+                    console.error('Error occurred:', err);
+                    // Handle the error here
+                    this.messageService.add({
+                        severity: 'error',
+                        summary: 'Error',
+                        detail: 'Not Delete',
+                        life: 3000,
+                    });
+                },
+            });
+        })
+        this.selectedWeddings = [];
+    }
 
-  saveProduct() {
-      this.submitted = true;
+    confirmDelete() {
+        this.deleteWeddingDialog = false;
 
-      if (this.product.name?.trim()) {
-          if (this.product.id) {
-              // @ts-ignore
-              this.product.inventoryStatus = this.product.inventoryStatus.value ? this.product.inventoryStatus.value : this.product.inventoryStatus;
-              this.products[this.findIndexById(this.product.id)] = this.product;
-              this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Updated', life: 3000 });
-          } else {
-              this.product.id = this.createId();
-              this.product.code = this.createId();
-              this.product.image = 'product-placeholder.svg';
-              // @ts-ignore
-              this.product.inventoryStatus = this.product.inventoryStatus ? this.product.inventoryStatus.value : 'INSTOCK';
-              this.products.push(this.product);
-              this.messageService.add({ severity: 'success', summary: 'Successful', detail: 'Product Created', life: 3000 });
-          }
+        this.weddingService.deleteData(this.wedding).subscribe({
+            next: (response) => {
+                // Handle the successful response here
+                this.ngOnInit();
+                this.messageService.add({
+                    severity: 'success',
+                    summary: 'Successful',
+                    detail: 'Wedding Deleted',
+                    life: 3000,
+                });
+            },
+            error: (err) => {
+                console.error('Error occurred:', err);
+                // Handle the error here
+                this.messageService.add({
+                    severity: 'error',
+                    summary: 'Error',
+                    detail: 'Not Delete',
+                    life: 3000,
+                });
+            },
+        });
+        
+        this.wedding = {} as Wedding;
+    }
 
-          this.products = [...this.products];
-          this.productDialog = false;
-          this.product = {};
-      }
-  }
+    hideDialog() {
+        this.weddingDialog = false;
+        this.submitted = false;
+    }
 
-  findIndexById(id: string): number {
-      let index = -1;
-      for (let i = 0; i < this.products.length; i++) {
-          if (this.products[i].id === id) {
-              index = i;
-              break;
-          }
-      }
+    resetData() {
+        this.wedding = {} as Wedding;
+        this.messageResult = {} as MessageResult<Wedding>;
+        this.messageResults = {} as MessageResults<Wedding>;
+    }
+    saveWedding() {
+        this.submitted = true;
 
-      return index;
-  }
+        if (this.wedding.weddingTittle?.trim()) {
+            console.log(this.selectedIsDeleted);
+            console.log(this.isDeletedes)
+            if (this.wedding.id) {
+                this.setWedding();
+                this.wedding.isDeleted = this.selectedIsDeleted.toLowerCase() == "deleted" ? true : false;
+                console.table(this.wedding);
+                this.weddingService.putData(this.wedding).subscribe({
+                    next: (response) => {
+                        // Handle the successful response here
+                        this.ngOnInit();
+                        this.messageService.add({
+                            severity: 'success',
+                            summary: 'Successful',
+                            detail: 'Wedding Updated',
+                            life: 3000,
+                        });
+                    },
+                    error: (err) => {
+                        console.error('Error occurred:', err);
+                        // Handle the error here
+                        this.messageService.add({
+                            severity: 'error',
+                            summary: 'Error',
+                            detail: 'Not update',
+                            life: 3000,
+                        });
+                    },
+                });
+            } else {
+                this.setWedding();
+                this.wedding.isDeleted = this.selectedIsDeleted === "deleted" ? true : false;
+                // add and map from MessageView to MessageResult
+                this.weddingService.postData(this.wedding).subscribe({
+                    next: (response) => {
+                        this.ngOnInit();
+                        this.messageService.add({
+                            severity: 'success',
+                            summary: 'Successful',
+                            detail: 'Wedding Created',
+                            life: 3000,
+                        });
+                    },
+                    error: (err) => {
+                        console.error('Error occurred:', err);
+                        // Handle the error here
+                        this.messageService.add({
+                            severity: 'error',
+                            summary: 'Error',
+                            detail: 'Not create',
+                            life: 3000,
+                        });
+                    },
+                });
+            }
 
-  createId(): string {
-      let id = '';
-      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      for (let i = 0; i < 5; i++) {
-          id += chars.charAt(Math.floor(Math.random() * chars.length));
-      }
-      return id;
-  }
+            this.weddingDialog = false;
+        }
+    }
 
-  onGlobalFilter(table: Table, event: Event) {
-      table.filterGlobal((event.target as HTMLInputElement).value, 'contains');
-  }
+    findIndexById(id: string): number {
+        let index = -1;
+        for (let i = 0; i < this.weddings.length; i++) {
+            if (this.weddings[i].id.toString() === id) {
+                index = i;
+                break;
+            }
+        }
+
+        return index;
+    }
+
+    onGlobalFilter(table: Table, event: Event) {
+        table.filterGlobal(
+            (event.target as HTMLInputElement).value,
+            'contains'
+        );
+    }
+
+    setWedding() {
+        this.setWeddingBase();
+        this.convertDateWeddingFromViewToDb();
+    }
+
+    setWeddingBase() {
+        if (this.wedding.id) {
+            this.wedding.lastUpdatedBy = 'User';
+            this.wedding.isDeleted = false;
+        } else {
+            this.wedding.createdDate = new Date();
+            this.wedding.createdBy = 'User';
+            this.wedding.lastUpdatedDate = new Date();
+            this.wedding.lastUpdatedBy = 'User';
+            this.wedding.isDeleted = false;
+        }
+    }
+
+    convertDateWeddingFromDbToView() {
+        this.startDateNG = new Date(this.wedding.startDate);
+        this.endDateNG = new Date(this.wedding.endDate);
+    }
+
+    convertDateWeddingFromViewToDb() {
+        // Config time zone
+        this.wedding.startDate = new Date(
+            this.startDateNG.getTime() -
+                this.startDateNG.getTimezoneOffset() * 60000
+        );
+        this.wedding.endDate = new Date(
+            this.endDateNG.getTime() -
+                this.endDateNG.getTimezoneOffset() * 60000
+        );
+    }
 }

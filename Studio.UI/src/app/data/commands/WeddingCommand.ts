@@ -1,3 +1,4 @@
+import { Guid } from 'guid-typescript';
 import {
   CreateCommand,
   DeleteCommand,
@@ -10,6 +11,7 @@ export interface WeddingCreateCommand extends CreateCommand {
   status?: string; // Optional field
   startDate: Date; // Date in TypeScript
   endDate: Date;
+  id?: Guid,
   createdBy: string;
   createdDate: Date;
   lastUpdatedBy: string;
@@ -17,6 +19,15 @@ export interface WeddingCreateCommand extends CreateCommand {
   isDeleted: boolean;
 }
 
-export interface WeddingUpdateCommand extends UpdateCommand {}
+export interface WeddingUpdateCommand extends UpdateCommand {
+  weddingTittle: string; // Corrected spelling
+  weddingDescription?: string; // Optional field
+  status?: string; // Optional field
+  startDate: Date; // Date in TypeScript
+  endDate: Date;
+  lastUpdatedBy: string;
+  lastUpdatedDate?: Date; // Optional Date
+  isDeleted: boolean;
+}
 
 export interface WeddingDeleteCommand extends DeleteCommand {}
