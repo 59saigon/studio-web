@@ -5,7 +5,6 @@ import { EventManagementRoutingModule } from './event-management-routing.module'
 
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     EventManagementRoutingModule

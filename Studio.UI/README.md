@@ -33,4 +33,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 cmd: ng g m [module-name] --routing 
 
 ## How to create component + module + routing
- ng g c wedding-list  && ng g m wedding-list --routing
+ ng g c location-list  && ng g m wedding-list --routing

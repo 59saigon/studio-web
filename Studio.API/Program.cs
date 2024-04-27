@@ -80,6 +80,8 @@ builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 builder.Services.AddTransient<IWeddingService, WeddingService>();
 
 builder.Services.AddScoped<ILocationService, LocationService>();
+builder.Services.AddScoped<ICountryService, CountryService>();
+builder.Services.AddScoped<ICityService, CityService>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 

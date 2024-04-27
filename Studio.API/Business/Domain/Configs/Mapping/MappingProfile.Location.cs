@@ -14,6 +14,16 @@ namespace Studio.API.Business.Domain.Configs.Mapping
             CreateMap<Location, LocationCreateCommand>().ReverseMap();
             CreateMap<Location, LocationView>().ReverseMap();
             CreateMap<Location, LocationUpdateCommand>().ReverseMap();
+
+            CreateMap<City, CityResult>().ReverseMap();
+            CreateMap<City, CityCreateCommand>().ReverseMap();
+            CreateMap<City, CityView>().ReverseMap();
+            CreateMap<City, CityUpdateCommand>().ReverseMap();
+
+            CreateMap<Country, CountryResult>().ReverseMap();
+            CreateMap<Country, CountryCreateCommand>().ReverseMap();
+            CreateMap<Country, CountryView>().ReverseMap();
+            CreateMap<Country, CountryUpdateCommand>().ReverseMap();
         }
     }
 }

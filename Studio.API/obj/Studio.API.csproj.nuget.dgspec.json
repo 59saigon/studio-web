@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj": {}
+    "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj": {
+    "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
+        "projectUniqueName": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
         "projectName": "Studio.API",
-        "projectPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
+        "projectPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Studio.API.csproj",
         "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\obj\\",
+        "outputPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,10 +52,6 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
-            },
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.4.4, )"
             },
             "FluentValidation": {
               "target": "Package",

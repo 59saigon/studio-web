@@ -1,6 +1,4 @@
-import { Guid } from 'guid-typescript';
 import { BaseEntity } from './BaseEntity';
-import { Event } from './Event';
 import { EventXService } from './EventXService';
 
 export interface Service extends BaseEntity {

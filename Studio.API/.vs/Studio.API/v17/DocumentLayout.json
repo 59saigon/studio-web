@@ -1,126 +1,98 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\",
+  "WorkspaceRootPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\configs\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\events\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\events\\ieventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\events\\eventqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\events\\eventqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\services\\events\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\services\\events\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\services\\locations\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\services\\locations\\countryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\results\\events\\eventresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\results\\events\\eventresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\locations\\countryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\locations\\countryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\configs\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\configs\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\configs\\mapping\\mappingprofile.service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\configs\\mapping\\mappingprofile.service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\services\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\services\\services\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\services\\weddings\\weddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\services\\weddings\\weddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\weddings\\iweddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\weddings\\iweddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\services\\servicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\services\\servicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\weddings\\weddingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\weddings\\weddingqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\commands\\weddings\\weddingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\commands\\weddings\\weddingcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\commands\\services\\servicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\commands\\services\\servicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\unitofworks\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\unitofworks\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\unitofworks\\ibaseunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\unitofworks\\ibaseunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\repositories\\services\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\repositories\\services\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\apis\\controllers\\services\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\services\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\commands\\services\\serviceupdatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\commands\\services\\serviceupdatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\commands\\services\\servicecreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\commands\\services\\servicecreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingupdatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\commands\\weddings\\weddingupdatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingdeletecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\commands\\weddings\\weddingdeletecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\commands\\weddings\\weddingcreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\commands\\weddings\\weddingcreatecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\apis\\controllers\\weddings\\weddingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\weddings\\weddingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\queries\\services\\servicegetallquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\queries\\services\\servicegetallquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\queries\\services\\servicegetbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\queries\\services\\servicegetbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\migrations\\20240424133805_eventxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:migrations\\20240424133805_eventxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\events\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\events\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\photos\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\photos\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\locations\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\locations\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\locations\\country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\locations\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\locations\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\photos\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\photos\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\entities\\locations\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\entities\\locations\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\apis\\controllers\\events\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\events\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\apis\\controllers\\locations\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\locations\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\locations\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\locations\\icountryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\repositories\\bases\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\repositories\\bases\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\services\\locations\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\services\\locations\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\locations\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\locations\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\locations\\cityqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\locations\\cityqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\apis\\controllers\\locations\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\locations\\citycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\handler\\commands\\locations\\countrycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\commands\\locations\\countrycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\apis\\controllers\\locations\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\locations\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\repositories\\locations\\icountryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\repositories\\locations\\icountryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\business\\handler\\commands\\locations\\citycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\commands\\locations\\citycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\data\\repositories\\locations\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:data\\repositories\\locations\\cityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|d:\\working\\nhumystudio_webapi\\studio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -154,392 +126,301 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MappingProfile.Service.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.Service.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Configs\\Mapping\\MappingProfile.Service.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.Service.cs",
-              "RelativeToolTip": "Business\\Domain\\Configs\\Mapping\\MappingProfile.Service.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:33:27.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAwA4AAAAdAAAA",
+              "Title": "IEventService.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Events\\IEventService.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Events\\IEventService.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Events\\IEventService.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Events\\IEventService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:32:35.603Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IWeddingService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Weddings\\IWeddingService.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Weddings\\IWeddingService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Weddings\\IWeddingService.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Weddings\\IWeddingService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:30:21.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeddingService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Weddings\\WeddingService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Weddings\\WeddingService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Weddings\\WeddingService.cs",
-              "RelativeToolTip": "Business\\Services\\Weddings\\WeddingService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAYwBUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:30:05.294Z",
+              "WhenOpened": "2024-04-27T19:03:43.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ServiceService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Services\\ServiceService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Services\\ServiceService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Services\\ServiceService.cs",
-              "RelativeToolTip": "Business\\Services\\Services\\ServiceService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAYwA0AAAAtAAAA",
+              "Title": "EventService.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Events\\EventService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Events\\EventService.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Events\\EventService.cs",
+              "RelativeToolTip": "Business\\Services\\Events\\EventService.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAcwBAAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:30:00.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAADwvy4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:28:29.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WeddingQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Weddings\\WeddingQueryHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Weddings\\WeddingQueryHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Weddings\\WeddingQueryHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Queries\\Weddings\\WeddingQueryHandler.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAYwB8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:27:31.486Z",
+              "WhenOpened": "2024-04-27T18:33:04.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "WeddingCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Commands\\Weddings\\WeddingCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Title": "EventController.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventController.cs",
+              "RelativeDocumentMoniker": "APIs\\Controllers\\Events\\EventController.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventController.cs",
+              "RelativeToolTip": "APIs\\Controllers\\Events\\EventController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:25:12.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IBaseUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\UnitOfWorks\\IBaseUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\UnitOfWorks\\IBaseUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\UnitOfWorks\\IBaseUnitOfWork.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\UnitOfWorks\\IBaseUnitOfWork.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:26:10.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\UnitOfWorks\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\UnitOfWorks\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\UnitOfWorks\\IUnitOfWork.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\UnitOfWorks\\IUnitOfWork.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:26:10.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IServiceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:25:52.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IServiceService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:25:46.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ServiceQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:25:35.808Z",
+              "WhenOpened": "2024-04-27T18:26:56.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ServiceCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Services\\ServiceCommandHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Commands\\Services\\ServiceCommandHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Services\\ServiceCommandHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Commands\\Services\\ServiceCommandHandler.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAA7AAAA",
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Locations\\LocationController.cs",
+              "RelativeDocumentMoniker": "APIs\\Controllers\\Locations\\LocationController.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Locations\\LocationController.cs",
+              "RelativeToolTip": "APIs\\Controllers\\Locations\\LocationController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAB0AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:25:24.28Z",
+              "WhenOpened": "2024-04-27T17:52:02.359Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "WeddingCreateCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingCreateCommand.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAIAAAA",
+              "DocumentIndex": 1,
+              "Title": "EventQueryHandler.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABYAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:23:28.54Z",
+              "WhenOpened": "2024-04-27T17:49:04.194Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ServiceUpdateCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Services\\ServiceUpdateCommand.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Commands\\Services\\ServiceUpdateCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Services\\ServiceUpdateCommand.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Commands\\Services\\ServiceUpdateCommand.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABUAAAABAAAA",
+              "DocumentIndex": 4,
+              "Title": "EventResult.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Results\\Events\\EventResult.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Results\\Events\\EventResult.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Results\\Events\\EventResult.cs",
+              "RelativeToolTip": "Business\\Domain\\Results\\Events\\EventResult.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:22:52.346Z",
+              "WhenOpened": "2024-04-27T16:16:24.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "WeddingUpdateCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingUpdateCommand.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAIAAAA",
+              "DocumentIndex": 11,
+              "Title": "ICountryService.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Locations\\ICountryService.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Locations\\ICountryService.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Locations\\ICountryService.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Locations\\ICountryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:22:32.596Z",
+              "WhenOpened": "2024-04-27T15:09:31.087Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "WeddingDeleteCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingDeleteCommand.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingDeleteCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingDeleteCommand.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Commands\\Weddings\\WeddingDeleteCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "CountryService.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Locations\\CountryService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Locations\\CountryService.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Locations\\CountryService.cs",
+              "RelativeToolTip": "Business\\Services\\Locations\\CountryService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwBsAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:21:54.117Z",
+              "WhenOpened": "2024-04-27T15:09:44.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ServiceCreateCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Services\\ServiceCreateCommand.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Commands\\Services\\ServiceCreateCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Services\\ServiceCreateCommand.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Commands\\Services\\ServiceCreateCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
+              "Title": "CityController.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Locations\\CityController.cs",
+              "RelativeDocumentMoniker": "APIs\\Controllers\\Locations\\CityController.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Locations\\CityController.cs",
+              "RelativeToolTip": "APIs\\Controllers\\Locations\\CityController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:21:49.932Z",
+              "WhenOpened": "2024-04-27T15:08:53.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ServiceGetByIdQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetByIdQuery.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetByIdQuery.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetByIdQuery.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetByIdQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABCAAAA",
+              "DocumentIndex": 5,
+              "Title": "CountryQueryHandler.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Locations\\CountryQueryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Locations\\CountryQueryHandler.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Locations\\CountryQueryHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Queries\\Locations\\CountryQueryHandler.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:20:20.009Z",
+              "WhenOpened": "2024-04-27T14:41:29.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ServiceGetAllQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetAllQuery.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetAllQuery.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetAllQuery.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Queries\\Services\\ServiceGetAllQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "DocumentIndex": 17,
+              "Title": "CountryCommandHandler.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Locations\\CountryCommandHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Commands\\Locations\\CountryCommandHandler.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Locations\\CountryCommandHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Commands\\Locations\\CountryCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:20:06.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "WeddingController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "RelativeDocumentMoniker": "APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "RelativeToolTip": "APIs\\Controllers\\Weddings\\WeddingController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:18:46.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ServiceController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Services\\ServiceController.cs",
-              "RelativeDocumentMoniker": "APIs\\Controllers\\Services\\ServiceController.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Services\\ServiceController.cs",
-              "RelativeToolTip": "APIs\\Controllers\\Services\\ServiceController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAwAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T14:18:43.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "20240424133805_EventXService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Migrations\\20240424133805_EventXService.cs",
-              "RelativeDocumentMoniker": "Migrations\\20240424133805_EventXService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Migrations\\20240424133805_EventXService.cs",
-              "RelativeToolTip": "Migrations\\20240424133805_EventXService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T13:38:06.054Z",
+              "WhenOpened": "2024-04-27T14:41:25.694Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Services\\Service.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Entities\\Services\\Service.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Services\\Service.cs",
-              "RelativeToolTip": "Business\\Domain\\Entities\\Services\\Service.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Title": "CountryController.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Locations\\CountryController.cs",
+              "RelativeDocumentMoniker": "APIs\\Controllers\\Locations\\CountryController.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Locations\\CountryController.cs",
+              "RelativeToolTip": "APIs\\Controllers\\Locations\\CountryController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:53:15.573Z",
+              "WhenOpened": "2024-04-27T14:41:20.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 19,
+              "Title": "ICountryRepository.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Locations\\ICountryRepository.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Repositories\\Locations\\ICountryRepository.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Locations\\ICountryRepository.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Repositories\\Locations\\ICountryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T14:41:15.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Photo.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Photos\\Photo.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Photos\\Photo.cs",
               "RelativeDocumentMoniker": "Business\\Domain\\Entities\\Photos\\Photo.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Photos\\Photo.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Photos\\Photo.cs",
               "RelativeToolTip": "Business\\Domain\\Entities\\Photos\\Photo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:52:56.706Z",
+              "WhenOpened": "2024-04-27T14:22:47.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 14,
+              "Title": "ICityService.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Locations\\ICityService.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Locations\\ICityService.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Locations\\ICityService.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Locations\\ICityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T13:42:29.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CityQueryHandler.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Locations\\CityQueryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Locations\\CityQueryHandler.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Locations\\CityQueryHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Queries\\Locations\\CityQueryHandler.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T13:40:38.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CityCommandHandler.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Locations\\CityCommandHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Commands\\Locations\\CityCommandHandler.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Locations\\CityCommandHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Commands\\Locations\\CityCommandHandler.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T13:40:37.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Bases\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Repositories\\Bases\\IBaseRepository.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Bases\\IBaseRepository.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Repositories\\Bases\\IBaseRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAIwAsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T13:36:35.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Locations\\CityService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Locations\\CityService.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Locations\\CityService.cs",
+              "RelativeToolTip": "Business\\Services\\Locations\\CityService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAmwBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T13:13:08.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CityRepository.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Data\\Repositories\\Locations\\CityRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Locations\\CityRepository.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Data\\Repositories\\Locations\\CityRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Locations\\CityRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T13:12:37.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Country.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\Country.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\Country.cs",
               "RelativeDocumentMoniker": "Business\\Domain\\Entities\\Locations\\Country.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\Country.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\Country.cs",
               "RelativeToolTip": "Business\\Domain\\Entities\\Locations\\Country.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAowAsAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:51:55.027Z",
+              "WhenOpened": "2024-04-27T12:37:23.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "City.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\City.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Entities\\Locations\\City.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\City.cs",
-              "RelativeToolTip": "Business\\Domain\\Entities\\Locations\\City.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAADgv1IAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:50:06.79Z",
+              "WhenOpened": "2024-04-27T12:14:02.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Location.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\Location.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Entities\\Locations\\Location.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Locations\\Location.cs",
-              "RelativeToolTip": "Business\\Domain\\Entities\\Locations\\Location.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "DocumentIndex": 6,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
+              "ToolTip": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "Business\\Domain\\Configs\\Mapping\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:46:59.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Event.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Events\\Event.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Entities\\Events\\Event.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Entities\\Events\\Event.cs",
-              "RelativeToolTip": "Business\\Domain\\Entities\\Events\\Event.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T12:43:59.388Z",
+              "WhenOpened": "2024-04-27T12:13:04.957Z",
               "EditorCaption": ""
             }
           ]

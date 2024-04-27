@@ -11,8 +11,5 @@ public class Photo : BaseEntity
     
     public string Url { get; set; }
     
-    [ForeignKey("Event")] 
-    public Guid EventId { get; set; }
-
-    public virtual Event Event { get; set; }
+    public virtual IList<EventXPhoto> EventXPhotos { get; set; }
 }

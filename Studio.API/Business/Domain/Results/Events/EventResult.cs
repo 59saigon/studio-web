@@ -19,12 +19,12 @@ namespace Studio.API.Business.Domain.Results.Events
         
         public string? Status { get; set; }
 
-        public WeddingResult Wedding { get; set; }
+        public virtual WeddingResult Wedding { get; set; }
         
         public LocationResult Location { get; set; }
 
-        public IList<PhotoResult> Photos { get; set; }
-        
-        public IList<ServiceResult> Services { get; set; }
+        public IList<EventXServiceResult> EventXServices { get; set; }
+
+        public IList<EventXPhotoResult> EventXPhotos { get; set; }
     }
 }

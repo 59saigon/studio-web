@@ -28,9 +28,9 @@ namespace Studio.API.Business.Domain.Entities.Events
         
         public virtual Location Location { get; set; }
 
-        public virtual IList<Photo> Photos { get; set; }
-        
         public virtual IList<EventXService> EventXServices { get; set; }
+
+        public virtual IList<EventXPhoto> EventXPhotos { get; set; }
 
     }
 }

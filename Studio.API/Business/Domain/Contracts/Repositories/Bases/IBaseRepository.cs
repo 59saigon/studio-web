@@ -29,6 +29,5 @@ namespace Studio.API.Business.Domain.Contracts.Repositories.Bases
         void DeleteRange(IEnumerable<TEntity> entities);
         void CheckCancellationToken(CancellationToken cancellationToken = default);
 
-        
     }
 }

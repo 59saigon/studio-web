@@ -95,6 +95,8 @@ namespace Studio.API.Data.Repositories.Base
             var result = await queryable.Where(entity => !entity.IsDeleted).ToListAsync();
             return result;
         }
+
+        
         #endregion
 
         #region GetById(Guid) + GetByIds(IList<Guid>)

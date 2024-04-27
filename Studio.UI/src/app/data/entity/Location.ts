@@ -7,4 +7,6 @@ export interface Location extends BaseEntity{
     cityId: Guid; // Guid represented as string
     city?: City; // Reference to City class, optional
     events?: Event[];
+
+    
 }

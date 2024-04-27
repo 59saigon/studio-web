@@ -20,7 +20,7 @@ namespace Studio.API.Business.Handler.Queries.Events
 
         public Task<MessageResults<EventResult>> Handle(EventGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _eventService.GetAll<EventResult>();
+            return _eventService.GetAll(cancellationToken);
         }
 
         public Task<MessageResult<EventResult>> Handle(EventGetByIdQuery request, CancellationToken cancellationToken)

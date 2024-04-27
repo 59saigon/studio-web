@@ -14,6 +14,11 @@ export class ConstantService {
     return apiLink;
   }
 
+  private setInstanceByAPI(entity: string, rest: string): string {
+    var apiLink = `${Constants.BASE_URL}/api/${entity}/${rest}`;
+    return apiLink;
+  }
+
   receiveInstanceAPI(
     entity: string,
     rest: string,
@@ -44,7 +49,7 @@ export class ConstantService {
     rest: string,
     valueGetBy?: string
   ): string {
-    return `${this.setInstanceAPI(entity, rest)}-${valueGetBy}`;
+    return `${this.setInstanceByAPI(entity, rest)}-${valueGetBy}`;
   }
 
   private getInstanceAPI(entity: string, rest: string): string {

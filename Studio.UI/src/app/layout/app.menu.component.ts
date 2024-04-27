@@ -24,8 +24,12 @@ export class AppMenuComponent implements OnInit {
                 label: 'Management',
                 items:[
                     {label: 'Wedding Management', icon: 'pi pi-heart', routerLink: ['/management/wedding']},
+                    
+                    {label: 'Event Management', icon: 'pi pi-calendar', routerLink: ['/management/event']},
                     {label: 'Service Management', icon: 'pi pi-cog', routerLink: ['/management/service']},
-                    {label: 'Event Management', icon: 'pi pi-calendar', routerLink: ['/management/event']}
+
+                    {label: 'City Management', icon: 'pi pi-map-marker', routerLink: ['/management/city']},
+                    {label: 'Country Management', icon: 'pi pi-map-marker', routerLink: ['/management/country']},
                 ]
             },
             {
