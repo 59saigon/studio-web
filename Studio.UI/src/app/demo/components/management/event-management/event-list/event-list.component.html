@@ -101,9 +101,8 @@
                             <span class="p-column-title">Location</span>
                             {{event.location.locationName}}
                         </td>
-                        <td style="width:14%; min-width:10rem;">
-                            <span class="p-column-title">Status</span>
-                            {{event.status}}
+                        <td style="width:14%; min-width:10rem;"><span  class="p-column-title">Availibility</span>
+                            <span [class]="'event-status-' +(event.status ? event.status.toLowerCase() : '')">{{event.status}}</span>
                         </td>
                         
                         <td style="width:14%; min-width:10rem;"><span class="p-column-title">CreateDate</span>
