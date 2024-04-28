@@ -81,6 +81,8 @@ export class WeddingListComponent implements OnInit {
     }
 
     openNew() {
+        this.startDateNG = undefined
+        this.endDateNG = undefined
         this.wedding = {} as Wedding;
         this.submitted = false;
         this.weddingDialog = true;
@@ -256,6 +258,7 @@ export class WeddingListComponent implements OnInit {
 
     setWeddingBase() {
         if (this.wedding.id) {
+            this.wedding.lastUpdatedDate = new Date();
             this.wedding.lastUpdatedBy = 'User';
             this.wedding.isDeleted = false;
         } else {

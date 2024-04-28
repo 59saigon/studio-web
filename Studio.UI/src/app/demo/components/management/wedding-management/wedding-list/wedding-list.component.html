@@ -152,18 +152,17 @@
                         </ng-template>
                     </p-dropdown>
                 </div>
- 
-                
 
-                <div class="field">
-                    <label for="startDate">Start Date</label>
-                    <p-calendar appendTo="body" dateFormat="dd/mm/yy"  [(ngModel)]="startDateNG" [showIcon]="true" inputId="icon"></p-calendar>
+                <div class="formgrid grid">
+                    <div class="field col">
+                        <label for="startDate">Start Date</label>
+                        <p-calendar appendTo="body" dateFormat="dd/mm/yy"  [(ngModel)]="startDateNG" [showIcon]="true" inputId="icon"></p-calendar>
+                    </div>
+                    <div class="field col">
+                        <label for="endDate">End Date</label>
+                        <p-calendar appendTo="body" dateFormat="dd/mm/yy"  [(ngModel)]="endDateNG" [showIcon]="true" inputId="icon"></p-calendar>
+                    </div>
                 </div>
-                <div class="field">
-                    <label for="endDate">End Date</label>
-                    <p-calendar appendTo="body" dateFormat="dd/mm/yy"  [(ngModel)]="endDateNG" [showIcon]="true" inputId="icon"></p-calendar>
-                </div>
-
                 
             </ng-template>
 

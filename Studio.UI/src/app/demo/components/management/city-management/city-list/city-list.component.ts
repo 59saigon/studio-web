@@ -94,6 +94,7 @@ export class CityListComponent implements OnInit {
     }
 
     openNew() {
+        this.selectedCountry = undefined
         this.city = {} as City;
         this.submitted = false;
         this.cityDialog = true;
@@ -104,18 +105,19 @@ export class CityListComponent implements OnInit {
     }
 
     editCity(city: City) {
+        this.selectedCountry = this.countries.find(c => c.id === city.country.id);
         this.city = { ...city };
         this.cityDialog = true;
     }
 
     deleteCity(city: City) {
         this.deleteCityDialog = true;
+        this.selectedCountry = undefined;
         this.city = { ...city };
     }
 
     confirmDeleteSelected() {
         this.deleteCitysDialog = false;
-        console.table(this.selectedCitys);
         this.selectedCitys.forEach((w) => {
             this.cityService.deleteData('city', w).subscribe({
                 next: (response) => {
@@ -266,6 +268,7 @@ export class CityListComponent implements OnInit {
 
     setCityBase() {
         if (this.city.id) {
+            this.city.lastUpdatedDate = new Date();
             this.city.lastUpdatedBy = 'User';
             this.city.isDeleted = false;
         } else {

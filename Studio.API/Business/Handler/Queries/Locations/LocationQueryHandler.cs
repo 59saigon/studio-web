@@ -20,7 +20,7 @@ namespace Studio.API.Business.Handler.Queries.Locations
 
         public Task<MessageResults<LocationResult>> Handle(LocationGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _locationService.GetAll<LocationResult>();
+            return _locationService.GetAll(cancellationToken);
         }
 
         public Task<MessageResult<LocationResult>> Handle(LocationGetByIdQuery request, CancellationToken cancellationToken)

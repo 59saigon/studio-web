@@ -237,6 +237,7 @@ export class CountryListComponent implements OnInit{
 
   setCountryBase() {
       if (this.country.id) {
+        this.country.lastUpdatedDate = new Date();
           this.country.lastUpdatedBy = 'User';
           this.country.isDeleted = false;
       } else {

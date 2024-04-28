@@ -168,7 +168,7 @@
 <!-- country -->
                 <div class="formgrid grid">
                     <div class="field col">
-                        <p-dropdown (onChange)="getListCityByCountryId($event)" appendTo="body" [options]="countries" [(ngModel)]="selectedCountry" optionLabel="countryName" [filter]="true" filterBy="countryName"  placeholder="Select a Country">
+                        <p-dropdown (onChange)="getListCityByCountryId()" appendTo="body" [options]="countries" [(ngModel)]="selectedCountry" optionLabel="countryName" [filter]="true" filterBy="countryName"  placeholder="Select a Country">
                             <ng-template pTemplate="selectedItem">
                                 <div class="country-item country-item-value" *ngIf="selectedCountry">
                                     <div>{{selectedCountry.countryName}}</div>

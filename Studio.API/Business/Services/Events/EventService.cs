@@ -28,6 +28,8 @@ namespace Studio.API.Business.Services.Events
                 .Include(entity => entity.EventXPhotos)
                 .Include(entity => entity.EventXServices)
                 .Include(entity => entity.Location)
+                .Include(entity => entity.Location.City)
+                .Include(entity => entity.Location.City.Country)
                 .Include(entity => entity.Wedding)
                 .ToListAsync();
 

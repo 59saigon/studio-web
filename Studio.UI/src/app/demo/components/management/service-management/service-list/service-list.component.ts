@@ -253,6 +253,7 @@ export class ServiceListComponent implements OnInit {
 
     setServiceBase() {
         if (this.service.id) {
+            this.service.lastUpdatedDate = new Date();
             this.service.lastUpdatedBy = 'User';
             this.service.isDeleted = false;
         } else {

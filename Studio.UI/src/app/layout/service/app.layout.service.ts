@@ -24,7 +24,7 @@ interface LayoutState {
 })
 export class LayoutService {
     _config: AppConfig = {
-        ripple: false,
+        ripple: true,
         inputStyle: 'outlined',
         menuMode: 'static',
         colorScheme: 'light',
@@ -52,6 +52,7 @@ export class LayoutService {
     overlayOpen$ = this.overlayOpen.asObservable();
 
     constructor() {
+
         effect(() => {
             const config = this.config();
             if (this.updateStyle(config)) {

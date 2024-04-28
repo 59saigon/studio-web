@@ -75,7 +75,7 @@ export class EventListComponent implements OnInit {
         private locationService: LocationService,
         private weddingService: WeddingService,
         private datePipe: DatePipe
-    ) { }
+    ) {}
 
     messageResults!: MessageResults<EventEntity>;
     messageResult!: MessageResult<EventEntity>;
@@ -102,14 +102,14 @@ export class EventListComponent implements OnInit {
         this.getListEvent();
         this.getListCountry();
         this.getListWedding();
-
+        
         this.statuses = [
             { label: 'OPEN', value: 'open' },
             { label: 'COMPLETED', value: 'completed' },
             { label: 'DELETED', value: 'deleted' },
         ];
     }
-    getListCityByCountryId(event: Event) {
+    getListCityByCountryId() {
         this.cities = this.selectedCountry.cities;
         this.selectedCity = this.cities[0];
     }
@@ -157,6 +157,9 @@ export class EventListComponent implements OnInit {
     }
 
     openNew() {
+        this.selectedWedding = undefined
+        this.selectedCity = undefined
+        this.selectedCountry = undefined
         this.location = {} as Location;
         this.event = {} as EventEntity;
         this.submitted = false;
@@ -171,9 +174,24 @@ export class EventListComponent implements OnInit {
         this.event = { ...event };
         this.location = { ...event.location };
         this.wedding = { ...event.wedding };
-        this.selectedWedding = { ...event.wedding };
-        this.selectedCity = { ...event.location.city };
-        this.selectedCountry = { ...event.location.city.country };
+
+        // Ensure selectedCountry is the same reference as in the countries array
+        this.selectedCountry = this.countries.find(
+            (c) => c.id === event.location.city.country.id
+        );
+
+        this.getListCityByCountryId();
+
+        // Ensure selectedCity is the same reference as in the cities array
+        this.selectedCity = this.cities.find(
+            (c) => c.id === event.location.city.id
+        );
+
+        // Ensure selectedWedding is the same reference as in the weddings array
+        this.selectedWedding = this.weddings.find(
+            (w) => w.id === event.wedding.id
+        );
+
         this.eventDialog = true;
     }
 
@@ -298,7 +316,7 @@ export class EventListComponent implements OnInit {
                                 life: 3000,
                             });
                         },
-                    })
+                    });
             }
         }
     }
@@ -306,10 +324,9 @@ export class EventListComponent implements OnInit {
         this.submitted = true;
         // call api location to set in db in order to get locationId
         this.saveLocation(() => {
-            this.setEvent()
-            
+            this.setEvent();
+
             if (this.event.eventTittle?.trim()) {
-                
                 if (this.event.id) {
                     this.eventService.putData('event', this.event).subscribe({
                         next: (response) => {
@@ -334,7 +351,6 @@ export class EventListComponent implements OnInit {
                         },
                     });
                 } else {
-                    
                     this.eventService.postData('event', this.event).subscribe({
                         next: (response) => {
                             console.table(this.event);
@@ -345,7 +361,6 @@ export class EventListComponent implements OnInit {
                                 detail: 'Event Created',
                                 life: 3000,
                             });
-                            
                         },
                         error: (err) => {
                             console.error('Error occurred:', err);
@@ -362,8 +377,7 @@ export class EventListComponent implements OnInit {
 
                 this.eventDialog = false;
             }
-        }
-        );
+        });
     }
     //https://localhost:7099/api/location/get-by-id
     findIndexById(id: string): number {
@@ -393,6 +407,7 @@ export class EventListComponent implements OnInit {
 
     setEventBase() {
         if (this.event.id) {
+            this.event.lastUpdatedDate = new Date();
             this.event.lastUpdatedBy = 'User';
             this.event.isDeleted = false;
         } else {
@@ -410,6 +425,7 @@ export class EventListComponent implements OnInit {
     }
     setLocationBase() {
         if (this.location.id) {
+            this.location.lastUpdatedDate = new Date();
             this.location.lastUpdatedBy = 'User';
             this.location.isDeleted = false;
         } else {
