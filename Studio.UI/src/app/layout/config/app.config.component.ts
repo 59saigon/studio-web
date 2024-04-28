@@ -14,7 +14,9 @@ export class AppConfigComponent {
     constructor(
         public layoutService: LayoutService,
         public menuService: MenuService
-    ) {}
+    ) {
+        this.changeTheme('aura-dark-pink','dark');
+    }
 
     get visible(): boolean {
         return this.layoutService.state.configSidebarVisible;
