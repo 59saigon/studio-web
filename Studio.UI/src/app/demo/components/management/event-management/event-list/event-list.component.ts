@@ -404,9 +404,15 @@ export class EventListComponent implements OnInit {
     }
 
     navigateAfterSelected(event: EventEntity) {
-        this.router.navigate(['/management/event'], {
-            queryParams: { q: event.id },
-        });
+        // Navigate away first
+        this.router
+            .navigateByUrl('/', { skipLocationChange: true })
+            .then(() => {
+                // Navigate back with new query params
+                this.router.navigate(['/management/event'], {
+                    queryParams: { q: event.id },
+                });
+            });
         this.setShowDetails();
     }
 
