@@ -9,7 +9,5 @@ export interface Photo extends BaseEntity {
 }
 
 export interface PhotoGetAllQuery {
-    fromDate: Date;
-    toDate: Date;
     photoIds: Guid[]; // Sử dụng string[] nếu photoIds là các chuỗi UUID
 }

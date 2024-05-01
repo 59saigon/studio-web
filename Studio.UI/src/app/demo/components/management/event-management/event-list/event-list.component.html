@@ -7,24 +7,81 @@
             <p-toolbar styleClass="mb-4">
                 <ng-template pTemplate="left">
                     <div class="my-2">
-                        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
-                        <button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedEvents()" [disabled]="!selectedEvents || !selectedEvents.length"></button>
+                        <button
+                            pButton
+                            pRipple
+                            label="New"
+                            icon="pi pi-plus"
+                            class="p-button-success mr-2"
+                            (click)="openNew()"
+                        ></button>
+                        <button
+                            pButton
+                            pRipple
+                            label="Delete"
+                            icon="pi pi-trash"
+                            class="p-button-danger"
+                            (click)="deleteSelectedEvents()"
+                            [disabled]="
+                                !selectedEvents || !selectedEvents.length
+                            "
+                        ></button>
                     </div>
                 </ng-template>
 
                 <ng-template pTemplate="right">
-                    <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
-                    <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help" (click)="dt.exportCSV()"></button>
+                    <p-fileUpload
+                        mode="basic"
+                        accept="image/*"
+                        [maxFileSize]="1000000"
+                        label="Import"
+                        chooseLabel="Import"
+                        class="mr-2 inline-block"
+                    ></p-fileUpload>
+                    <button
+                        pButton
+                        pRipple
+                        label="Export"
+                        icon="pi pi-upload"
+                        class="p-button-help"
+                        (click)="dt.exportCSV()"
+                    ></button>
                 </ng-template>
             </p-toolbar>
 
-            <p-table #dt [value]="events" styleClass="p-datatable-sm" responsiveLayout="stack" [breakpoint]="'960px'" [columns]="cols" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="['eventName']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [(selection)]="selectedEvents" selectionMode="multiple" [rowHover]="true" dataKey="id">
+            <p-table
+                #dt
+                [value]="events"
+                styleClass="p-datatable-sm"
+                responsiveLayout="stack"
+                [breakpoint]="'960px'"
+                [columns]="cols"
+                responsiveLayout="scroll"
+                [rows]="10"
+                [globalFilterFields]="['eventName']"
+                [paginator]="true"
+                [rowsPerPageOptions]="[10, 20, 30]"
+                [showCurrentPageReport]="true"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [(selection)]="selectedEvents"
+                selectionMode="multiple"
+                [rowHover]="true"
+                dataKey="id"
+            >
                 <ng-template pTemplate="caption">
-                    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+                    <div
+                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+                    >
                         <h5 class="m-0">Manage Events</h5>
                         <span class="block mt-2 md:mt-0 p-input-icon-left">
                             <i class="pi pi-search"></i>
-                            <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Search..."  class="w-full sm:w-auto"/>
+                            <input
+                                pInputText
+                                type="text"
+                                (input)="onGlobalFilter(dt, $event)"
+                                placeholder="Search..."
+                                class="w-full sm:w-auto"
+                            />
                         </span>
                     </div>
                 </ng-template>
@@ -33,106 +90,153 @@
                         <th style="width: 3rem">
                             <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                         </th>
-                        <th pSortableColumn="id">Id <p-sortIcon field="code"></p-sortIcon></th>
-                        <th pSortableColumn="tittle" >
-                            Tittle 
+                        <th pSortableColumn="id">
+                            Id <p-sortIcon field="code"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="tittle">
+                            Tittle
                             <p-sortIcon field="tittle"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="description" >
+                        <th pSortableColumn="description">
                             Description
                             <p-sortIcon field="description"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="wedding" >
-                            Wedding 
+                        <th pSortableColumn="wedding">
+                            Wedding
                             <p-sortIcon field="wedding"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="location" >
-                            Location 
+                        <th pSortableColumn="location">
+                            Location
                             <p-sortIcon field="location"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="status" >
+                        <th pSortableColumn="status">
                             Status
                             <p-sortIcon field="status"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="createdBy" >
+                        <th pSortableColumn="createdBy">
                             Created By
                             <p-sortIcon field="createdBy"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="createdDate" >
+                        <th pSortableColumn="createdDate">
                             Created Date
                             <p-sortIcon field="createdDate"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="lastUpdatedBy" >
+                        <th pSortableColumn="lastUpdatedBy">
                             Last Updated By
                             <p-sortIcon field="lastUpdatedBy"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="lastUpdatedDate" >
+                        <th pSortableColumn="lastUpdatedDate">
                             Last Updated Date
                             <p-sortIcon field="lastUpdatedDate"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="isDeleted" >
+                        <th pSortableColumn="isDeleted">
                             Availibility
                             <p-sortIcon field="isDeleted"></p-sortIcon>
                         </th>
                         <!-- Actions column typically does not need sorting -->
-                        <th >Actions</th>
-                      </tr>
+                        <th>Actions</th>
+                    </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-event>
                     <tr>
                         <td>
                             <p-tableCheckbox [value]="event"></p-tableCheckbox>
                         </td>
-                        <td (click)="navigateAfterSelected(event)" style="width:14%; min-width:10rem;"><span class="p-column-title">Id</span>
-                            <button  style="
-                            display:inline-block;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            max-width: 12ch;"  
-                                pButton type="button" label="{{event.id}}" class="p-button-link">
-                            </button>
+                        <td
+                            (click)="navigateAfterSelected(event)"
+                            style="width: 14%; min-width: 10rem"
+                        >
+                            <span class="p-column-title">Id</span>
+                            <button
+                                style="
+                                    display: inline-block;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    max-width: 12ch;
+                                "
+                                
+                                pButton
+                                type="button"
+                                label="{{ event.id }}"
+                                class="p-button-link"
+                            ></button>
                         </td>
-                        <td style="width:14%; min-width:10rem;">
+                        <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">Tittle</span>
-                            {{event.eventTittle}}
+                            {{ event.eventTittle }}
                         </td>
-                        <td style="width:14%; min-width:10rem;">
+                        <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">Description</span>
-                            {{event.eventDescription}}
+                            {{ event.eventDescription }}
                         </td>
-                        <td style="width:14%; min-width:10rem;">
+                        <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">Wedding</span>
-                            {{event.wedding.weddingTittle}}
+                            {{ event.wedding.weddingTittle }}
                         </td>
-                        <td style="width:14%; min-width:10rem;">
+                        <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">Location</span>
-                            {{event.location.locationName}}
+                            {{ event.location.locationName }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span  class="p-column-title">Availibility</span>
-                            <span [class]="'event-status-' +(event.status ? event.status.toLowerCase() : '')">{{event.status}}</span>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Availibility</span>
+                            <span
+                                [class]="
+                                    'event-status-' +
+                                    (event.status
+                                        ? event.status.toLowerCase()
+                                        : '')
+                                "
+                                >{{ event.status }}</span
+                            >
                         </td>
-                        
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">CreateDate</span>
-                            {{event.createdBy}}
+
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">CreateDate</span>
+                            {{ event.createdBy }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">CreatedDate</span>
-                            {{event.createdDate | date: 'dd/MM/yyyy'}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">CreatedDate</span>
+                            {{ event.createdDate | date : "dd/MM/yyyy" }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">LastUpdatedBy</span>
-                            {{event.lastUpdatedBy}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">LastUpdatedBy</span>
+                            {{ event.lastUpdatedBy }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">lastUpdatedDate</span>
-                            {{event.lastUpdatedDate | date: 'dd/MM/yyyy'}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">lastUpdatedDate</span>
+                            {{ event.lastUpdatedDate | date : "dd/MM/yyyy" }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">Is Deleted</span>
-                            <i class="pi" style="color: green" [ngClass]="{'true-icon pi-check-circle': !event.isDeleted, 'false-icon pi-times-circle': event.isDeleted}"></i>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Is Deleted</span>
+                            <i
+                                class="pi"
+                                style="color: green"
+                                [ngClass]="{
+                                    'true-icon pi-check-circle':
+                                        !event.isDeleted,
+                                    'false-icon pi-times-circle':
+                                        event.isDeleted
+                                }"
+                            ></i>
                         </td>
 
                         <td>
                             <div class="flex">
-                                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-text" (click)="editEvent(event)"></button>
-                                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-text" (click)="deleteEvent(event)"></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-pencil"
+                                    class="p-button-rounded p-button-text"
+                                    (click)="editEvent(event)"
+                                ></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-trash"
+                                    class="p-button-rounded p-button-text"
+                                    (click)="deleteEvent(event)"
+                                ></button>
                             </div>
                         </td>
                     </tr>
@@ -140,125 +244,264 @@
             </p-table>
         </div>
 
-        <p-dialog  [(visible)]="eventDialog" [style]="{width: '450px'}" 
-        header="Event Details" [modal]="true" class="p-fluid">
+        <p-dialog
+            [(visible)]="eventDialog"
+            [style]="{ width: '450px' }"
+            header="Event Details"
+            [modal]="true"
+            class="p-fluid"
+        >
             <ng-template pTemplate="content">
                 <div class="field">
                     <label for="eventTittle">Tittle</label>
-                    <input type="text" pInputText id="eventTittle" [(ngModel)]="event.eventTittle" required autofocus [ngClass]="{'ng-invalid ng-dirty' : submitted && !event.eventTittle}"/>
-                    <small class="ng-dirty ng-invalid" *ngIf="submitted && !event.eventTittle">Tittle is required.</small>
+                    <input
+                        type="text"
+                        pInputText
+                        id="eventTittle"
+                        [(ngModel)]="event.eventTittle"
+                        required
+                        autofocus
+                        [ngClass]="{
+                            'ng-invalid ng-dirty':
+                                submitted && !event.eventTittle
+                        }"
+                    />
+                    <small
+                        class="ng-dirty ng-invalid"
+                        *ngIf="submitted && !event.eventTittle"
+                        >Tittle is required.</small
+                    >
                 </div>
                 <div class="field">
                     <label for="eventDescription">Description</label>
-                    <textarea  id="eventDescription" pInputTextarea [(ngModel)]="event.eventDescription" required rows="3" cols="20"></textarea>
+                    <textarea
+                        id="eventDescription"
+                        pInputTextarea
+                        [(ngModel)]="event.eventDescription"
+                        required
+                        rows="3"
+                        cols="20"
+                    ></textarea>
                 </div>
-                
+
                 <div class="field col">
                     <label for="weddingTittle">Wedding</label>
-                    <p-dropdown appendTo="body" [options]="weddings" [(ngModel)]="selectedWedding" optionLabel="weddingTittle" [filter]="true" filterBy="weddingTittle"  placeholder="Select a wedding">
+                    <p-dropdown
+                        appendTo="body"
+                        [options]="weddings"
+                        [(ngModel)]="selectedWedding"
+                        optionLabel="weddingTittle"
+                        [filter]="true"
+                        filterBy="weddingTittle"
+                        placeholder="Select a wedding"
+                    >
                         <ng-template pTemplate="selectedItem">
-                            <div class="wedding-item wedding-item-value" *ngIf="selectedWedding">
-                                <div>{{selectedWedding.weddingTittle}}</div>
+                            <div
+                                class="wedding-item wedding-item-value"
+                                *ngIf="selectedWedding"
+                            >
+                                <div>{{ selectedWedding.weddingTittle }}</div>
                             </div>
                         </ng-template>
                         <ng-template let-w pTemplate="item">
                             <div class="wedding-item">
-                                <div>{{w.weddingTittle}}</div>
+                                <div>{{ w.weddingTittle }}</div>
                             </div>
                         </ng-template>
                     </p-dropdown>
                 </div>
-<!-- wedding, location -->
-<div class="field">
-    <label for="locationName">Location</label>
-    <input type="text" pInputText id="locationName" [(ngModel)]="location.locationName" required autofocus [ngClass]="{'ng-invalid ng-dirty' : submitted && !location.locationName}"/>
-</div>
-<!-- country -->
+                <!-- wedding, location -->
+                <div class="field">
+                    <label for="locationName">Location</label>
+                    <input
+                        type="text"
+                        pInputText
+                        id="locationName"
+                        [(ngModel)]="location.locationName"
+                        required
+                        autofocus
+                        [ngClass]="{
+                            'ng-invalid ng-dirty':
+                                submitted && !location.locationName
+                        }"
+                    />
+                </div>
+                <!-- country -->
                 <div class="formgrid grid">
                     <div class="field col">
-                        <p-dropdown (onChange)="getListCityByCountryId()" appendTo="body" [options]="countries" [(ngModel)]="selectedCountry" optionLabel="countryName" [filter]="true" filterBy="countryName"  placeholder="Select a Country">
+                        <p-dropdown
+                            (onChange)="getListCityByCountryId()"
+                            appendTo="body"
+                            [options]="countries"
+                            [(ngModel)]="selectedCountry"
+                            optionLabel="countryName"
+                            [filter]="true"
+                            filterBy="countryName"
+                            placeholder="Select a Country"
+                        >
                             <ng-template pTemplate="selectedItem">
-                                <div class="country-item country-item-value" *ngIf="selectedCountry">
-                                    <div>{{selectedCountry.countryName}}</div>
+                                <div
+                                    class="country-item country-item-value"
+                                    *ngIf="selectedCountry"
+                                >
+                                    <div>{{ selectedCountry.countryName }}</div>
                                 </div>
                             </ng-template>
                             <ng-template let-country pTemplate="item">
                                 <div class="country-item">
-                                    <div>{{country.countryName}}</div>
+                                    <div>{{ country.countryName }}</div>
                                 </div>
                             </ng-template>
                         </p-dropdown>
                     </div>
-<!-- city -->
+                    <!-- city -->
 
                     <div class="field col">
-                        <p-dropdown appendTo="body" [options]="cities" [(ngModel)]="selectedCity" optionLabel="cityName" [filter]="true" filterBy="cityName"  placeholder="Select a City">
+                        <p-dropdown
+                            appendTo="body"
+                            [options]="cities"
+                            [(ngModel)]="selectedCity"
+                            optionLabel="cityName"
+                            [filter]="true"
+                            filterBy="cityName"
+                            placeholder="Select a City"
+                        >
                             <ng-template pTemplate="selectedItem">
-                                <div class="city-item city-item-value" *ngIf="selectedCity">
-                                    <div>{{selectedCity.cityName}}</div>
+                                <div
+                                    class="city-item city-item-value"
+                                    *ngIf="selectedCity"
+                                >
+                                    <div>{{ selectedCity.cityName }}</div>
                                 </div>
                             </ng-template>
                             <ng-template let-city pTemplate="item">
                                 <div class="city-item">
-                                    <div>{{city.cityName}}</div>
+                                    <div>{{ city.cityName }}</div>
                                 </div>
                             </ng-template>
                         </p-dropdown>
                     </div>
-
                 </div>
-<!-- end -->
+                <!-- end -->
                 <div class="field">
                     <label for="status">Status</label>
-                    <p-dropdown appendTo="body" [(ngModel)]="event.status" inputId="status" optionValue="label" [options]="statuses" placeholder="Select">
+                    <p-dropdown
+                        appendTo="body"
+                        [(ngModel)]="event.status"
+                        inputId="status"
+                        optionValue="label"
+                        [options]="statuses"
+                        placeholder="Select"
+                    >
                         <ng-template pTemplate="selectedItem">
-                            <span *ngIf="event && event.status" [class]="'event-status-' + event.status.toLowerCase()" >{{event.status}}</span>
+                            <span
+                                *ngIf="event && event.status"
+                                [class]="
+                                    'event-status-' + event.status.toLowerCase()
+                                "
+                                >{{ event.status }}</span
+                            >
                         </ng-template>
                         <ng-template let-option pTemplate="item">
-                            <span [class]="'event-status-' + option.value">{{option.label}}</span>
+                            <span [class]="'event-status-' + option.value">{{
+                                option.label
+                            }}</span>
                         </ng-template>
                     </p-dropdown>
                 </div>
-            
-
-                
             </ng-template>
 
-            
-
-           
-
-
             <ng-template pTemplate="footer">
-                <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-                <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveEvent()"></button>
+                <button
+                    pButton
+                    pRipple
+                    label="Cancel"
+                    icon="pi pi-times"
+                    class="p-button-text"
+                    (click)="hideDialog()"
+                ></button>
+                <button
+                    pButton
+                    pRipple
+                    label="Save"
+                    icon="pi pi-check"
+                    class="p-button-text"
+                    (click)="saveEvent()"
+                ></button>
             </ng-template>
         </p-dialog>
 
-        <p-dialog [(visible)]="deleteEventDialog" header="Confirm" [modal]="true" [style]="{width:'450px'}">
+        <p-dialog
+            [(visible)]="deleteEventDialog"
+            header="Confirm"
+            [modal]="true"
+            [style]="{ width: '450px' }"
+        >
             <div class="flex align-items-center justify-content-center">
-                <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem"></i>
-                <span *ngIf="event">Are you sure you want to delete <b>{{event.eventTittle}}</b>?</span>
+                <i
+                    class="pi pi-exclamation-triangle mr-3"
+                    style="font-size: 2rem"
+                ></i>
+                <span *ngIf="event"
+                    >Are you sure you want to delete
+                    <b>{{ event.eventTittle }}</b
+                    >?</span
+                >
             </div>
             <ng-template pTemplate="footer">
-                <button pButton pRipple icon="pi pi-times" class="p-button-text" label="No" (click)="deleteEventDialog = false"></button>
-                <button pButton pRipple icon="pi pi-check" class="p-button-text" label="Yes" (click)="confirmDelete()"></button>
+                <button
+                    pButton
+                    pRipple
+                    icon="pi pi-times"
+                    class="p-button-text"
+                    label="No"
+                    (click)="deleteEventDialog = false"
+                ></button>
+                <button
+                    pButton
+                    pRipple
+                    icon="pi pi-check"
+                    class="p-button-text"
+                    label="Yes"
+                    (click)="confirmDelete()"
+                ></button>
             </ng-template>
         </p-dialog>
 
-        <p-dialog [(visible)]="deleteEventsDialog" header="Confirm" [modal]="true" [style]="{width:'450px'}">
+        <p-dialog
+            [(visible)]="deleteEventsDialog"
+            header="Confirm"
+            [modal]="true"
+            [style]="{ width: '450px' }"
+        >
             <div class="flex align-items-center justify-content-center">
-                <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem"></i>
+                <i
+                    class="pi pi-exclamation-triangle mr-3"
+                    style="font-size: 2rem"
+                ></i>
                 <span>Are you sure you want to delete selected events?</span>
             </div>
             <ng-template pTemplate="footer">
-                <button pButton pRipple icon="pi pi-times" class="p-button-text" label="No" (click)="deleteEventsDialog = false"></button>
-                <button pButton pRipple icon="pi pi-check" class="p-button-text" label="Yes" (click)="confirmDeleteSelected()"></button>
+                <button
+                    pButton
+                    pRipple
+                    icon="pi pi-times"
+                    class="p-button-text"
+                    label="No"
+                    (click)="deleteEventsDialog = false"
+                ></button>
+                <button
+                    pButton
+                    pRipple
+                    icon="pi pi-check"
+                    class="p-button-text"
+                    label="Yes"
+                    (click)="confirmDeleteSelected()"
+                ></button>
             </ng-template>
         </p-dialog>
     </div>
 </div>
-
 
 <div *ngIf="showDetails">
     <app-event-service-list></app-event-service-list>

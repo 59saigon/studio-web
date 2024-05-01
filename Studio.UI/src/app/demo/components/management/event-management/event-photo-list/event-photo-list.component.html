@@ -7,13 +7,7 @@
                 <ng-template pTemplate="left">
                     <div class="my-2">
                         <button pButton pRipple label="Assign" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
-                        <button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedPhotos()" [disabled]="!selectedPhotos || !selectedPhotos.length"></button>
                     </div>
-                </ng-template>
-
-                <ng-template pTemplate="right">
-                    <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
-                    <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help" (click)="dt.exportCSV()"></button>
                 </ng-template>
             </p-toolbar>
 
@@ -29,9 +23,6 @@
                 </ng-template>
                 <ng-template pTemplate="header">
                     <tr>
-                        <th style="width: 3rem">
-                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                        </th>
                         <th pSortableColumn="id">Id <p-sortIcon field="code"></p-sortIcon></th>
                         <th pSortableColumn="photoName" >
                             Photo Name 
@@ -68,9 +59,7 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-photo>
                     <tr>
-                        <td>
-                            <p-tableCheckbox [value]="photo"></p-tableCheckbox>
-                        </td>
+                        
                         <td style="width:14%; min-width:10rem;"><span class="p-column-title">Id</span>
                             {{photo.id}}
                         </td>
@@ -126,9 +115,6 @@
                 </ng-template>
                 <ng-template pTemplate="header">
                     <tr>
-                        <th style="width: 3rem">
-                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                        </th>
                         <th pSortableColumn="id">Id <p-sortIcon field="code"></p-sortIcon></th>
                         <th pSortableColumn="photoName" >
                             Photo Name 
@@ -165,9 +151,6 @@
                 </ng-template>
                 <ng-template pTemplate="body" let-photo>
                     <tr>
-                        <td>
-                            <p-tableCheckbox [value]="photo"></p-tableCheckbox>
-                        </td>
                         <td style="width:14%; min-width:10rem;"><span class="p-column-title">Id</span>
                             {{photo.id}}
                         </td>

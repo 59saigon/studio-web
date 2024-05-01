@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Guid } from 'guid-typescript';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
-import { Subscription } from 'rxjs';
 import { EventEntity } from 'src/app/data/entity/Event';
 import { EventXPhoto } from 'src/app/data/entity/EventXPhoto';
 import { Photo, PhotoGetAllQuery } from 'src/app/data/entity/Photo';
@@ -23,8 +22,8 @@ import { PhotoService } from 'src/app/demo/service/management/photo.service';
     styleUrl: './event-photo-list.component.scss',
     providers: [MessageService, PhotoService, EventService, EventXPhotoService],
 })
-export class EventPhotoListComponent implements OnInit, OnDestroy {
-    private subscription: Subscription = new Subscription();
+export class EventPhotoListComponent implements OnInit {
+    //private subscription: Subscription = new Subscription();
 
     id: string | null = null;
 
@@ -63,11 +62,10 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
         private eventXPhotoService: EventXPhotoService,
         private datePipe: DatePipe
     ) {
-        console.log('changed');
     }
-    ngOnDestroy(): void {
-        this.subscription.unsubscribe();
-    }
+    // ngOnDestroy(): void {
+    //     this.subscription.unsubscribe();
+    // }
 
     messageResults!: MessageResults<Photo>;
     messageResult!: MessageResult<Photo>;
@@ -91,7 +89,7 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
     }
     // get còn lại
     getListPhoto() {
-        this.subscription.add(
+        //this.subscription.add(
             this.getPhotoGetAllQuery(() => {
                 this.photoService
                     .getListData('photo', this.photoGetAllQuery)
@@ -107,7 +105,7 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
                         },
                     });
             })
-        );
+        //);
     }
     // get ids
     getPhotoGetAllQuery(callback: () => void) {

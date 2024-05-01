@@ -1,29 +1,25 @@
 export enum Constants {
-    BASE_URL = "https://localhost:7099",
+    BASE_URL = 'https://localhost:7099',
 
-    CREATE = "create",
+    CREATE = 'create',
 
-    UPDATE = "update",
+    UPDATE = 'update',
 
-    DELETE = "delete",
-    
-    GET_LIST = "get",
+    DELETE = 'delete',
 
-    GET_BY = "get-by",
+    GET_LIST = 'get',
 
-    ENTITY_WEDDING = "wedding",
+    GET_BY = 'get-by',
 
-    ENTITY_EVENT = "event",
+    ENTITY_WEDDING = 'wedding',
 
-    ENTITY_SERVICE = "service",
+    ENTITY_EVENT = 'event',
 
-    ENTITY_LOCATION = "location",
+    ENTITY_SERVICE = 'service',
 
-    ENTITY_PHOTO = "photo",
+    ENTITY_LOCATION = 'location',
 
+    ENTITY_PHOTO = 'photo',
 }
 
-export enum ConstantPics{
-
-    
-}
+export enum ConstantPics {}

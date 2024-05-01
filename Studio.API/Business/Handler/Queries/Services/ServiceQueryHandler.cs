@@ -20,7 +20,7 @@ namespace Studio.API.Business.Handler.Queries.Services
 
         public Task<MessageResults<ServiceResult>> Handle(ServiceGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _serviceService.GetAll<ServiceResult>();
+            return _serviceService.GetAll(request, cancellationToken);
         }
 
         public Task<MessageResult<ServiceResult>> Handle(ServiceGetByIdQuery request, CancellationToken cancellationToken)

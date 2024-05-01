@@ -24,38 +24,38 @@ namespace Studio.API.Business.Services.Events
             _eventXPhotoRepository = unitOfWork.EventXPhotoRepository;
         }
 
-        public async Task<MessageView<EventXPhotoView>> DeleteByEventIdAndPhotoId(EventXPhotoDeleteCommand x)
-        {
-            // if have a root id
-            if(Guid.TryParse(x.Id.ToString(), out Guid guidOutput))
-            {
-                return await base.DeleteById<EventXPhotoView>(x.Id);
-            }
+        //public async Task<MessageView<EventXPhotoView>> DeleteByEventIdAndPhotoId(EventXPhotoDeleteCommand x)
+        //{
+        //    // if have a root id
+        //    if(Guid.TryParse(x.Id.ToString(), out Guid guidOutput))
+        //    {
+        //        return await base.DeleteById<EventXPhotoView>(x.Id);
+        //    }
 
-            // create getByid
-            EventXPhotoGetByIdQuery query = new EventXPhotoGetByIdQuery();
-            query.PhotoId = x.PhotoId;
-            query.EventId = x.EventId;
+        //    // create getByid
+        //    EventXPhotoGetByIdQuery query = new EventXPhotoGetByIdQuery();
+        //    query.PhotoId = x.PhotoId;
+        //    query.EventId = x.EventId;
 
-            //get to check
-            var entity = await _eventXPhotoRepository.GetByEventIdAndPhotoId(query);
-            if(entity == null)
-            {
-                //delete
-                return null;
-            }
-            return await base.DeleteById<EventXPhotoView>(entity.Id);
-        }
+        //    //get to check
+        //    var entity = await _eventXPhotoRepository.GetByEventIdAndPhotoId(query);
+        //    if(entity == null)
+        //    {
+        //        //delete
+        //        return null;
+        //    }
+        //    return await base.DeleteById<EventXPhotoView>(entity.Id);
+        //}
 
-        public async Task<MessageResults<EventXPhotoResult>> GetAllExceptFromIds(EventXPhotoGetAllQuery x,CancellationToken cancellationToken = default)
-        {
-            var eventXPhotos = await _eventXPhotoRepository.GetAllExceptFromIds(x,cancellationToken);
-            // map 
-            var content = _mapper.Map<IList<EventXPhoto>, List<EventXPhotoResult>>(eventXPhotos);
-            var msgResults = AppMessage.GetMessageResults<EventXPhotoResult>(content);
+        //public async Task<MessageResults<EventXPhotoResult>> GetAllExceptFromIds(EventXPhotoGetAllQuery x,CancellationToken cancellationToken = default)
+        //{
+        //    var eventXPhotos = await _eventXPhotoRepository.GetAllExceptFromIds(x,cancellationToken);
+        //    // map 
+        //    var content = _mapper.Map<IList<EventXPhoto>, List<EventXPhotoResult>>(eventXPhotos);
+        //    var msgResults = AppMessage.GetMessageResults<EventXPhotoResult>(content);
 
-            return msgResults;
-        }
+        //    return msgResults;
+        //}
 
         public async Task<MessageResult<EventXPhotoResult>> GetByEventIdAndPhotoId(EventXPhotoGetByIdQuery x)
         {

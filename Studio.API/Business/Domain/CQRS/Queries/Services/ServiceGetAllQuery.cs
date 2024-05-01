@@ -5,5 +5,6 @@ namespace Studio.API.Business.Domain.CQRS.Queries.Services
 {
     public class ServiceGetAllQuery : GetAllQuery<ServiceResult>
     {
+        public List<Guid>? ServiceIds { get; set; }
     }
 }

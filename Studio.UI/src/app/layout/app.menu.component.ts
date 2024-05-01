@@ -4,32 +4,59 @@ import { LayoutService } from './service/app.layout.service';
 
 @Component({
     selector: 'app-menu',
-    templateUrl: './app.menu.component.html'
+    templateUrl: './app.menu.component.html',
 })
 export class AppMenuComponent implements OnInit {
-
     model: any[] = [];
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService) {}
 
     ngOnInit() {
         this.model = [
             {
                 label: 'Home',
                 items: [
-                    { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
-                ]
+                    {
+                        label: 'Dashboard',
+                        icon: 'pi pi-fw pi-home',
+                        routerLink: ['/'],
+                    },
+                ],
             },
             {
                 label: 'Management',
-                items:[
-                    {label: 'Event Management', icon: 'pi pi-calendar', routerLink: ['/management/event']},
-                    {label: 'Wedding Management', icon: 'pi pi-heart', routerLink: ['/management/wedding']},
-                    {label: 'Service Management', icon: 'pi pi-cog', routerLink: ['/management/service']},
-                    {label: 'Photo Management', icon: 'pi pi-images', routerLink: ['/management/photo']},
-                    {label: 'City Management', icon: 'pi pi-map-marker', routerLink: ['/management/city']},
-                    {label: 'Country Management', icon: 'pi pi-map-marker', routerLink: ['/management/country']},
-                ]
+                items: [
+                    {
+                        label: 'Event Management',
+                        icon: 'pi pi-calendar',
+                        routerLink: ['/management/event'],
+                    },
+                    {
+                        label: 'Wedding Management',
+                        icon: 'pi pi-heart',
+                        routerLink: ['/management/wedding'],
+                    },
+                    {
+                        label: 'Service Management',
+                        icon: 'pi pi-cog',
+                        routerLink: ['/management/service'],
+                    },
+                    {
+                        label: 'Photo Management',
+                        icon: 'pi pi-images',
+                        routerLink: ['/management/photo'],
+                    },
+                    {
+                        label: 'City Management',
+                        icon: 'pi pi-map-marker',
+                        routerLink: ['/management/city'],
+                    },
+                    {
+                        label: 'Country Management',
+                        icon: 'pi pi-map-marker',
+                        routerLink: ['/management/country'],
+                    },
+                ],
             },
             // {
             //     label: 'UI Components',
@@ -164,13 +191,20 @@ export class AppMenuComponent implements OnInit {
                 label: 'Get Started',
                 items: [
                     {
-                        label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['/documentation']
+                        label: 'Documentation',
+                        icon: 'pi pi-fw pi-question',
+                        routerLink: ['/documentation'],
                     },
                     {
-                        label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/sonnh1106/NhuMyStudio_WebAPI'], target: '_blank'
-                    }
-                ]
-            }
+                        label: 'View Source',
+                        icon: 'pi pi-fw pi-search',
+                        url: [
+                            'https://github.com/sonnh1106/NhuMyStudio_WebAPI',
+                        ],
+                        target: '_blank',
+                    },
+                ],
+            },
         ];
     }
 }

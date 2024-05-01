@@ -20,12 +20,12 @@ namespace Studio.API.Business.Handler.Queries.Events
 
         public Task<MessageResults<EventXServiceResult>> Handle(EventXServiceGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _eventXServiceService.GetAllExceptFromIds(request, cancellationToken);
+            return _baseService.GetAll<EventXServiceResult>();
         }
 
         public Task<MessageResult<EventXServiceResult>> Handle(EventXServiceGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _eventXServiceService.GetById<EventXServiceResult>(request.Id);
+            return _eventXServiceService.GetByEventIdAndServiceId(request);
         }
     }
 }

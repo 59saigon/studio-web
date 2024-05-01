@@ -3,52 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\commands\\events\\eventxphotocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\commands\\events\\eventxphotocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\services\\events\\eventxphotoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\services\\events\\eventxphotoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\repositories\\services\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\repositories\\services\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\events\\eventxphotoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\events\\eventxphotoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\services\\servicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\services\\servicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\queries\\common\\getqueryablequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\queries\\common\\getqueryablequery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\apis\\controllers\\events\\eventxphotocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\events\\eventxphotocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\data\\repositories\\events\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:data\\repositories\\events\\eventrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\events\\eventqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\events\\eventqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\apis\\controllers\\events\\eventxservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\events\\eventxservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\commands\\events\\eventxservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\commands\\events\\eventxservicecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\cqrs\\commands\\events\\eventxphotos\\eventxphotodeletecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\cqrs\\commands\\events\\eventxphotos\\eventxphotodeletecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\apis\\controllers\\events\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:apis\\controllers\\events\\eventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\photos\\photoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\photos\\photoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
+              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T14:26:20.351Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -82,157 +63,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetQueryableQuery.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Queries\\Common\\GetQueryableQuery.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Queries\\Common\\GetQueryableQuery.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Queries\\Common\\GetQueryableQuery.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Queries\\Common\\GetQueryableQuery.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T10:22:56.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EventRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Data\\Repositories\\Events\\EventRepository.cs",
-              "RelativeDocumentMoniker": "Data\\Repositories\\Events\\EventRepository.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Data\\Repositories\\Events\\EventRepository.cs",
-              "RelativeToolTip": "Data\\Repositories\\Events\\EventRepository.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAnwCcAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T10:05:38.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EventQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Queries\\Events\\EventQueryHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T10:05:27.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EventXPhotoCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Events\\EventXPhotoCommandHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Commands\\Events\\EventXPhotoCommandHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Events\\EventXPhotoCommandHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Commands\\Events\\EventXPhotoCommandHandler.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:48:16.826Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EventXPhotoService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Events\\EventXPhotoService.cs",
-              "RelativeDocumentMoniker": "Business\\Services\\Events\\EventXPhotoService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Services\\Events\\EventXPhotoService.cs",
-              "RelativeToolTip": "Business\\Services\\Events\\EventXPhotoService.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAcwD0AAABAAAAA",
+              "Title": "IServiceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
+              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
+              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
+              "RelativeToolTip": "Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAB4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:39:58.13Z",
+              "WhenOpened": "2024-05-01T14:26:31.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EventXPhotoQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Events\\EventXPhotoQueryHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Events\\EventXPhotoQueryHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Events\\EventXPhotoQueryHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Queries\\Events\\EventXPhotoQueryHandler.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAA9AAAA",
+              "Title": "ServiceQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
+              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:34:40.311Z",
+              "WhenOpened": "2024-05-01T14:25:56.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EventXServiceCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Events\\EventXServiceCommandHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Commands\\Events\\EventXServiceCommandHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Commands\\Events\\EventXServiceCommandHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Commands\\Events\\EventXServiceCommandHandler.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACIAAAA3AAAA",
+              "DocumentIndex": 3,
+              "Title": "PhotoQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
+              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
+              "RelativeToolTip": "Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:02:30.507Z",
+              "WhenOpened": "2024-05-01T14:25:54.807Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EventXServiceController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventXServiceController.cs",
-              "RelativeDocumentMoniker": "APIs\\Controllers\\Events\\EventXServiceController.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventXServiceController.cs",
-              "RelativeToolTip": "APIs\\Controllers\\Events\\EventXServiceController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABsAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:02:18.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EventXPhotoDeleteCommand.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Events\\EventXPhotos\\EventXPhotoDeleteCommand.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\CQRS\\Commands\\Events\\EventXPhotos\\EventXPhotoDeleteCommand.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\CQRS\\Commands\\Events\\EventXPhotos\\EventXPhotoDeleteCommand.cs",
-              "RelativeToolTip": "Business\\Domain\\CQRS\\Commands\\Events\\EventXPhotos\\EventXPhotoDeleteCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T09:00:46.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EventController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventController.cs",
-              "RelativeDocumentMoniker": "APIs\\Controllers\\Events\\EventController.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventController.cs",
-              "RelativeToolTip": "APIs\\Controllers\\Events\\EventController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADcAAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T07:32:42.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EventXPhotoController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventXPhotoController.cs",
-              "RelativeDocumentMoniker": "APIs\\Controllers\\Events\\EventXPhotoController.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\APIs\\Controllers\\Events\\EventXPhotoController.cs",
-              "RelativeToolTip": "APIs\\Controllers\\Events\\EventXPhotoController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T07:32:20.789Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAAAAYAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T05:38:40.163Z"
             }
           ]
         }

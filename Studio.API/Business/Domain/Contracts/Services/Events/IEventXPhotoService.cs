@@ -13,8 +13,8 @@ namespace Studio.API.Business.Domain.Contracts.Services.Events
 {
     public interface IEventXPhotoService : IBaseService
     {
-        Task<MessageResults<EventXPhotoResult>> GetAllExceptFromIds(EventXPhotoGetAllQuery x, CancellationToken cancellationToken = default);
-        Task<MessageView<EventXPhotoView>> DeleteByEventIdAndPhotoId(EventXPhotoDeleteCommand x);
+        //Task<MessageResults<EventXPhotoResult>> GetAllExceptFromIds(EventXPhotoGetAllQuery x, CancellationToken cancellationToken = default);
+        //Task<MessageView<EventXPhotoView>> DeleteByEventIdAndPhotoId(EventXPhotoDeleteCommand x);
         Task<MessageResult<EventXPhotoResult>> GetByEventIdAndPhotoId(EventXPhotoGetByIdQuery x);
     }
 }

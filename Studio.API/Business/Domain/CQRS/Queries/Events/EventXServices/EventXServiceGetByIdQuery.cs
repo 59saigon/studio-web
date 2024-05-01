@@ -5,5 +5,7 @@ namespace Studio.API.Business.Domain.CQRS.Queries.Events.EventXServices
 {
     public class EventXServiceGetByIdQuery : GetByIdQuery<EventXServiceResult>
     {
+        public Guid? EventId { get; set; }
+        public Guid? ServiceId { get; set; }
     }
 }

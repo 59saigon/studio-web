@@ -7,6 +7,7 @@ namespace Studio.API.Business.Domain.Contracts.Services.Events
 {
     public interface IEventXServiceService : IBaseService
     {
-        Task<MessageResults<EventXServiceResult>> GetAllExceptFromIds(EventXServiceGetAllQuery x, CancellationToken cancellationToken = default);
+        //Task<MessageResults<EventXServiceResult>> GetAllExceptFromIds(EventXServiceGetAllQuery x, CancellationToken cancellationToken = default);
+        Task<MessageResult<EventXServiceResult>> GetByEventIdAndServiceId(EventXServiceGetByIdQuery x);
     }
 }

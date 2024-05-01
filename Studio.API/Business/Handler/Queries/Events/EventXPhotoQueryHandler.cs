@@ -20,7 +20,7 @@ namespace Studio.API.Business.Handler.Queries.Events
 
         public Task<MessageResults<EventXPhotoResult>> Handle(EventXPhotoGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _eventXPhotoService.GetAllExceptFromIds(request, cancellationToken);
+            return _baseService.GetAll<EventXPhotoResult>();
         }
 
         public Task<MessageResult<EventXPhotoResult>> Handle(EventXPhotoGetByIdQuery request, CancellationToken cancellationToken)

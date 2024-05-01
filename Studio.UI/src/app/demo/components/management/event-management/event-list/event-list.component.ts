@@ -34,6 +34,8 @@ import { WeddingService } from 'src/app/demo/service/management/wedding.service'
     ],
 })
 export class EventListComponent implements OnInit {
+    id: string = '';
+
     eventDialog: boolean = false;
 
     deleteEventDialog: boolean = false;
@@ -408,6 +410,7 @@ export class EventListComponent implements OnInit {
         this.router
             .navigateByUrl('/', { skipLocationChange: true })
             .then(() => {
+                this.id = event.id.toString();
                 // Navigate back with new query params
                 this.router.navigate(['/management/event'], {
                     queryParams: { q: event.id },
