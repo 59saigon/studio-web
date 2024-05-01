@@ -25,7 +25,7 @@ namespace Studio.API.Business.Handler.Queries.Events
 
         public Task<MessageResult<EventXPhotoResult>> Handle(EventXPhotoGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _eventXPhotoService.GetById<EventXPhotoResult>(request.Id);
+            return _eventXPhotoService.GetByEventIdAndPhotoId(request);
         }
     }
 }

@@ -45,9 +45,6 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
 
     eventXPhoto: EventXPhoto = {} as EventXPhoto;
 
-    startDateNG: Date;
-    endDateNG: Date;
-
     selectedPhotos: Photo[] = [];
 
     submitted: boolean = false;
@@ -77,8 +74,20 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
     messageView!: MessageView<Photo>;
     messageViews!: MessageViews<Photo>;
     ngOnInit() {
+        // avoid override
+        this.resetValue();
+
         this.getValueInParamater();
         this.getListPhoto();
+    }
+
+    resetValue() {
+        this.photos = [];
+        this.photo = {} as Photo;
+        this.eventXPhoto = {} as EventXPhoto;
+        this.events = [];
+        this.photoGetAllQuery = {} as PhotoGetAllQuery;
+        this.assignedPhotos = [];
     }
     // get còn lại
     getListPhoto() {
@@ -138,8 +147,6 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
     }
     // end ids
     openNew() {
-        this.startDateNG = undefined;
-        this.endDateNG = undefined;
         this.photo = {} as Photo;
 
         this.submitted = false;
@@ -162,18 +169,83 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
 
     confirmDeleteSelected() {
         this.deletePhotosDialog = false;
-        console.table(this.selectedPhotos);
         this.selectedPhotos.forEach((w) => {
-            this.photoService.deleteData('photo', w).subscribe({
+            this.eventXPhotoService
+                .deleteData('evenXPhoto', w.eventXPhotos)
+                .subscribe({
+                    next: (response) => {
+                        // Handle the successful response here
+                        this.ngOnInit();
+                        this.messageService.add({
+                            severity: 'success',
+                            summary: 'Successful',
+                            detail: 'Photo Deleted',
+                            life: 3000,
+                        });
+                    },
+                    error: (err) => {
+                        console.error('Error occurred:', err);
+                        // Handle the error here
+                        this.messageService.add({
+                            severity: 'error',
+                            summary: 'Error',
+                            detail: 'Not Delete',
+                            life: 3000,
+                        });
+                    },
+                });
+        });
+        this.selectedPhotos = [];
+    }
+
+    confirmDelete() {
+        this.deletePhotoDialog = false;
+        // get eventId
+        this.eventXPhoto.eventId = Guid.parse(this.id).toJSON().value;
+        // get photoId
+        this.eventXPhoto.photoId = this.photo.id;
+        // get EventXPhoto
+        this.getEventXPhotoByEventIdAndPhotoId(() => {
+            // xóa eventXPhoto ( how to get ?)
+            this.eventXPhotoService
+                .deleteData('eventXPhoto', this.eventXPhoto)
+                .subscribe({
+                    next: (response) => {
+                        // Handle the successful response here
+                        this.ngOnInit();
+                        this.messageService.add({
+                            severity: 'success',
+                            summary: 'Successful',
+                            detail: 'Photo Deleted',
+                            life: 3000,
+                        });
+                    },
+                    error: (err) => {
+                        console.error('Error occurred:', err);
+                        // Handle the error here
+                        this.messageService.add({
+                            severity: 'error',
+                            summary: 'Error',
+                            detail: 'Not Delete',
+                            life: 3000,
+                        });
+                    },
+                });
+        });
+        this.eventXPhoto = {} as EventXPhoto;
+        this.photo = {} as Photo;
+    }
+
+    getEventXPhotoByEventIdAndPhotoId(callback: () => void) {
+        this.eventXPhotoService
+            .getByValueData('eventXPhoto', this.eventXPhoto, 'id')
+            .subscribe({
                 next: (response) => {
                     // Handle the successful response here
-                    this.ngOnInit();
-                    this.messageService.add({
-                        severity: 'success',
-                        summary: 'Successful',
-                        detail: 'Photo Deleted',
-                        life: 3000,
-                    });
+                    this.eventXPhoto = { ...response.result };
+                    if (this.eventXPhoto.id.toString() != null) {
+                        callback();
+                    }
                 },
                 error: (err) => {
                     console.error('Error occurred:', err);
@@ -186,37 +258,6 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
                     });
                 },
             });
-        });
-        this.selectedPhotos = [];
-    }
-
-    confirmDelete() {
-        this.deletePhotoDialog = false;
-
-        this.photoService.deleteData('photo', this.photo).subscribe({
-            next: (response) => {
-                // Handle the successful response here
-                this.ngOnInit();
-                this.messageService.add({
-                    severity: 'success',
-                    summary: 'Successful',
-                    detail: 'Photo Deleted',
-                    life: 3000,
-                });
-            },
-            error: (err) => {
-                console.error('Error occurred:', err);
-                // Handle the error here
-                this.messageService.add({
-                    severity: 'error',
-                    summary: 'Error',
-                    detail: 'Not Delete',
-                    life: 3000,
-                });
-            },
-        });
-
-        this.photo = {} as Photo;
     }
 
     hideDialog() {
@@ -235,30 +276,31 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
 
         if (this.photo.id) {
             this.setEventXPhoto();
-            this.eventXPhotoService.postData('eventXPhoto', this.eventXPhoto).subscribe({
-                next: (response) => {
-                    // Handle the successful response here
-                    this.getListPhoto();
-                    this.messageService.add({
-                        severity: 'success',
-                        summary: 'Successful',
-                        detail: 'EventXPhoto Created',
-                        life: 3000,
-                    });
-                },
-                error: (err) => {
-                    console.error('Error occurred:', err);
-                    // Handle the error here
-                    this.messageService.add({
-                        severity: 'error',
-                        summary: 'Error',
-                        detail: 'Not create',
-                        life: 3000,
-                    });
-                },
-            });
+            this.eventXPhotoService
+                .postData('eventXPhoto', this.eventXPhoto)
+                .subscribe({
+                    next: (response) => {
+                        // Handle the successful response here
+                        this.ngOnInit();
+                        this.messageService.add({
+                            severity: 'success',
+                            summary: 'Successful',
+                            detail: 'EventXPhoto Created',
+                            life: 3000,
+                        });
+                    },
+                    error: (err) => {
+                        console.error('Error occurred:', err);
+                        // Handle the error here
+                        this.messageService.add({
+                            severity: 'error',
+                            summary: 'Error',
+                            detail: 'Not create',
+                            life: 3000,
+                        });
+                    },
+                });
         }
-
         this.photoDialog = false;
     }
 
@@ -305,9 +347,7 @@ export class EventPhotoListComponent implements OnInit, OnDestroy {
     }
     setEventXPhoto() {
         this.eventXPhoto.eventId = Guid.parse(this.id).toJSON().value;
-        console.log(this.eventXPhoto.eventId);
         this.eventXPhoto.photoId = this.photo.id;
-        console.log(this.eventXPhoto.photoId);
         this.setEventXPhotoBase();
     }
 

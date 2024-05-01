@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Studio.API.Business.Domain.Contracts.Repositories.Events;
+using Studio.API.Business.Domain.CQRS.Commands.Events.EventXPhotos;
 using Studio.API.Business.Domain.CQRS.Queries.Events.EventXPhotos;
 using Studio.API.Business.Domain.Entities.Events;
 using Studio.API.Data.Context;
@@ -26,5 +27,15 @@ namespace Studio.API.Data.Repositories.Events
             return results;
         }
 
+        public async Task<EventXPhoto> GetByEventIdAndPhotoId(EventXPhotoGetByIdQuery x, CancellationToken cancellationToken = default)
+        {
+            var queryable = base.GetQueryable(entity => entity.EventId == x.EventId
+            && entity.PhotoId == x.PhotoId);
+            var result = await queryable.Where(entity => !entity.IsDeleted)
+                .Include(entity => entity.Event)
+                .Include(entity => entity.Photo)
+                .SingleOrDefaultAsync();
+            return result;
+        }
     }
 }

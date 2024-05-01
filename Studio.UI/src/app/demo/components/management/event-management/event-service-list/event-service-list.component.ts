@@ -12,10 +12,5 @@ export class EventServiceListComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    // Lắng nghe thay đổi của tham số 'q' trong URL
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.id = params['q'];
-      console.log('ID received:', this.id); // Xử lý id nhận được tại đây
-    });
   }
 }
