@@ -15,13 +15,10 @@ namespace Studio.API.Business.Services.Services
     {
         private readonly IServiceRepository _serviceRepository;
 
-
-
         public ServiceService(IMapper mapper, IUnitOfWork unitOfWork) : base(mapper, unitOfWork)
         {
             _serviceRepository = _unitOfWork.ServiceRepository;
         }
-
 
     }
 }

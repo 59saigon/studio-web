@@ -21,6 +21,9 @@ export enum Constants {
 
     ENTITY_PHOTO = "photo",
 
+}
 
+export enum ConstantPics{
 
+    
 }

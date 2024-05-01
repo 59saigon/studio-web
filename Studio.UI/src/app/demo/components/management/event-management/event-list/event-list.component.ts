@@ -1,5 +1,6 @@
 import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { City } from 'src/app/data/entity/City';
@@ -71,9 +72,10 @@ export class EventListComponent implements OnInit {
         private eventService: EventService,
         private messageService: MessageService,
         private countryService: CountryService,
-        private cityService: CityService,
         private locationService: LocationService,
         private weddingService: WeddingService,
+        private activatedRoute: ActivatedRoute,
+        private router: Router,
         private datePipe: DatePipe
     ) {}
 
@@ -97,12 +99,14 @@ export class EventListComponent implements OnInit {
     messageLocationView!: MessageView<Location>;
     messageLocationViews!: MessageViews<Location>;
 
+    showDetails = false;
+
     statuses: any[] = [];
     ngOnInit() {
         this.getListEvent();
         this.getListCountry();
         this.getListWedding();
-        
+        this.setShowDetails();
         this.statuses = [
             { label: 'OPEN', value: 'open' },
             { label: 'COMPLETED', value: 'completed' },
@@ -157,9 +161,9 @@ export class EventListComponent implements OnInit {
     }
 
     openNew() {
-        this.selectedWedding = undefined
-        this.selectedCity = undefined
-        this.selectedCountry = undefined
+        this.selectedWedding = undefined;
+        this.selectedCity = undefined;
+        this.selectedCountry = undefined;
         this.location = {} as Location;
         this.event = {} as EventEntity;
         this.submitted = false;
@@ -397,6 +401,22 @@ export class EventListComponent implements OnInit {
             (event.target as HTMLInputElement).value,
             'contains'
         );
+    }
+
+    navigateAfterSelected(event: EventEntity) {
+        this.router.navigate(['/management/event'], {
+            queryParams: { q: event.id },
+        });
+        this.setShowDetails();
+    }
+
+    setShowDetails() {
+        this.activatedRoute.queryParams.subscribe((params) => {
+            // Giả sử tham số là 'q'
+            const q = params['q'];
+            // Thiết lập showDetails dựa trên sự tồn tại và giá trị của 'q'
+            this.showDetails = q && q.trim() !== '';
+        });
     }
 
     setEvent() {

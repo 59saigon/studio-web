@@ -22,13 +22,9 @@ namespace Studio.API.Business.Services.Locations
 
         public async Task<MessageResults<LocationResult>> GetAll(CancellationToken cancellationToken = default)
         {
-            var queryable = _baseRepository.GetQueryable();
-            var results = await queryable.Where(entity => !entity.IsDeleted)
-                .Include(entity => entity.City)
-                .ToListAsync();
-
+            var locations = await _locationRepository.GetAllWithInclude(cancellationToken);
             // map 
-            var content = _mapper.Map<IList<Location>, List<LocationResult>>(results);
+            var content = _mapper.Map<IList<Location>, List<LocationResult>>(locations);
             var msgResults = AppMessage.GetMessageResults<LocationResult>(content);
 
             return msgResults;

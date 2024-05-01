@@ -19,7 +19,7 @@ namespace Studio.API.Business.Domain.Results.Events
         
         public string? Status { get; set; }
 
-        public virtual WeddingResult Wedding { get; set; }
+        public WeddingResult Wedding { get; set; }
         
         public LocationResult Location { get; set; }
 

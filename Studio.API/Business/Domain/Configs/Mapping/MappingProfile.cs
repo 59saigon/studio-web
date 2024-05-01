@@ -13,6 +13,9 @@ namespace Studio.API.Business.Domain.Configs.Mapping
             EventMapping();
             UserMapping();
             ServiceMapping();
+            PhotoMapping();
+            EventXPhotoMapping();
+            EventXServiceMapping();
         }
         
     }

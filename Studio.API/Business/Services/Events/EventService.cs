@@ -11,6 +11,7 @@ using Studio.API.Business.Domain.Results.Locations;
 using Studio.API.Business.Domain.Results.Messages;
 using Studio.API.Business.Domain.Utilities;
 using Studio.API.Business.Services.Bases;
+using Studio.API.Data.Repositories.Locations;
 
 namespace Studio.API.Business.Services.Events
 {
@@ -23,18 +24,9 @@ namespace Studio.API.Business.Services.Events
         }
         public async Task<MessageResults<EventResult>> GetAll(CancellationToken cancellationToken = default)
         {
-            var queryable = _baseRepository.GetQueryable();
-            var results = await queryable.Where(entity => !entity.IsDeleted)
-                .Include(entity => entity.EventXPhotos)
-                .Include(entity => entity.EventXServices)
-                .Include(entity => entity.Location)
-                .Include(entity => entity.Location.City)
-                .Include(entity => entity.Location.City.Country)
-                .Include(entity => entity.Wedding)
-                .ToListAsync();
-
+            var events = await _eventRepository.GetAllWithInclude(cancellationToken);
             // map 
-            var content = _mapper.Map<IList<Event>, List<EventResult>>(results);
+            var content = _mapper.Map<IList<Event>, List<EventResult>>(events);
             var msgResults = AppMessage.GetMessageResults<EventResult>(content);
 
             return msgResults;

@@ -32,6 +32,8 @@ using Studio.API.Data.Repositories.Photos;
 using Studio.API.Data.Repositories.Services;
 using Studio.API.Business.Domain.Contracts.Services.Services;
 using Studio.API.Business.Services.Services;
+using Studio.API.Business.Domain.Contracts.Services.Photos;
+using Studio.API.Business.Services.Photos;
 
 var builder = WebApplication.CreateBuilder(args);
 #region Add-DbContext
@@ -69,6 +71,10 @@ builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
+builder.Services.AddScoped<IEventXPhotoRepository, EventXPhotoRepository>();
+builder.Services.AddScoped<IEventXServiceRepository, EventXServiceRepository>();
+
+
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 
@@ -86,8 +92,12 @@ builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IEventXPhotoService, EventXPhotoService>();
+builder.Services.AddScoped<IEventXServiceService, EventXServiceService>();
 
 builder.Services.AddScoped<IServiceService, ServiceService>();
+
+builder.Services.AddScoped<IPhotoService, PhotoService>();
 
 #endregion
 

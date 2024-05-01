@@ -8,5 +8,4 @@ public class PhotoView : BaseView
     
     public string Url { get; set; }
     
-    public Guid EventId { get; set; }
 }

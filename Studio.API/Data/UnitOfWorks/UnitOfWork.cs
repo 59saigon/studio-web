@@ -30,5 +30,9 @@ namespace Studio.API.Data.UnitOfWorks
         public IPhotoRepository PhotoRepository => GetRepository<IPhotoRepository>();
 
         public IServiceRepository ServiceRepository => GetRepository<IServiceRepository>();
+
+        public IEventXPhotoRepository EventXPhotoRepository => GetRepository<IEventXPhotoRepository>();
+
+        public IEventXServiceRepository EventXServiceRepository => GetRepository<IEventXServiceRepository>();
     }
 }

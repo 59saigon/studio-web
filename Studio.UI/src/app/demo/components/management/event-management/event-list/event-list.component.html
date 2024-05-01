@@ -1,4 +1,5 @@
 <p-toast></p-toast>
+
 <div class="grid">
     <div class="col-12">
         <div class="card px-6 py-6">
@@ -82,8 +83,15 @@
                         <td>
                             <p-tableCheckbox [value]="event"></p-tableCheckbox>
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">Id</span>
-                            {{event.id}}
+                        <td (click)="navigateAfterSelected(event)" style="width:14%; min-width:10rem;"><span class="p-column-title">Id</span>
+                            <button  style="
+                            display:inline-block;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 12ch;"  
+                                pButton type="button" label="{{event.id}}" class="p-button-link">
+                            </button>
                         </td>
                         <td style="width:14%; min-width:10rem;">
                             <span class="p-column-title">Tittle</span>
@@ -249,4 +257,10 @@
             </ng-template>
         </p-dialog>
     </div>
+</div>
+
+
+<div *ngIf="showDetails">
+    <app-event-service-list></app-event-service-list>
+    <app-event-photo-list></app-event-photo-list>
 </div>

@@ -16,6 +16,7 @@ export class AppConfigComponent {
         public menuService: MenuService
     ) {
         this.changeTheme('aura-dark-pink','dark');
+        this.ripple = true;
     }
 
     get visible(): boolean {

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BaseCommand, CreateCommand, DeleteCommand, UpdateCommand } from 'src/app/data/commands/BaseCommand';
+import { Photo, PhotoGetAllQuery } from 'src/app/data/entity/Photo';
 import { GetAllQuery } from 'src/app/data/queries/BaseQuery';
 import { MessageResults } from 'src/app/data/results/MessageResult';
 import { MessageView } from 'src/app/data/views/MessageView';
@@ -18,6 +19,13 @@ export class BaseService<T>{
     private http: HttpClient,
     private constantService: ConstantService
   ) {}
+
+  getTest(entity: string, data: PhotoGetAllQuery): Observable<MessageResults<Photo>> {
+    return this.http.post<MessageResults<Photo>>(
+      'https://localhost:7099/api/photo/get-photo-list',
+      data
+    );
+  }
 
   getListData(entity: string, data: any): Observable<any> {
     return this.http.post(

@@ -11,6 +11,7 @@ const routes: Routes = [];
     { path: 'country', data: { breadcrumb: 'Country' }, loadChildren: () => import('./country-management/country-management.module').then(m => m.CountryManagementModule) },
     { path: 'city', data: { breadcrumb: 'City' }, loadChildren: () => import('./city-management/city-management.module').then(m => m.CityManagementModule) },
     { path: 'blog', data: { breadcrumb: 'Blog' }, loadChildren: () => import('./blog-management/blog-management.module').then(m => m.BlogManagementModule) },
+    { path: 'photo', data: { breadcrumb: 'Photo' }, loadChildren: () => import('./photo-management/photo-management.module').then(m => m.PhotoManagementModule) },
     { path: '**', redirectTo: '/notfound' }
 ])],
   exports: [RouterModule]

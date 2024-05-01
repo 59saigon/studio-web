@@ -17,5 +17,7 @@ namespace Studio.API.Business.Domain.Contracts.UnitOfWorks
         IEventRepository EventRepository { get; }
         IPhotoRepository PhotoRepository { get; }
         IServiceRepository ServiceRepository { get; }
+        IEventXPhotoRepository EventXPhotoRepository { get; }
+        IEventXServiceRepository EventXServiceRepository { get; }
     }
 }

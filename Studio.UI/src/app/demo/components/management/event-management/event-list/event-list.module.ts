@@ -19,8 +19,10 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
 import { EventListComponent } from './event-list.component';
+import { EventServiceListComponent } from '../event-service-list/event-service-list.component';
+import { EventPhotoListComponent } from '../event-photo-list/event-photo-list.component';
 @NgModule({
-    declarations: [EventListComponent],
+    declarations: [EventListComponent, EventServiceListComponent, EventPhotoListComponent],
     imports: [
         CommonModule,
         EventListRoutingModule,

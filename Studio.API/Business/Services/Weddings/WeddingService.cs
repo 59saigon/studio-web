@@ -15,13 +15,10 @@ namespace Studio.API.Business.Services.Weddings
     {
         private readonly IWeddingRepository _weddingRepository;
 
-
-
         public WeddingService(IMapper mapper, IUnitOfWork unitOfWork) : base(mapper, unitOfWork)
         {
             _weddingRepository = _unitOfWork.WeddingRepository;
         }
-
 
     }
 }

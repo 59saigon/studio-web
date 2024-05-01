@@ -13,6 +13,6 @@ export interface EventEntity extends BaseEntity {
     status?: string; // Optional string
     wedding?: Wedding; // Reference to Wedding class
     location?: Location; // Reference to Location class
-    eventXPhoto: EventXPhoto[];
+    eventXPhotos: EventXPhoto[];
     eventXServices?: EventXService[]; // Array of Service objects
 }
