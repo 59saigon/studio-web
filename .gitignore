@@ -401,3 +401,7 @@ FodyWeavers.xsd
 /*/obj/Debug/net6.0/*.csproj.FileListAbsolute.txt
 #
 /*/.vs/*/v17/DocumentLayout.json
+/Studio.API/.vs/ProjectEvaluation/studio.api.metadata.v7.bin
+/Studio.API/.vs/Studio.API/DesignTimeBuild/.dtbcache.v2
+/Studio.API/.vs/ProjectEvaluation/studio.api.projects.v7.bin
+/Studio.API/.vs/Studio.API/v17/.futdcache.v2
