@@ -400,3 +400,4 @@ FodyWeavers.xsd
 /Studio.API/obj/Debug/net6.0/apphost.exe
 /Studio.API/obj/Debug/net6.0/Studio.API.csproj.FileListAbsolute.txt
 #
+/Studio.API/.vs/Studio.API/v17/DocumentLayout.json
