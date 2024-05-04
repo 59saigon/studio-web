@@ -3,7 +3,6 @@ using Studio.API.Business.Domain.Contracts.Repositories.Events;
 using Studio.API.Business.Domain.Contracts.Services.Events;
 using Studio.API.Business.Domain.Contracts.UnitOfWorks;
 using Studio.API.Business.Domain.CQRS.Queries.Events.EventXServices;
-using Studio.API.Business.Domain.CQRS.Queries.Events.EventXServices;
 using Studio.API.Business.Domain.Entities.Events;
 using Studio.API.Business.Domain.Results.Events;
 using Studio.API.Business.Domain.Results.Messages;

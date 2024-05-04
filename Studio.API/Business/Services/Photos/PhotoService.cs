@@ -3,7 +3,6 @@ using Studio.API.Business.Domain.Contracts.Repositories.Photos;
 using Studio.API.Business.Domain.Contracts.Services.Photos;
 using Studio.API.Business.Domain.Contracts.UnitOfWorks;
 using Studio.API.Business.Domain.Entities.Photos;
-using Studio.API.Business.Domain.Entities.Photos;
 using Studio.API.Business.Domain.Results.Photos;
 using Studio.API.Business.Domain.Results.Messages;
 using Studio.API.Business.Domain.Utilities;
