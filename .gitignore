@@ -396,8 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-/Studio.API/.vs/Studio.API/v17/.suo
-/Studio.API/obj/Debug/net6.0/apphost.exe
-/Studio.API/obj/Debug/net6.0/Studio.API.csproj.FileListAbsolute.txt
+/*/.vs/*/v17/.suo
+/*/obj/Debug/net6.0/apphost.exe
+/*/obj/Debug/net6.0/*.csproj.FileListAbsolute.txt
 #
-/Studio.API/.vs/Studio.API/v17/DocumentLayout.json
+/*/.vs/*/v17/DocumentLayout.json
