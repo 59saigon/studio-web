@@ -1,29 +1,85 @@
 <p-toast></p-toast>
-<div class="grid">
-    <div class="col-12">
-        <div class="card px-6 py-6">
-            <p-toast></p-toast>
+<p-panel header="Country List" [toggleable]="true">
+    <div class="grid">
+        <div class="col-12">
             <p-toolbar styleClass="mb-4">
                 <ng-template pTemplate="left">
                     <div class="my-2">
-                        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
-                        <button pButton pRipple label="Delete" icon="pi pi-trash" class="p-button-danger" (click)="deleteSelectedCountrys()" [disabled]="!selectedCountrys || !selectedCountrys.length"></button>
+                        <button
+                            pButton
+                            pRipple
+                            label="New"
+                            icon="pi pi-plus"
+                            class="p-button-success mr-2"
+                            (click)="openNew()"
+                        ></button>
+                        <button
+                            pButton
+                            pRipple
+                            label="Delete"
+                            icon="pi pi-trash"
+                            class="p-button-danger"
+                            (click)="deleteSelectedCountrys()"
+                            [disabled]="
+                                !selectedCountrys || !selectedCountrys.length
+                            "
+                        ></button>
                     </div>
                 </ng-template>
 
                 <ng-template pTemplate="right">
-                    <p-fileUpload mode="basic" accept="image/*" [maxFileSize]="1000000" label="Import" chooseLabel="Import" class="mr-2 inline-block"></p-fileUpload>
-                    <button pButton pRipple label="Export" icon="pi pi-upload" class="p-button-help" (click)="dt.exportCSV()"></button>
+                    <p-fileUpload
+                        mode="basic"
+                        accept="image/*"
+                        [maxFileSize]="1000000"
+                        label="Import"
+                        chooseLabel="Import"
+                        class="mr-2 inline-block"
+                    ></p-fileUpload>
+                    <button
+                        pButton
+                        pRipple
+                        label="Export"
+                        icon="pi pi-upload"
+                        class="p-button-help"
+                        (click)="dt.exportCSV()"
+                    ></button>
                 </ng-template>
             </p-toolbar>
 
-            <p-table #dt [value]="countrys" styleClass="p-datatable-sm" responsiveLayout="stack" [breakpoint]="'960px'" [columns]="cols" responsiveLayout="scroll" [rows]="10" [globalFilterFields]="['countryName']" [paginator]="true" [rowsPerPageOptions]="[10,20,30]" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [(selection)]="selectedCountrys" selectionMode="multiple" [rowHover]="true" dataKey="id">
+            <p-table
+                #dt
+                [value]="countrys"
+                styleClass="p-datatable-sm"
+                responsiveLayout="stack"
+                [breakpoint]="'960px'"
+                [columns]="cols"
+                responsiveLayout="scroll"
+                [rows]="10"
+                [globalFilterFields]="['countryName']"
+                [paginator]="true"
+                [rowsPerPageOptions]="[10, 20, 30]"
+                [showCurrentPageReport]="true"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [(selection)]="selectedCountrys"
+                selectionMode="multiple"
+                [rowHover]="true"
+                dataKey="id"
+            >
                 <ng-template pTemplate="caption">
-                    <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
+                    <div
+                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+                    >
                         <h5 class="m-0">Manage Countrys</h5>
                         <span class="block mt-2 md:mt-0 p-input-icon-left">
                             <i class="pi pi-search"></i>
-                            <input pInputText type="text" (input)="onGlobalFilter(dt, $event)" placeholder="Search..."  class="w-full sm:w-auto"/>
+                            <input
+                                pInputText
+                                type="text"
+                                (input)="onGlobalFilter(dt, $event)"
+                                placeholder="Search..."
+                                class="w-full sm:w-auto"
+                            />
                         </span>
                     </div>
                 </ng-template>
@@ -32,112 +88,234 @@
                         <th style="width: 3rem">
                             <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                         </th>
-                        <th pSortableColumn="id">Id <p-sortIcon field="code"></p-sortIcon></th>
-                        <th pSortableColumn="countryName" >
-                            Country 
+                        <th pSortableColumn="id">
+                            Id <p-sortIcon field="code"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="countryName">
+                            Country
                             <p-sortIcon field="countryName"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="createdBy" >
+                        <th pSortableColumn="createdBy">
                             Created By
                             <p-sortIcon field="createdBy"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="createdDate" >
+                        <th pSortableColumn="createdDate">
                             Created Date
                             <p-sortIcon field="createdDate"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="lastUpdatedBy" >
+                        <th pSortableColumn="lastUpdatedBy">
                             Last Updated By
                             <p-sortIcon field="lastUpdatedBy"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="lastUpdatedDate" >
+                        <th pSortableColumn="lastUpdatedDate">
                             Last Updated Date
                             <p-sortIcon field="lastUpdatedDate"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="isDeleted" >
+                        <th pSortableColumn="isDeleted">
                             Availibility
                             <p-sortIcon field="isDeleted"></p-sortIcon>
                         </th>
                         <!-- Actions column typically does not need sorting -->
-                        <th >Actions</th>
-                      </tr>
+                        <th>Actions</th>
+                    </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-country>
                     <tr>
                         <td>
-                            <p-tableCheckbox [value]="country"></p-tableCheckbox>
+                            <p-tableCheckbox
+                                [value]="country"
+                            ></p-tableCheckbox>
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">Id</span>
-                            {{country.id}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Id</span>
+                            {{ country.id }}
                         </td>
-                        <td style="width:14%; min-width:10rem;">
+                        <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">Country</span>
-                            {{country.countryName}}
+                            {{ country.countryName }}
                         </td>
-                        
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">CreateDate</span>
-                            {{country.createdBy}}
+
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">CreateDate</span>
+                            {{ country.createdBy }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">CreatedDate</span>
-                            {{country.createdDate | date: 'dd/MM/yyyy'}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">CreatedDate</span>
+                            {{ country.createdDate | date : "dd/MM/yyyy" }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">LastUpdatedBy</span>
-                            {{country.lastUpdatedBy}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">LastUpdatedBy</span>
+                            {{ country.lastUpdatedBy }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">lastUpdatedDate</span>
-                            {{country.lastUpdatedDate | date: 'dd/MM/yyyy'}}
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">lastUpdatedDate</span>
+                            {{ country.lastUpdatedDate | date : "dd/MM/yyyy" }}
                         </td>
-                        <td style="width:14%; min-width:10rem;"><span class="p-column-title">Is Deleted</span>
-                            <i class="pi" style="color: green" [ngClass]="{'true-icon pi-check-circle': !country.isDeleted, 'false-icon pi-times-circle': country.isDeleted}"></i>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Is Deleted</span>
+                            <i
+                                class="pi"
+                                style="color: green"
+                                [ngClass]="{
+                                    'true-icon pi-check-circle':
+                                        !country.isDeleted,
+                                    'false-icon pi-times-circle':
+                                        country.isDeleted
+                                }"
+                            ></i>
                         </td>
 
                         <td>
                             <div class="flex">
-                                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-text" (click)="editCountry(country)"></button>
-                                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-text" (click)="deleteCountry(country)"></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-pencil"
+                                    class="p-button-rounded p-button-text"
+                                    (click)="editCountry(country)"
+                                ></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-trash"
+                                    class="p-button-rounded p-button-text"
+                                    (click)="deleteCountry(country)"
+                                ></button>
                             </div>
                         </td>
                     </tr>
                 </ng-template>
             </p-table>
-        </div>
 
-        <p-dialog  [(visible)]="countryDialog" [style]="{width: '450px'}" 
-        header="Country Details" [modal]="true" class="p-fluid">
-            <ng-template pTemplate="content">
-                <img [src]="'assets/demo/images/country/' + country.image" [alt]="country.image" width="150" class="mt-0 mx-auto mb-5 block shadow-2" *ngIf="country.image">
-                <div class="field">
-                    <label for="countryName">Country</label>
-                    <input type="text" pInputText id="countryName" [(ngModel)]="country.countryName" required autofocus [ngClass]="{'ng-invalid ng-dirty' : submitted && !country.countryName}"/>
-                    <small class="ng-dirty ng-invalid" *ngIf="submitted && !country.countryName">Tittle is required.</small>
+            <p-dialog
+                [(visible)]="countryDialog"
+                [style]="{ width: '450px' }"
+                header="Country Details"
+                [modal]="true"
+                class="p-fluid"
+            >
+                <ng-template pTemplate="content">
+                    <img
+                        [src]="'assets/demo/images/country/' + country.image"
+                        [alt]="country.image"
+                        width="150"
+                        class="mt-0 mx-auto mb-5 block shadow-2"
+                        *ngIf="country.image"
+                    />
+                    <div class="field">
+                        <label for="countryName">Country</label>
+                        <input
+                            type="text"
+                            pInputText
+                            id="countryName"
+                            [(ngModel)]="country.countryName"
+                            required
+                            autofocus
+                            [ngClass]="{
+                                'ng-invalid ng-dirty':
+                                    submitted && !country.countryName
+                            }"
+                        />
+                        <small
+                            class="ng-dirty ng-invalid"
+                            *ngIf="submitted && !country.countryName"
+                            >Tittle is required.</small
+                        >
+                    </div>
+                </ng-template>
+
+                <ng-template pTemplate="footer">
+                    <button
+                        pButton
+                        pRipple
+                        label="Cancel"
+                        icon="pi pi-times"
+                        class="p-button-text"
+                        (click)="hideDialog()"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        label="Save"
+                        icon="pi pi-check"
+                        class="p-button-text"
+                        (click)="saveCountry()"
+                    ></button>
+                </ng-template>
+            </p-dialog>
+
+            <p-dialog
+                [(visible)]="deleteCountryDialog"
+                header="Confirm"
+                [modal]="true"
+                [style]="{ width: '450px' }"
+            >
+                <div class="flex align-items-center justify-content-center">
+                    <i
+                        class="pi pi-exclamation-triangle mr-3"
+                        style="font-size: 2rem"
+                    ></i>
+                    <span *ngIf="country"
+                        >Are you sure you want to delete
+                        <b>{{ country.countryName }}</b
+                        >?</span
+                    >
                 </div>
-            </ng-template>
+                <ng-template pTemplate="footer">
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-times"
+                        class="p-button-text"
+                        label="No"
+                        (click)="deleteCountryDialog = false"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-check"
+                        class="p-button-text"
+                        label="Yes"
+                        (click)="confirmDelete()"
+                    ></button>
+                </ng-template>
+            </p-dialog>
 
-            <ng-template pTemplate="footer">
-                <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-                <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveCountry()"></button>
-            </ng-template>
-        </p-dialog>
-
-        <p-dialog [(visible)]="deleteCountryDialog" header="Confirm" [modal]="true" [style]="{width:'450px'}">
-            <div class="flex align-items-center justify-content-center">
-                <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem"></i>
-                <span *ngIf="country">Are you sure you want to delete <b>{{country.countryName}}</b>?</span>
-            </div>
-            <ng-template pTemplate="footer">
-                <button pButton pRipple icon="pi pi-times" class="p-button-text" label="No" (click)="deleteCountryDialog = false"></button>
-                <button pButton pRipple icon="pi pi-check" class="p-button-text" label="Yes" (click)="confirmDelete()"></button>
-            </ng-template>
-        </p-dialog>
-
-        <p-dialog [(visible)]="deleteCountrysDialog" header="Confirm" [modal]="true" [style]="{width:'450px'}">
-            <div class="flex align-items-center justify-content-center">
-                <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem"></i>
-                <span>Are you sure you want to delete selected countrys?</span>
-            </div>
-            <ng-template pTemplate="footer">
-                <button pButton pRipple icon="pi pi-times" class="p-button-text" label="No" (click)="deleteCountrysDialog = false"></button>
-                <button pButton pRipple icon="pi pi-check" class="p-button-text" label="Yes" (click)="confirmDeleteSelected()"></button>
-            </ng-template>
-        </p-dialog>
+            <p-dialog
+                [(visible)]="deleteCountrysDialog"
+                header="Confirm"
+                [modal]="true"
+                [style]="{ width: '450px' }"
+            >
+                <div class="flex align-items-center justify-content-center">
+                    <i
+                        class="pi pi-exclamation-triangle mr-3"
+                        style="font-size: 2rem"
+                    ></i>
+                    <span
+                        >Are you sure you want to delete selected
+                        countrys?</span
+                    >
+                </div>
+                <ng-template pTemplate="footer">
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-times"
+                        class="p-button-text"
+                        label="No"
+                        (click)="deleteCountrysDialog = false"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-check"
+                        class="p-button-text"
+                        label="Yes"
+                        (click)="confirmDeleteSelected()"
+                    ></button>
+                </ng-template>
+            </p-dialog>
+        </div>
     </div>
-</div>
+</p-panel>

@@ -19,6 +19,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
+import { PanelModule } from 'primeng/panel';
 @NgModule({
     declarations: [PhotoListComponent],
     imports: [
@@ -40,6 +41,7 @@ import { CalendarModule } from 'primeng/calendar';
         DialogModule,
         CalendarModule,
         ToastModule,
+        PanelModule,
     ],
 })
 export class PhotoListModule {}

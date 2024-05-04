@@ -21,6 +21,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { EventListComponent } from './event-list.component';
 import { EventServiceListComponent } from '../event-service-list/event-service-list.component';
 import { EventPhotoListComponent } from '../event-photo-list/event-photo-list.component';
+import { PanelModule } from 'primeng/panel';
+import { PanelMenu, PanelMenuModule } from 'primeng/panelmenu';
 @NgModule({
     declarations: [EventListComponent, EventServiceListComponent, EventPhotoListComponent],
     imports: [
@@ -42,6 +44,8 @@ import { EventPhotoListComponent } from '../event-photo-list/event-photo-list.co
         DialogModule,
         CalendarModule,
         ToastModule,
+        PanelModule,
+        PanelMenuModule,
     ],
 })
 export class EventListModule {}

@@ -19,6 +19,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
 import { CountryListComponent } from './country-list.component';
+import { PanelModule } from 'primeng/panel';
 @NgModule({
   declarations: [CountryListComponent],
   imports: [
@@ -39,7 +40,8 @@ import { CountryListComponent } from './country-list.component';
     InputNumberModule,
     DialogModule,
     CalendarModule,
-    ToastModule
+    ToastModule,
+    PanelModule,
   ]
 })
 export class CountryListModule { }

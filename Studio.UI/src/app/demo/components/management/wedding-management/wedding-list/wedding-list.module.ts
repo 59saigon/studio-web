@@ -19,6 +19,7 @@ import {CalendarModule} from 'primeng/calendar';
 
 import { WeddingListRoutingModule } from './wedding-list-routing.module';
 import { WeddingListComponent } from './wedding-list.component';
+import { PanelModule } from 'primeng/panel';
 
 @NgModule({
     imports: [
@@ -39,7 +40,8 @@ import { WeddingListComponent } from './wedding-list.component';
         InputNumberModule,
         DialogModule,
         CalendarModule,
-        ToastModule
+        ToastModule,
+        PanelModule,
     ],
     declarations: [WeddingListComponent]
 })
