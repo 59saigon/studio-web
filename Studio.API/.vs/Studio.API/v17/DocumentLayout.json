@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\services\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\services\\services\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\domain\\contracts\\repositories\\services\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\domain\\contracts\\repositories\\services\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\services\\servicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\services\\servicequeryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|c:\\users\\nguye\\desktop\\working\\individual\\nhumystudio_webapi\\studio.api\\business\\handler\\queries\\photos\\photoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DD19BD3-55A1-48E1-B231-86513F2DADEC}|Studio.API.csproj|solutionrelative:business\\handler\\queries\\photos\\photoqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\Working\\NhuMyStudio_WebAPI\\Studio.API\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,21 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IServiceService.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\Services\\Services\\IServiceService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T14:26:20.351Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -60,45 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IServiceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "RelativeDocumentMoniker": "Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "RelativeToolTip": "Business\\Domain\\Contracts\\Repositories\\Services\\IServiceRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAB4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T14:26:31.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiceQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Queries\\Services\\ServiceQueryHandler.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T14:25:56.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PhotoQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
-              "RelativeDocumentMoniker": "Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
-              "ToolTip": "C:\\Users\\nguye\\Desktop\\Working\\Individual\\NhuMyStudio_WebAPI\\Studio.API\\Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
-              "RelativeToolTip": "Business\\Handler\\Queries\\Photos\\PhotoQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T14:25:54.807Z",
-              "EditorCaption": ""
             }
           ]
         }
