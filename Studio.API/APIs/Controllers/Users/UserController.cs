@@ -34,14 +34,6 @@ namespace Studio.API.APIs.Controllers.Users
             return Ok(messageResult);
         }
 
-        // POST api/<UserController>
-        [HttpPost("create-user")]
-        public async Task<IActionResult> Create([FromBody] UserCreateCommand userCreateCommand)
-        {
-            MessageView<UserView> messageView = await _mediator.Send(userCreateCommand);
-            return Ok(messageView);
-        }
-
         // PUT api/<UserController>/5
         [HttpPost("update-user")]
         public async Task<IActionResult> Update([FromBody] UserUpdateCommand userUpdateCommand)
@@ -50,12 +42,26 @@ namespace Studio.API.APIs.Controllers.Users
             return Ok(messageView);
         }
 
-
         // DELETE api/<UserController>/5
         [HttpPost("delete-user")]
         public async Task<IActionResult> Delete([FromBody] UserDeleteCommand userDeleteCommand)
         {
             MessageView<UserView> messageView = await _mediator.Send(userDeleteCommand);
+            return Ok(messageView);
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] AuthQuery authQuery)
+        {
+            MessageResult<AuthResult> messageResult = await _mediator.Send(authQuery);
+            return Ok(messageResult);
+        }
+
+        // POST api/<AuthController>
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] UserCreateCommand userCreateCommand)
+        {
+            MessageView<UserView> messageView = await _mediator.Send(userCreateCommand);
             return Ok(messageView);
         }
     }

@@ -18,14 +18,14 @@ namespace Studio.API.Business.Handler.Queries.Weddings
             _weddingService = weddingService;
         }
 
-        public Task<MessageResults<WeddingResult>> Handle(WeddingGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResults<WeddingResult>> Handle(WeddingGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _weddingService.GetAll<WeddingResult>();
+            return await _weddingService.GetAll<WeddingResult>();
         }
 
-        public Task<MessageResult<WeddingResult>> Handle(WeddingGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResult<WeddingResult>> Handle(WeddingGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _weddingService.GetById<WeddingResult>(request.Id);
+            return await _weddingService.GetById<WeddingResult>(request.Id);
         }
     }
 }

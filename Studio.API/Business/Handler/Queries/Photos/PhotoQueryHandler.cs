@@ -18,14 +18,14 @@ namespace Studio.API.Business.Handler.Queries.Photos
             _photoService = photoService;
         }
 
-        public Task<MessageResults<PhotoResult>> Handle(PhotoGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResults<PhotoResult>> Handle(PhotoGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _photoService.GetAll(request, cancellationToken);
+            return await _photoService.GetAll(request, cancellationToken);
         }
 
-        public Task<MessageResult<PhotoResult>> Handle(PhotoGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResult<PhotoResult>> Handle(PhotoGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _photoService.GetById<PhotoResult>(request.Id);
+            return await _photoService.GetById<PhotoResult>(request.Id);
         }
     }
 }

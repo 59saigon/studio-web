@@ -54,9 +54,9 @@ builder.Services.AddAutoMapper(typeof(MappingProfile));
 #region Add-MediaR
 
 //After 12.0.0
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 ////Before 12.0.0
-//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 
 #endregion
 
@@ -82,22 +82,21 @@ builder.Services.AddScoped<IPhotoRepository, PhotoRepository>();
 #endregion
 
 #region Add-Transient
-
 builder.Services.AddTransient<IWeddingService, WeddingService>();
 
-builder.Services.AddScoped<ILocationService, LocationService>();
-builder.Services.AddScoped<ICountryService, CountryService>();
-builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddTransient<ILocationService, LocationService>();
+builder.Services.AddTransient<ICountryService, CountryService>();
+builder.Services.AddTransient<ICityService, CityService>();
 
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
-builder.Services.AddScoped<IEventService, EventService>();
-builder.Services.AddScoped<IEventXPhotoService, EventXPhotoService>();
-builder.Services.AddScoped<IEventXServiceService, EventXServiceService>();
+builder.Services.AddTransient<IEventService, EventService>();
+builder.Services.AddTransient<IEventXPhotoService, EventXPhotoService>();
+builder.Services.AddTransient<IEventXServiceService, EventXServiceService>();
 
-builder.Services.AddScoped<IServiceService, ServiceService>();
+builder.Services.AddTransient<IServiceService, ServiceService>();
 
-builder.Services.AddScoped<IPhotoService, PhotoService>();
+builder.Services.AddTransient<IPhotoService, PhotoService>();
 
 #endregion
 

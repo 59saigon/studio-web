@@ -5,5 +5,6 @@ namespace Studio.API.Business.Domain.CQRS.Queries.Users
 {
     public class UserGetAllQuery : GetAllQuery<UserResult>
     {
+        
     }
 }

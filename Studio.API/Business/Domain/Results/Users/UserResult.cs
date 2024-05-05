@@ -20,8 +20,6 @@ namespace Studio.API.Business.Domain.Results.Users
         
         public string Username { get; set; } = null!;
         
-        public string Password { get; set; } = null!;
-        
         public Guid RoleId { get; set; }
         
         public string? Avatar { get; set; }

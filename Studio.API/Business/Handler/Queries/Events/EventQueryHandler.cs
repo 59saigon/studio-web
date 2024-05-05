@@ -18,14 +18,14 @@ namespace Studio.API.Business.Handler.Queries.Events
             _eventService = eventService;
         }
 
-        public Task<MessageResults<EventResult>> Handle(EventGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResults<EventResult>> Handle(EventGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _eventService.GetAll(cancellationToken);
+            return await _eventService.GetAll(cancellationToken);
         }
 
-        public Task<MessageResult<EventResult>> Handle(EventGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResult<EventResult>> Handle(EventGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _eventService.GetById<EventResult>(request.Id);
+            return await _eventService.GetById<EventResult>(request.Id);
         }
     }
 }

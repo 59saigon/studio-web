@@ -1,8 +1,5 @@
-﻿using MediatR;
-using Studio.API.Business.Domain.Contracts.Services.Bases;
-using Studio.API.Business.Domain.CQRS.Queries.Base;
+﻿using Studio.API.Business.Domain.Contracts.Services.Bases;
 using Studio.API.Business.Domain.Models.Base;
-using Studio.API.Business.Domain.Models.Messages;
 
 namespace Studio.API.Business.Handler.Queries.Base
 {

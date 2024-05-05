@@ -14,6 +14,9 @@ namespace Studio.API.Business.Domain.Configs.Mapping
             CreateMap<User, UserCreateCommand>().ReverseMap();
             CreateMap<User, UserView>().ReverseMap();
             CreateMap<User, UserUpdateCommand>().ReverseMap();
+
+            CreateMap<Role, RoleResult>().ReverseMap();
+            CreateMap<Role, RoleView>().ReverseMap();
         }
     }
 }

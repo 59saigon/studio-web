@@ -18,14 +18,14 @@ namespace Studio.API.Business.Handler.Queries.Events
             _eventXPhotoService = eventXPhotoService;
         }
 
-        public Task<MessageResults<EventXPhotoResult>> Handle(EventXPhotoGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResults<EventXPhotoResult>> Handle(EventXPhotoGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _baseService.GetAll<EventXPhotoResult>();
+            return await _baseService.GetAll<EventXPhotoResult>();
         }
 
-        public Task<MessageResult<EventXPhotoResult>> Handle(EventXPhotoGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResult<EventXPhotoResult>> Handle(EventXPhotoGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _eventXPhotoService.GetByEventIdAndPhotoId(request);
+            return await _eventXPhotoService.GetByEventIdAndPhotoId(request);
         }
     }
 }

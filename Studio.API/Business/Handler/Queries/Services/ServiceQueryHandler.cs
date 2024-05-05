@@ -18,14 +18,14 @@ namespace Studio.API.Business.Handler.Queries.Services
             _serviceService = serviceService;
         }
 
-        public Task<MessageResults<ServiceResult>> Handle(ServiceGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResults<ServiceResult>> Handle(ServiceGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _serviceService.GetAll(request, cancellationToken);
+            return await _serviceService.GetAll(request, cancellationToken);
         }
 
-        public Task<MessageResult<ServiceResult>> Handle(ServiceGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResult<ServiceResult>> Handle(ServiceGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _serviceService.GetById<ServiceResult>(request.Id);
+            return await _serviceService.GetById<ServiceResult>(request.Id);
         }
     }
 }

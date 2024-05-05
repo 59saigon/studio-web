@@ -10,7 +10,9 @@ namespace Studio.API.Business.Handler.Queries.Users
 {
     public class UserQueryHandler : BaseQueryHandler<UserView>,
         IRequestHandler<UserGetAllQuery, MessageResults<UserResult>>,
-        IRequestHandler<UserGetByIdQuery, MessageResult<UserResult>>
+        IRequestHandler<UserGetByIdQuery, MessageResult<UserResult>>,
+        IRequestHandler<AuthQuery, MessageResult<AuthResult>>
+
     {
         protected readonly IUserService _userService;
         public UserQueryHandler(IUserService userService) : base(userService)
@@ -18,14 +20,20 @@ namespace Studio.API.Business.Handler.Queries.Users
             _userService = userService;
         }
 
-        public Task<MessageResults<UserResult>> Handle(UserGetAllQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResults<UserResult>> Handle(UserGetAllQuery request, CancellationToken cancellationToken)
         {
-            return _userService.GetAll<UserResult>();
+            return await _userService.GetAll<UserResult>();
         }
 
-        public Task<MessageResult<UserResult>> Handle(UserGetByIdQuery request, CancellationToken cancellationToken)
+        public async Task<MessageResult<UserResult>> Handle(UserGetByIdQuery request, CancellationToken cancellationToken)
         {
-            return _userService.GetById<UserResult>(request.Id);
+            return await _userService.GetById<UserResult>(request.Id);
+        }
+
+        public async Task<MessageResult<AuthResult>> Handle(AuthQuery request, CancellationToken cancellationToken)
+        {
+            var msgView = await _userService.Login(request, cancellationToken);
+            return msgView;
         }
     }
 }
