@@ -53,7 +53,7 @@ namespace Studio.API.APIs.Controllers.Users
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] AuthQuery authQuery)
         {
-            MessageResult<AuthResult> messageResult = await _mediator.Send(authQuery);
+            MessageLoginResult<UserResult> messageResult = await _mediator.Send(authQuery);
             return Ok(messageResult);
         }
 

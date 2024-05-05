@@ -11,7 +11,7 @@ namespace Studio.API.Business.Handler.Queries.Users
     public class UserQueryHandler : BaseQueryHandler<UserView>,
         IRequestHandler<UserGetAllQuery, MessageResults<UserResult>>,
         IRequestHandler<UserGetByIdQuery, MessageResult<UserResult>>,
-        IRequestHandler<AuthQuery, MessageResult<AuthResult>>
+        IRequestHandler<AuthQuery, MessageLoginResult<UserResult>>
 
     {
         protected readonly IUserService _userService;
@@ -30,7 +30,7 @@ namespace Studio.API.Business.Handler.Queries.Users
             return await _userService.GetById<UserResult>(request.Id);
         }
 
-        public async Task<MessageResult<AuthResult>> Handle(AuthQuery request, CancellationToken cancellationToken)
+        public async Task<MessageLoginResult<UserResult>> Handle(AuthQuery request, CancellationToken cancellationToken)
         {
             var msgView = await _userService.Login(request, cancellationToken);
             return msgView;

@@ -18,6 +18,11 @@ namespace Studio.API.Business.Domain.Utilities
         {
             return new MessageResult<TResult>(result);
         }
+        public static MessageLoginResult<TResult> GetMessageLoginResult<TResult>(TResult result, string token, string expiration)
+            where TResult : BaseResult
+        {
+            return new MessageLoginResult<TResult>(result, token, expiration);
+        }
 
         public static MessageViews<TView> GetMessageViews<TView>(List<TView> views)
             where TView : BaseView

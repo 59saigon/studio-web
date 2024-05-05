@@ -10,7 +10,7 @@ namespace Studio.API.Business.Domain.Contracts.Services.Users
 {
     public interface IUserService : IBaseService
     {
-        Task<MessageResult<AuthResult>> Login(AuthQuery x, CancellationToken cancellationToken = default);
+        Task<MessageLoginResult<UserResult>> Login(AuthQuery x, CancellationToken cancellationToken = default);
         Task<MessageView<UserView>> Register(UserCreateCommand x, CancellationToken cancellationToken = default);
     }
 }

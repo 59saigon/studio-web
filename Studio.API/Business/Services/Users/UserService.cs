@@ -39,18 +39,15 @@ namespace Studio.API.Business.Services.Users
             _configuration = configuration;
         }
 
-        public async Task<MessageResult<AuthResult>> Login(AuthQuery x, CancellationToken cancellationToken = default)
+        public async Task<MessageLoginResult<UserResult>> Login(AuthQuery x, CancellationToken cancellationToken = default)
         {
             // check username or email
             User user = await _userRepository.FindUsernameOrEmail(x);
+            UserResult userResult = new UserResult();
+            
             if (user == null)
             {
-                return AppMessage.GetMessageResult(new AuthResult
-                {
-                    User = null,
-                    Token = string.Empty,
-                    Expiration = string.Empty,
-                });
+                return AppMessage.GetMessageLoginResult(userResult, null, null);
             }
 
             // check password
@@ -58,23 +55,15 @@ namespace Studio.API.Business.Services.Users
             if (!isPasswordValid)
             {
                 // Nếu mật khẩu không khớp, trả lại thông tin không hợp lệ
-                return AppMessage.GetMessageResult(new AuthResult
-                {
-                    User = null,
-                    Token = string.Empty,
-                    Expiration = string.Empty,
-                });
+                return AppMessage.GetMessageLoginResult(userResult, null, null);
             }
 
-            UserResult userResult = _mapper.Map<User, UserResult>(user);
+            userResult = _mapper.Map<User, UserResult>(user);
             JwtSecurityToken token = CreateToken(user);
-            AuthResult authResult = new AuthResult
-            {
-                User = userResult,
-                Token = new JwtSecurityTokenHandler().WriteToken(token),
-                Expiration = token.ValidTo.ToString(),
-            };
-            var msgResult = AppMessage.GetMessageResult<AuthResult>(authResult);
+            var msgResult = AppMessage.GetMessageLoginResult(userResult,
+                new JwtSecurityTokenHandler().WriteToken(token), 
+                token.ValidTo.ToString());
+
             return msgResult;
         }
 
