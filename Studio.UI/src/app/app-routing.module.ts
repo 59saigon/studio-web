@@ -2,6 +2,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { AppLayoutComponent } from './layout/app.layout.component';
+import { AuthGuard } from './core/guard/auth.guard';
 
 @NgModule({
     imports: [
@@ -10,6 +11,7 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                 {
                     path: '',
                     component: AppLayoutComponent,
+                    canActivate: [AuthGuard],
                     children: [
                         {
                             path: '',
@@ -71,6 +73,7 @@ import { AppLayoutComponent } from './layout/app.layout.component';
                 },
                 {
                     path: 'landing',
+                    canActivate: [AuthGuard],
                     loadChildren: () =>
                         import('./demo/components/landing/landing.module').then(
                             (m) => m.LandingModule

@@ -20,7 +20,6 @@ import { PhotoService } from 'src/app/demo/service/management/photo.service';
     selector: 'app-event-photo-list',
     templateUrl: './event-photo-list.component.html',
     styleUrl: './event-photo-list.component.scss',
-    providers: [MessageService, PhotoService, EventService, EventXPhotoService],
 })
 export class EventPhotoListComponent implements OnInit {
     //private subscription: Subscription = new Subscription();

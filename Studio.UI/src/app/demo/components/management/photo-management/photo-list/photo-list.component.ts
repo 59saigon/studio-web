@@ -13,7 +13,6 @@ import { PhotoService } from 'src/app/demo/service/management/photo.service';
     selector: 'app-photo-list',
     templateUrl: './photo-list.component.html',
     styleUrl: './photo-list.component.scss',
-    providers: [MessageService, PhotoService, DatePipe],
 })
 export class PhotoListComponent implements OnInit {
     photoDialog: boolean = false;

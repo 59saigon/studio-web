@@ -20,7 +20,6 @@ import { ServiceService } from 'src/app/demo/service/management/service.service'
     selector: 'app-event-service-list',
     templateUrl: './event-service-list.component.html',
     styleUrl: './event-service-list.component.scss',
-    providers: [MessageService, ServiceService, EventService, EventXServiceService],
 })
 export class EventServiceListComponent implements OnInit {
     //private subscription: Subscription = new Subscription();

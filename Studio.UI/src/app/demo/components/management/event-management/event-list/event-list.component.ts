@@ -23,15 +23,6 @@ import { WeddingService } from 'src/app/demo/service/management/wedding.service'
     selector: 'app-event-list',
     templateUrl: './event-list.component.html',
     styleUrl: './event-list.component.scss',
-    providers: [
-        MessageService,
-        EventService,
-        CityService,
-        CountryService,
-        DatePipe,
-        LocationService,
-        WeddingService,
-    ],
 })
 export class EventListComponent implements OnInit {
     id: string = '';
@@ -78,7 +69,6 @@ export class EventListComponent implements OnInit {
         private weddingService: WeddingService,
         private activatedRoute: ActivatedRoute,
         private router: Router,
-        private datePipe: DatePipe
     ) {}
 
     messageResults!: MessageResults<EventEntity>;

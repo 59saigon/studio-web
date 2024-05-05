@@ -13,7 +13,6 @@ import { ServiceService } from 'src/app/demo/service/management/service.service'
     selector: 'app-service-list',
     templateUrl: './service-list.component.html',
     styleUrl: './service-list.component.scss',
-    providers: [MessageService, ServiceService, DatePipe],
 })
 export class ServiceListComponent implements OnInit {
     serviceDialog: boolean = false;

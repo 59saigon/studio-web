@@ -16,7 +16,6 @@ import { CountryService } from 'src/app/demo/service/management/country.service'
     selector: 'app-city-list',
     templateUrl: './city-list.component.html',
     styleUrl: './city-list.component.scss',
-    providers: [MessageService, CityService, CountryService, DatePipe],
 })
 export class CityListComponent implements OnInit {
     cityDialog: boolean = false;

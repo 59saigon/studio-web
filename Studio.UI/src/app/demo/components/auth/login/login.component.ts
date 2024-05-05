@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/data/entity/User';
 import { AuthQuery } from 'src/app/data/queries/AuthQuery';
 import { UserService } from 'src/app/demo/service/management/user.service';
@@ -15,7 +16,6 @@ import { LayoutService } from 'src/app/layout/service/app.layout.service';
             color: var(--primary-color) !important;
         }
     `],
-    providers: [UserService]
 })
 export class LoginComponent {
 
@@ -25,13 +25,18 @@ export class LoginComponent {
 
     user: User = {} as User;
 
-    constructor(public layoutService: LayoutService, public userService: UserService) { }
+    token: string = "";
+
+    constructor(public layoutService: LayoutService, public userService: UserService, private router: Router) { }
 
     onLogin(){
         this.userService.onLogin('user', this.authQuery).subscribe({
             next: (response) => {
                 this.user = response.result;
-                console.table(this.user);
+                this.token = response.token;
+                this.userService.setToken(this.user, this.token);
+                this.router.navigateByUrl('/');
+                console.table(response.result);
             },
             error: (err) => {
                 console.error('Error occurred:', err);

@@ -13,7 +13,6 @@ import { WeddingService } from 'src/app/demo/service/management/wedding.service'
     selector: 'app-wedding-list',
     templateUrl: './wedding-list.component.html',
     styleUrl: './wedding-list.component.scss',
-    providers: [MessageService, WeddingService, DatePipe],
 })
 export class WeddingListComponent implements OnInit {
     weddingDialog: boolean = false;
@@ -42,7 +41,6 @@ export class WeddingListComponent implements OnInit {
     constructor(
         private weddingService: WeddingService,
         private messageService: MessageService,
-        private datePipe: DatePipe
     ) {}
 
     messageResults!: MessageResults<Wedding>;

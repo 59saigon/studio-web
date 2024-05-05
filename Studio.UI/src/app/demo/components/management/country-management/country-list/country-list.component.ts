@@ -11,7 +11,6 @@ import { CountryService } from 'src/app/demo/service/management/country.service'
   selector: 'app-country-list',
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.scss',
-  providers: [MessageService, CountryService, DatePipe],
 })
 export class CountryListComponent implements OnInit{
   countryDialog: boolean = false;
