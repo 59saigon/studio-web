@@ -1,6 +1,10 @@
 export enum Constants {
     BASE_URL = 'https://localhost:7099',
 
+    LOGIN = 'login',
+    
+    REGISTER = 'register',
+
     CREATE = 'create',
 
     UPDATE = 'update',

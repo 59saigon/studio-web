@@ -1,16 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {
-    BaseCommand,
-    CreateCommand,
-    DeleteCommand,
-    UpdateCommand,
-} from 'src/app/data/commands/BaseCommand';
-import { Photo } from 'src/app/data/entity/Photo';
-import { GetAllQuery } from 'src/app/data/queries/BaseQuery';
-import { MessageResults } from 'src/app/data/results/MessageResult';
-import { MessageView } from 'src/app/data/views/MessageView';
 import { Constants } from 'src/app/shared/Constants';
 import { ConstantService } from 'src/app/shared/constant.service';
 
@@ -20,8 +10,8 @@ import { ConstantService } from 'src/app/shared/constant.service';
 //https://localhost:7099/api/wedding/get-wedding-list
 export class BaseService<T> {
     constructor(
-        private http: HttpClient,
-        private constantService: ConstantService
+        public http: HttpClient,
+        public constantService: ConstantService
     ) {}
 
     getListData(entity: string, data: any): Observable<any> {
@@ -65,6 +55,21 @@ export class BaseService<T> {
             data
         );
     }
+
+    onLogin(entity: string, data: any): Observable<any> {
+        return this.http.post(
+            this.constantService.receiveInstanceAPI(entity, Constants.LOGIN),
+            data
+        );
+    }
+
+    onRegister(entity: string, data: any): Observable<any> {
+        return this.http.post(
+            this.constantService.receiveInstanceAPI(entity, Constants.REGISTER),
+            data
+        );
+    }
+
     // constructor(
     //   private http: HttpClient,
     // ) {}
