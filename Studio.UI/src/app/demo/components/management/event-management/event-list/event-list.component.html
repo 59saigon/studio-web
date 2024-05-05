@@ -295,14 +295,12 @@
                                     class="wedding-item wedding-item-value"
                                     *ngIf="selectedWedding"
                                 >
-                                    <div>
-                                        {{ selectedWedding.weddingTittle }}
-                                    </div>
+                                    {{ selectedWedding.weddingTittle }}
                                 </div>
                             </ng-template>
                             <ng-template let-w pTemplate="item">
                                 <div class="wedding-item">
-                                    <div>{{ w.weddingTittle }}</div>
+                                    {{ w.weddingTittle }}
                                 </div>
                             </ng-template>
                         </p-dropdown>
@@ -508,8 +506,8 @@
 </p-panel>
 
 <div *ngIf="showDetails">
-    <br/>
+    <br />
     <app-event-service-list></app-event-service-list>
-    <br/>
+    <br />
     <app-event-photo-list></app-event-photo-list>
 </div>
