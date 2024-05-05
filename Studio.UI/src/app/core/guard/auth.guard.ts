@@ -20,13 +20,23 @@ export class AuthGuard implements CanActivate {
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot
     ): boolean {
+        const currentUrl = state.url; // Đường dẫn hiện tại
+
         if (this.userService.IsLoggedIn()) {
-            console.log('true');
-            return true;
+            if (currentUrl === '/auth/login') {
+                // Nếu người dùng đã đăng nhập và đang cố gắng truy cập trang đăng nhập, chuyển hướng họ
+                this.router.navigate(['/']); // Chuyển hướng đến trang chính hoặc trang khác
+                return false; // Ngăn kích hoạt tuyến đường
+            }
+            return true; // Cho phép truy cập nếu đã đăng nhập
         } else {
-            this.router.navigateByUrl('/auth/login');
-            console.log('false');
-            return false;
+            if (currentUrl === '/auth/login') {
+                // Nếu chưa đăng nhập và cố gắng truy cập trang đăng nhập, cho phép
+                return true; // Cho phép truy cập
+            }
+            // Nếu chưa đăng nhập và cố gắng truy cập các trang khác, chuyển hướng đến trang đăng nhập
+            this.router.navigateByUrl('/auth/login'); // Chuyển hướng đến trang đăng nhập
+            return false; // Ngăn kích hoạt tuyến đường
         }
     }
 }

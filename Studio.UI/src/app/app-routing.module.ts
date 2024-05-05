@@ -66,6 +66,7 @@ import { AuthGuard } from './core/guard/auth.guard';
                 },
                 {
                     path: 'auth',
+                    canActivate: [AuthGuard],
                     loadChildren: () =>
                         import('./demo/components/auth/auth.module').then(
                             (m) => m.AuthModule
