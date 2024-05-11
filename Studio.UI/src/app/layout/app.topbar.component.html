@@ -31,9 +31,11 @@
                 layoutService.state.profileSidebarVisible
         }"
     >
-        <!-- <app-config></app-config> -->
-        
-        <button class="p-link layout-topbar-button">
+        <button
+            pButton
+            class="p-link layout-topbar-button"
+            (click)="op.toggle($event)"
+        >
             <p-avatar
                 image="{{ userService.getUserDetails().avatar }}"
                 styleClass="mr-2"
@@ -42,6 +44,21 @@
             ></p-avatar>
             <span>Profile</span>
         </button>
+
+        <p-overlayPanel #op>
+            <ul class="layout-menu">
+                <ng-container *ngFor="let item of m; let i = index">
+                    <li
+                        app-menuitem
+                        *ngIf="!item.separator"
+                        [item]="item"
+                        [index]="i"
+                        [root]="true"
+                    ></li>
+                </ng-container>
+            </ul>
+            
+        </p-overlayPanel>
 
         <button
             class="p-link layout-topbar-button"

@@ -19,6 +19,8 @@ import { AppSidebarComponent } from './app.sidebar.component';
 import { AppLayoutComponent } from './app.layout.component';
 import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
     declarations: [
@@ -43,7 +45,9 @@ import { MenuModule } from 'primeng/menu';
         RouterModule,
         AppConfigModule,
         AvatarModule,
-        MenuModule
+        MenuModule,
+        ButtonModule,
+        OverlayPanelModule
     ],
     exports: [AppLayoutComponent],
 })
