@@ -21,6 +21,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { MenuModule } from 'primeng/menu';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
     declarations: [
@@ -47,7 +48,8 @@ import { ButtonModule } from 'primeng/button';
         AvatarModule,
         MenuModule,
         ButtonModule,
-        OverlayPanelModule
+        OverlayPanelModule,
+        ToastModule,
     ],
     exports: [AppLayoutComponent],
 })

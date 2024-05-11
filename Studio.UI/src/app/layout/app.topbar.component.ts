@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from './service/app.layout.service';
 import { UserService } from '../demo/service/management/user.service';
@@ -9,9 +9,9 @@ import { RouterLink } from '@angular/router';
     selector: 'app-topbar',
     templateUrl: './app.topbar.component.html',
 })
-export class AppTopBarComponent {
+export class AppTopBarComponent implements OnInit {
     items!: MenuItem[];
-    m: any[] = [];
+
     @ViewChild('menubutton') menuButton!: ElementRef;
 
     @ViewChild('topbarmenubutton') topbarMenuButton!: ElementRef;
@@ -21,30 +21,42 @@ export class AppTopBarComponent {
     constructor(
         public layoutService: LayoutService,
         public userService: UserService
-    ) {
-        console.log(userService.getUserDetails().avatar);
+    ) {}
+    ngOnInit(): void {
         this.setModel();
     }
     onOpenConfigModule() {
         this.layoutService.showConfigSidebar();
     }
+    openMenu() {
+        const menuItem = (
+            this.menu.nativeElement.getElementsByClassName(
+                'p-menuitem-link'
+            ) as HTMLCollectionOf<HTMLElement>
+        )[0];
+
+        setTimeout(() => {
+            menuItem.focus();
+        }, 1);
+    }
 
     setModel() {
-        this.m = [
+        this.items = [
             {
                 label: 'Settings',
                 icon: 'pi pi-fw pi-cog',
-                //click: this.onOpenConfigModule()                
+                command: () => {
+                    this.onOpenConfigModule();
+                },
             },
             {
                 label: 'Logout',
                 icon: 'pi pi-fw pi-power-off',
-                // click: () => {
-                //     this.userService.logout();
-                //     window.location.reload();
-                // },
+                command: () => {
+                    this.userService.logout();
+                    window.location.reload();
+                },
             },
-            
         ];
     }
 }
