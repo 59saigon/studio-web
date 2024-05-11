@@ -40,13 +40,13 @@ namespace Studio.API.Data.Repositories.Events
             foreach (var ev in events)
             {
                 // Filter out deleted EventXPhotos
-                ev.EventXPhotos = ev.EventXPhotos.Where(ex => !ex.IsDeleted).ToList();
+                ev.EventXPhotos = ev.EventXPhotos.Where(ex => !ex.IsDeleted && !ex.Photo.IsDeleted).ToList();
             }
 
             foreach (var ev in events)
             {
                 // Filter out deleted EventXServices
-                ev.EventXServices = ev.EventXServices.Where(ex => !ex.IsDeleted).ToList();
+                ev.EventXServices = ev.EventXServices.Where(ex => !ex.IsDeleted && !ex.Service.IsDeleted).ToList();
             }
             return events;
         }
