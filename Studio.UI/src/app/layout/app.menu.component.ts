@@ -1,4 +1,4 @@
-import { OnInit } from '@angular/core';
+import { AfterViewInit, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 import { LayoutService } from './service/app.layout.service';
 import { UserService } from '../demo/service/management/user.service';
@@ -7,9 +7,15 @@ import { UserService } from '../demo/service/management/user.service';
     selector: 'app-menu',
     templateUrl: './app.menu.component.html',
 })
-export class AppMenuComponent implements OnInit {
+export class AppMenuComponent implements OnInit, AfterViewInit {
     model: any[] = [];
     otherModel: any[] = [];
+
+    @ViewChild('menubutton') menuButton!: ElementRef;
+
+    @ViewChild('topbarmenubutton') topbarMenuButton!: ElementRef;
+
+    @ViewChild('topbarmenu') menu!: ElementRef;
 
     constructor(
         public layoutService: LayoutService,
@@ -17,30 +23,49 @@ export class AppMenuComponent implements OnInit {
     ) {
         console.log(userService.getUserEmail());
     }
+    ngAfterViewInit(): void {
+        // Ensure menuElement is defined before accessing nativeElement
+        if (this.menu) {
+            // Access native element safely
+            console.log(this.menu.nativeElement);
+        } else {
+            console.error('Menu element not found');
+        }
+    }
 
     ngOnInit() {
         this.setModel();
         this.setOtherModel();
     }
+    openMenu() {
+        const menuItem = (
+            this.menu.nativeElement.getElementsByClassName(
+                'p-menuitem-link'
+            ) as HTMLCollectionOf<HTMLElement>
+        )[0];
+
+        setTimeout(() => {
+            menuItem.focus();
+        }, 1);
+    }
+    onOpenConfigModule() {
+        this.layoutService.showConfigSidebar();
+    }
     setOtherModel() {
         this.otherModel = [
-            {
-                label: 'Profile',
-                template: '	https://i.im.ge/2024/05/01/Zybhuh.e26d584f-5a11-4913-b4bb-c56f7409d729.jpeg'
-                
-            },
             {
                 label: 'Settings',
                 icon: 'pi pi-fw pi-cog',
                 command: () => {
-                    // action for settings
+                    this.onOpenConfigModule();
                 },
             },
             {
                 label: 'Logout',
                 icon: 'pi pi-fw pi-power-off',
                 command: () => {
-                    // action for logout
+                    this.userService.logout();
+                    window.location.reload();
                 },
             },
         ];

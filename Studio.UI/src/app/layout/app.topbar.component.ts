@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
     templateUrl: './app.topbar.component.html',
 })
 export class AppTopBarComponent implements OnInit {
-    items!: MenuItem[];
+    
 
     @ViewChild('menubutton') menuButton!: ElementRef;
 
@@ -23,40 +23,7 @@ export class AppTopBarComponent implements OnInit {
         public userService: UserService
     ) {}
     ngOnInit(): void {
-        this.setModel();
     }
-    onOpenConfigModule() {
-        this.layoutService.showConfigSidebar();
-    }
-    openMenu() {
-        const menuItem = (
-            this.menu.nativeElement.getElementsByClassName(
-                'p-menuitem-link'
-            ) as HTMLCollectionOf<HTMLElement>
-        )[0];
-
-        setTimeout(() => {
-            menuItem.focus();
-        }, 1);
-    }
-
-    setModel() {
-        this.items = [
-            {
-                label: 'Settings',
-                icon: 'pi pi-fw pi-cog',
-                command: () => {
-                    this.onOpenConfigModule();
-                },
-            },
-            {
-                label: 'Logout',
-                icon: 'pi pi-fw pi-power-off',
-                command: () => {
-                    this.userService.logout();
-                    window.location.reload();
-                },
-            },
-        ];
-    }
+    
+    
 }

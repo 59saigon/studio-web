@@ -31,23 +31,6 @@
                 layoutService.state.profileSidebarVisible
         }"
     >
-        <p-toast />
-        <button pButton class="p-link layout-topbar-button">
-            <p-avatar
-                image="{{ userService.getUserDetails().avatar }}"
-                styleClass="mr-2"
-                size="large"
-                shape="circle"
-                (click)="menu.toggle($event)"
-            ></p-avatar>
-            <span>Profile</span>
-        </button>
-        <p-menu
-            #menu
-            appendTo="body"
-            (onShow)="openMenu()"
-            [popup]="true"
-            [model]="items"
-        ></p-menu>
+        
     </div>
 </div>
