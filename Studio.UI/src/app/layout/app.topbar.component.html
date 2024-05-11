@@ -31,18 +31,21 @@
                 layoutService.state.profileSidebarVisible
         }"
     >
-        <app-config></app-config>
+        <!-- <app-config></app-config> -->
+        
         <button class="p-link layout-topbar-button">
-            <i class="pi pi-calendar"></i>
-            <span>Calendar</span>
-        </button>
-        <button class="p-link layout-topbar-button">
-            <i class="pi pi-user"></i>
+            <p-avatar
+                image="{{ userService.getUserDetails().avatar }}"
+                styleClass="mr-2"
+                size="large"
+                shape="circle"
+            ></p-avatar>
             <span>Profile</span>
         </button>
+
         <button
             class="p-link layout-topbar-button"
-            [routerLink]="'/documentation'"
+            (click)="onOpenConfigModule()"
         >
             <i class="pi pi-cog"></i>
             <span>Settings</span>

@@ -63,7 +63,6 @@ export class EventListComponent implements OnInit {
 
     constructor(
         private eventService: EventService,
-        private messageService: MessageService,
         private countryService: CountryService,
         private locationService: LocationService,
         private weddingService: WeddingService,
@@ -114,11 +113,9 @@ export class EventListComponent implements OnInit {
             next: (response) => {
                 this.messageWeddingResults = response;
                 this.weddings = this.messageWeddingResults.results;
-                // Handle the successful response here
             },
             error: (err) => {
-                console.error('Error occurred:', err);
-                // Handle the error here
+                this.eventService.openMessageError(err);
             },
         });
     }
@@ -127,12 +124,9 @@ export class EventListComponent implements OnInit {
             next: (response) => {
                 this.messageResults = response;
                 this.events = this.messageResults.results;
-                console.table(this.events);
-                // Handle the successful response here
             },
             error: (err) => {
-                console.error('Error occurred:', err);
-                // Handle the error here
+                this.eventService.openMessageError(err);
             },
         });
     }
@@ -142,12 +136,9 @@ export class EventListComponent implements OnInit {
             next: (response) => {
                 this.messageCountryResults = response;
                 this.countries = this.messageCountryResults.results;
-
-                // Handle the successful response here
             },
             error: (err) => {
-                console.error('Error occurred:', err);
-                // Handle the error here
+                this.eventService.openMessageError(err);
             },
         });
     }
@@ -171,19 +162,16 @@ export class EventListComponent implements OnInit {
         this.location = { ...event.location };
         this.wedding = { ...event.wedding };
 
-        // Ensure selectedCountry is the same reference as in the countries array
         this.selectedCountry = this.countries.find(
             (c) => c.id === event.location.city.country.id
         );
 
         this.getListCityByCountryId();
 
-        // Ensure selectedCity is the same reference as in the cities array
         this.selectedCity = this.cities.find(
             (c) => c.id === event.location.city.id
         );
 
-        // Ensure selectedWedding is the same reference as in the weddings array
         this.selectedWedding = this.weddings.find(
             (w) => w.id === event.wedding.id
         );
@@ -201,24 +189,11 @@ export class EventListComponent implements OnInit {
         this.selectedEvents.forEach((w) => {
             this.eventService.deleteData('event', w).subscribe({
                 next: (response) => {
-                    // Handle the successful response here
                     this.ngOnInit();
-                    this.messageService.add({
-                        severity: 'success',
-                        summary: 'Successful',
-                        detail: 'Event Deleted',
-                        life: 3000,
-                    });
+                    this.eventService.openMessageSuccess('Event Deleted');
                 },
                 error: (err) => {
-                    console.error('Error occurred:', err);
-                    // Handle the error here
-                    this.messageService.add({
-                        severity: 'error',
-                        summary: 'Error',
-                        detail: 'Not Delete',
-                        life: 3000,
-                    });
+                    this.eventService.openMessageError(err);
                 },
             });
         });
@@ -230,24 +205,11 @@ export class EventListComponent implements OnInit {
 
         this.eventService.deleteData('event', this.event).subscribe({
             next: (response) => {
-                // Handle the successful response here
                 this.ngOnInit();
-                this.messageService.add({
-                    severity: 'success',
-                    summary: 'Successful',
-                    detail: 'Event Deleted',
-                    life: 3000,
-                });
+                this.eventService.openMessageSuccess('Event Deleted');
             },
             error: (err) => {
-                console.error('Error occurred:', err);
-                // Handle the error here
-                this.messageService.add({
-                    severity: 'error',
-                    summary: 'Error',
-                    detail: 'Not Delete',
-                    life: 3000,
-                });
+                this.eventService.openMessageError(err);
             },
         });
 
@@ -281,14 +243,7 @@ export class EventListComponent implements OnInit {
                             callback();
                         },
                         error: (err) => {
-                            console.error('Error occurred:', err);
-                            // Handle the error here
-                            this.messageService.add({
-                                severity: 'error',
-                                summary: 'Error',
-                                detail: 'Not update',
-                                life: 3000,
-                            });
+                            this.eventService.openMessageError(err);
                         },
                     });
             } else {
@@ -303,14 +258,7 @@ export class EventListComponent implements OnInit {
                             callback();
                         },
                         error: (err) => {
-                            console.error('Error occurred:', err);
-                            // Handle the error here
-                            this.messageService.add({
-                                severity: 'error',
-                                summary: 'Error',
-                                detail: 'Not create',
-                                life: 3000,
-                            });
+                            this.eventService.openMessageError(err);
                         },
                     });
             }
@@ -318,7 +266,7 @@ export class EventListComponent implements OnInit {
     }
     saveEvent() {
         this.submitted = true;
-        // call api location to set in db in order to get locationId
+
         this.saveLocation(() => {
             this.setEvent();
 
@@ -326,24 +274,11 @@ export class EventListComponent implements OnInit {
                 if (this.event.id) {
                     this.eventService.putData('event', this.event).subscribe({
                         next: (response) => {
-                            // Handle the successful response here
                             this.ngOnInit();
-                            this.messageService.add({
-                                severity: 'success',
-                                summary: 'Successful',
-                                detail: 'Event Updated',
-                                life: 3000,
-                            });
+                            this.eventService.openMessageSuccess('Updated event');
                         },
                         error: (err) => {
-                            console.error('Error occurred:', err);
-                            // Handle the error here
-                            this.messageService.add({
-                                severity: 'error',
-                                summary: 'Error',
-                                detail: 'Not update',
-                                life: 3000,
-                            });
+                            this.eventService.openMessageError(err);
                         },
                     });
                 } else {
@@ -351,22 +286,10 @@ export class EventListComponent implements OnInit {
                         next: (response) => {
                             console.table(this.event);
                             this.ngOnInit();
-                            this.messageService.add({
-                                severity: 'success',
-                                summary: 'Successful',
-                                detail: 'Event Created',
-                                life: 3000,
-                            });
+                            this.eventService.openMessageSuccess('Created');
                         },
                         error: (err) => {
-                            console.error('Error occurred:', err);
-                            // Handle the error here
-                            this.messageService.add({
-                                severity: 'error',
-                                summary: 'Error',
-                                detail: 'Not create',
-                                life: 3000,
-                            });
+                            this.eventService.openMessageError(err);
                         },
                     });
                 }
@@ -375,7 +298,7 @@ export class EventListComponent implements OnInit {
             }
         });
     }
-    //https://localhost:7099/api/location/get-by-id
+
     findIndexById(id: string): number {
         let index = -1;
         for (let i = 0; i < this.events.length; i++) {
@@ -396,7 +319,6 @@ export class EventListComponent implements OnInit {
     }
 
     navigateAfterSelected(event: EventEntity) {
-        // Navigate away first
         this.router
             .navigateByUrl('/', { skipLocationChange: true })
             .then(() => {
@@ -406,14 +328,13 @@ export class EventListComponent implements OnInit {
                     queryParams: { q: event.id },
                 });
             });
+
         this.setShowDetails();
     }
 
     setShowDetails() {
         this.activatedRoute.queryParams.subscribe((params) => {
-            // Giả sử tham số là 'q'
             const q = params['q'];
-            // Thiết lập showDetails dựa trên sự tồn tại và giá trị của 'q'
             this.showDetails = q && q.trim() !== '';
         });
     }

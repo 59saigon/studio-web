@@ -1,6 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { LayoutService } from './service/app.layout.service';
+import { UserService } from '../demo/service/management/user.service';
 
 @Component({
     selector: 'app-menu',
@@ -8,10 +9,44 @@ import { LayoutService } from './service/app.layout.service';
 })
 export class AppMenuComponent implements OnInit {
     model: any[] = [];
+    otherModel: any[] = [];
 
-    constructor(public layoutService: LayoutService) {}
+    constructor(
+        public layoutService: LayoutService,
+        public userService: UserService
+    ) {
+        console.log(userService.getUserEmail());
+    }
 
     ngOnInit() {
+        this.setModel();
+        this.setOtherModel();
+    }
+    setOtherModel() {
+        this.otherModel = [
+            {
+                label: 'Profile',
+                template: '	https://i.im.ge/2024/05/01/Zybhuh.e26d584f-5a11-4913-b4bb-c56f7409d729.jpeg'
+                
+            },
+            {
+                label: 'Settings',
+                icon: 'pi pi-fw pi-cog',
+                command: () => {
+                    // action for settings
+                },
+            },
+            {
+                label: 'Logout',
+                icon: 'pi pi-fw pi-power-off',
+                command: () => {
+                    // action for logout
+                },
+            },
+        ];
+    }
+
+    setModel() {
         this.model = [
             {
                 label: 'Home',

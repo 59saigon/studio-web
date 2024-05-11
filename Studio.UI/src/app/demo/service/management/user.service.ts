@@ -23,5 +23,18 @@ export class UserService extends BaseService<User> {
     setToken(user: User, token: string) {
         localStorage.setItem('userEmail', user.email);
         localStorage.setItem('token', token);
+        localStorage.setItem('user', JSON.stringify(user));
+    }
+    getToken(): string {
+        return localStorage.getItem('token') || '';
+    }
+
+    getUserEmail(): string {
+        return localStorage.getItem('userEmail') || '';
+    }
+    
+    getUserDetails(): User {
+        const userJson = localStorage.getItem('user');
+        return userJson ? JSON.parse(userJson) : null;
     }
 }

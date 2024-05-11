@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MessageService } from 'primeng/api';
 import { Observable } from 'rxjs';
 import { Constants } from 'src/app/shared/Constants';
 import { ConstantService } from 'src/app/shared/constant.service';
@@ -11,8 +12,34 @@ import { ConstantService } from 'src/app/shared/constant.service';
 export class BaseService<T> {
     constructor(
         public http: HttpClient,
-        public constantService: ConstantService
+        public constantService: ConstantService,
+        private messageService: MessageService
     ) {}
+
+    openMessageSuccess(content: string){
+        this.messageService.add({
+            severity: 'success',
+            summary: 'Successful',
+            detail: content,
+            life: 3000,
+        });
+    }
+    openMessageError(content: string){
+        this.messageService.add({
+            severity: 'error',
+            summary: 'Error',
+            detail: content,
+            life: 3000,
+        });
+    }
+    openMessageWarn(content: string){
+        this.messageService.add({
+            severity: 'warn',
+            summary: 'Warn',
+            detail: content,
+            life: 3000,
+        });
+    }
 
     getListData(entity: string, data: any): Observable<any> {
         return this.http.post(
@@ -70,41 +97,5 @@ export class BaseService<T> {
         );
     }
 
-    // constructor(
-    //   private http: HttpClient,
-    // ) {}
-
-    // getListData(dataQuery: any, ): Observable<any> {
-    //   return this.http.post<MessageResults<T>>(
-    //     '/api/wedding/get-wedding-list',
-    //     dataQuery
-    //   );
-    // }
-    // getByValueData(dataQuery: any): Observable<any> {
-    //   return this.http.post<MessageResults<T>>(
-    //     'https://localhost:7099/api/wedding/get-by-id',
-    //     dataQuery
-    //   );
-    // }
-
-    // postData(dataCommand: any): Observable<any> {
-    //   return this.http.post<MessageView<T>>(
-    //     'https://localhost:7099/api/wedding/create-wedding',
-    //     dataCommand
-    //   );
-    // }
-
-    // putData(dataCommand: any): Observable<any> {
-    //   return this.http.post<MessageView<T>>(
-    //     'https://localhost:7099/api/wedding/update-wedding',
-    //     dataCommand
-    //   );
-    // }
-
-    // deleteData(dataCommand: any): Observable<any> {
-    //   return this.http.post<MessageView<T>>(
-    //     'https://localhost:7099/api/wedding/delete-wedding',
-    //     dataCommand
-    //   );
-    // }
+    
 }
