@@ -11,6 +11,11 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     model: any[] = [];
     otherModel: any[] = [];
 
+    avatarWidth: number = 0;
+
+    @ViewChild('avatar') _avatar!: ElementRef;
+    @ViewChild('menu') _menu!: ElementRef;
+
     @ViewChild('menubutton') menuButton!: ElementRef;
 
     @ViewChild('topbarmenubutton') topbarMenuButton!: ElementRef;
@@ -20,17 +25,9 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     constructor(
         public layoutService: LayoutService,
         public userService: UserService
-    ) {
-        console.log(userService.getUserEmail());
-    }
+    ) {}
     ngAfterViewInit(): void {
-        // Ensure menuElement is defined before accessing nativeElement
-        if (this.menu) {
-            // Access native element safely
-            console.log(this.menu.nativeElement);
-        } else {
-            console.error('Menu element not found');
-        }
+        this.avatarWidth = this._avatar.nativeElement.offsetWidth;
     }
 
     ngOnInit() {
@@ -46,6 +43,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
         setTimeout(() => {
             menuItem.focus();
+            menuItem.blur();
         }, 1);
     }
     onOpenConfigModule() {
