@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
 using Studio.API.Business.Domain.CQRS.Commands.Locations;
@@ -10,6 +11,7 @@ using Studio.API.Business.Domain.Results.Messages;
 
 namespace Studio.API.APIs.Controllers.Countrys
 {
+    [Authorize]
     [Route("api/country")]
     public class CountryController : BaseController
     {

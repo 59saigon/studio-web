@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
 using Studio.API.Business.Domain.CQRS.Commands.Events.EventXPhotos;
@@ -11,6 +12,7 @@ using Studio.API.Business.Domain.Results.Messages;
 namespace Studio.API.APIs.Controllers.Events
 {
     [Route("api/eventXPhoto")]
+    [Authorize]
     public class EventXPhotoController : BaseController
     {
         public EventXPhotoController(IMediator mediator) : base(mediator)

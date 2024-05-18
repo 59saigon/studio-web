@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
 using Studio.API.Business.Domain.CQRS.Commands.Services;
@@ -12,6 +13,7 @@ using Studio.API.Business.Domain.Results.Services;
 
 namespace Studio.API.APIs.Controllers.Services
 {
+    [Authorize]
     [Route("api/service")]
     public class ServiceController : BaseController
     {

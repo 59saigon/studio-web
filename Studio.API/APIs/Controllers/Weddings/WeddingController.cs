@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
 using Studio.API.Business.Domain.CQRS.Commands.Weddings;
@@ -12,6 +13,7 @@ using Studio.API.Business.Domain.Results.Weddings;
 
 namespace Studio.API.APIs.Controllers.Weddings
 {
+    [Authorize]
     [Route("api/wedding")]
     public class WeddingController : BaseController
     {

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
 using Studio.API.Business.Domain.CQRS.Commands.Photos;
@@ -12,6 +13,7 @@ using Studio.API.Business.Domain.Results.Photos;
 
 namespace Studio.API.APIs.Controllers.Photos
 {
+    [Authorize]
     [Route("api/photo")]
     public class PhotoController : BaseController
     {

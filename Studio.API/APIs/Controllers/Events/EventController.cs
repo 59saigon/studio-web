@@ -7,12 +7,14 @@ using Studio.API.Business.Domain.Models.Messages;
 using Studio.API.Business.Domain.Models.Events;
 using Studio.API.Business.Domain.Results.Messages;
 using Studio.API.Business.Domain.Results.Events;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Studio.API.APIs.Controllers.Events
 {
     [Route("api/event")]
+    [Authorize]
     public class EventController : BaseController
     {
         public EventController(IMediator mediator) : base(mediator)

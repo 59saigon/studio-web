@@ -7,11 +7,13 @@ using Studio.API.Business.Domain.Models.Messages;
 using Studio.API.Business.Domain.Models.Locations;
 using Studio.API.Business.Domain.Results.Messages;
 using Studio.API.Business.Domain.Results.Locations;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Studio.API.APIs.Controllers.Locations
 {
+    [Authorize]
     [Route("api/location")]
     public class LocationController : BaseController
     {

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Studio.API.APIs.Controllers.Base;
 using Studio.API.Business.Domain.CQRS.Commands.Users;
@@ -12,6 +13,7 @@ using Studio.API.Business.Domain.Results.Users;
 
 namespace Studio.API.APIs.Controllers.Users
 {
+    [Authorize]
     [Route("api/user")]
     public class UserController : BaseController
     {
@@ -50,6 +52,7 @@ namespace Studio.API.APIs.Controllers.Users
             return Ok(messageView);
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] AuthQuery authQuery)
         {
@@ -57,6 +60,7 @@ namespace Studio.API.APIs.Controllers.Users
             return Ok(messageResult);
         }
 
+        [AllowAnonymous]
         // POST api/<AuthController>
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserCreateCommand userCreateCommand)
