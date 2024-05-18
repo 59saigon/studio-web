@@ -11,8 +11,7 @@
                             label="Assign"
                             icon="pi pi-plus"
                             class="p-button-success mr-2"
-                            (click)="openNew()"
-                        ></button>
+                            (click)="openNew()"></button>
                     </div>
                 </ng-template>
             </p-toolbar>
@@ -33,12 +32,10 @@
                 [(selection)]="selectedServices"
                 selectionMode="multiple"
                 [rowHover]="true"
-                dataKey="id"
-            >
+                dataKey="id">
                 <ng-template pTemplate="caption">
                     <div
-                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
-                    >
+                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
                         <h5 class="m-0">Manage Services</h5>
                         <span class="block mt-2 md:mt-0 p-input-icon-left">
                             <i class="pi pi-search"></i>
@@ -47,55 +44,54 @@
                                 type="text"
                                 (input)="onGlobalFilter(dt, $event)"
                                 placeholder="Search..."
-                                class="w-full sm:w-auto"
-                            />
+                                class="w-full sm:w-auto" />
                         </span>
                     </div>
                 </ng-template>
                 <ng-template pTemplate="header">
                     <tr>
                         <th pSortableColumn="id">
-                            Id <p-sortIcon field="code"></p-sortIcon>
+                            Id <p-sorticon field="code"></p-sorticon>
                         </th>
                         <th pSortableColumn="tittle">
                             Tittle
-                            <p-sortIcon field="tittle"></p-sortIcon>
+                            <p-sorticon field="tittle"></p-sorticon>
                         </th>
                         <th pSortableColumn="description">
                             Description
-                            <p-sortIcon field="description"></p-sortIcon>
+                            <p-sorticon field="description"></p-sorticon>
                         </th>
                         <th pSortableColumn="type">
                             Type
-                            <p-sortIcon field="type"></p-sortIcon>
+                            <p-sorticon field="type"></p-sorticon>
                         </th>
                         <th pSortableColumn="price">
                             Price
-                            <p-sortIcon field="price"></p-sortIcon>
+                            <p-sorticon field="price"></p-sorticon>
                         </th>
                         <th pSortableColumn="status">
                             Status
-                            <p-sortIcon field="status"></p-sortIcon>
+                            <p-sorticon field="status"></p-sorticon>
                         </th>
                         <th pSortableColumn="createdBy">
                             Created By
-                            <p-sortIcon field="createdBy"></p-sortIcon>
+                            <p-sorticon field="createdBy"></p-sorticon>
                         </th>
                         <th pSortableColumn="createdDate">
                             Created Date
-                            <p-sortIcon field="createdDate"></p-sortIcon>
+                            <p-sorticon field="createdDate"></p-sorticon>
                         </th>
                         <th pSortableColumn="lastUpdatedBy">
                             Last Updated By
-                            <p-sortIcon field="lastUpdatedBy"></p-sortIcon>
+                            <p-sorticon field="lastUpdatedBy"></p-sorticon>
                         </th>
                         <th pSortableColumn="lastUpdatedDate">
                             Last Updated Date
-                            <p-sortIcon field="lastUpdatedDate"></p-sortIcon>
+                            <p-sorticon field="lastUpdatedDate"></p-sorticon>
                         </th>
                         <th pSortableColumn="isDeleted">
                             Availibility
-                            <p-sortIcon field="isDeleted"></p-sortIcon>
+                            <p-sorticon field="isDeleted"></p-sorticon>
                         </th>
                         <!-- Actions column typically does not need sorting -->
                         <th>Actions</th>
@@ -131,9 +127,7 @@
                                     (service.status
                                         ? service.status.toLowerCase()
                                         : '')
-                                "
-                                >{{ service.status }}</span
-                            >
+                                ">{{ service.status }}</span>
                         </td>
                         <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">CreateDate</span>
@@ -161,8 +155,7 @@
                                         !service.isDeleted,
                                     'false-icon pi-times-circle':
                                         service.isDeleted
-                                }"
-                            ></i>
+                                }"></i>
                         </td>
 
                         <td>
@@ -173,8 +166,7 @@
                                     style="color: red"
                                     icon="pi pi-minus"
                                     class="p-button-rounded p-button-text"
-                                    (click)="deleteService(service)"
-                                ></button>
+                                    (click)="deleteService(service)"></button>
                             </div>
                         </td>
                     </tr>
@@ -186,8 +178,7 @@
                 [style]="{ 'min-width': '50rem' }"
                 header="Service Details"
                 [modal]="true"
-                class="p-fluid"
-            >
+                class="p-fluid">
                 <div class="card px-6 py-6">
                     <p-table
                         #dt
@@ -204,79 +195,71 @@
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
                         selectionMode="multiple"
                         [rowHover]="true"
-                        dataKey="id"
-                    >
+                        dataKey="id">
                         <ng-template pTemplate="caption">
                             <div
-                                class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
-                            >
+                                class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
                                 <h5 class="m-0">Manage Services</h5>
                                 <span
-                                    class="block mt-2 md:mt-0 p-input-icon-left"
-                                >
+                                    class="block mt-2 md:mt-0 p-input-icon-left">
                                     <i class="pi pi-search"></i>
                                     <input
                                         pInputText
                                         type="text"
                                         (input)="onGlobalFilter(dt, $event)"
                                         placeholder="Search..."
-                                        class="w-full sm:w-auto"
-                                    />
+                                        class="w-full sm:w-auto" />
                                 </span>
                             </div>
                         </ng-template>
                         <ng-template pTemplate="header">
                             <tr>
                                 <th pSortableColumn="id">
-                                    Id <p-sortIcon field="code"></p-sortIcon>
+                                    Id <p-sorticon field="code"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="tittle">
                                     Tittle
-                                    <p-sortIcon field="tittle"></p-sortIcon>
+                                    <p-sorticon field="tittle"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="description">
                                     Description
-                                    <p-sortIcon
-                                        field="description"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="description"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="type">
                                     Type
-                                    <p-sortIcon field="type"></p-sortIcon>
+                                    <p-sorticon field="type"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="price">
                                     Price
-                                    <p-sortIcon field="price"></p-sortIcon>
+                                    <p-sorticon field="price"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="status">
                                     Status
-                                    <p-sortIcon field="status"></p-sortIcon>
+                                    <p-sorticon field="status"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="createdBy">
                                     Created By
-                                    <p-sortIcon field="createdBy"></p-sortIcon>
+                                    <p-sorticon field="createdBy"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="createdDate">
                                     Created Date
-                                    <p-sortIcon
-                                        field="createdDate"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="createdDate"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="lastUpdatedBy">
                                     Last Updated By
-                                    <p-sortIcon
-                                        field="lastUpdatedBy"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="lastUpdatedBy"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="lastUpdatedDate">
                                     Last Updated Date
-                                    <p-sortIcon
-                                        field="lastUpdatedDate"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="lastUpdatedDate"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="isDeleted">
                                     Availibility
-                                    <p-sortIcon field="isDeleted"></p-sortIcon>
+                                    <p-sorticon field="isDeleted"></p-sorticon>
                                 </th>
                                 <!-- Actions column typically does not need sorting -->
                                 <th>Actions</th>
@@ -293,9 +276,8 @@
                                     {{ service.serviceTittle }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >Description</span
-                                    >
+                                    <span
+                                        class="p-column-title">Description</span>
                                     {{ service.serviceDescription }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
@@ -307,53 +289,45 @@
                                     {{ service.price }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >Availibility</span
-                                    >
+                                    <span
+                                        class="p-column-title">Availibility</span>
                                     <span
                                         [class]="
                                             'service-status-' +
                                             (service.status
                                                 ? service.status.toLowerCase()
                                                 : '')
-                                        "
-                                        >{{ service.status }}</span
-                                    >
+                                        ">{{ service.status }}</span>
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >CreateDate</span
-                                    >
+                                    <span
+                                        class="p-column-title">CreateDate</span>
                                     {{ service.createdBy }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >CreatedDate</span
-                                    >
+                                    <span
+                                        class="p-column-title">CreatedDate</span>
                                     {{
-                                        service.createdDate
-                                            | date : "dd/MM/yyyy"
+                                    service.createdDate
+                                    | date : "dd/MM/yyyy"
                                     }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >LastUpdatedBy</span
-                                    >
+                                    <span
+                                        class="p-column-title">LastUpdatedBy</span>
                                     {{ service.lastUpdatedBy }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >lastUpdatedDate</span
-                                    >
+                                    <span
+                                        class="p-column-title">lastUpdatedDate</span>
                                     {{
-                                        service.lastUpdatedDate
-                                            | date : "dd/MM/yyyy"
+                                    service.lastUpdatedDate
+                                    | date : "dd/MM/yyyy"
                                     }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >Is Deleted</span
-                                    >
+                                    <span class="p-column-title">Is
+                                        Deleted</span>
                                     <i
                                         class="pi"
                                         style="color: green"
@@ -362,8 +336,7 @@
                                                 !service.isDeleted,
                                             'false-icon pi-times-circle':
                                                 service.isDeleted
-                                        }"
-                                    ></i>
+                                        }"></i>
                                 </td>
 
                                 <td>
@@ -374,8 +347,7 @@
                                             style="color: greenyellow"
                                             icon="pi pi-plus"
                                             class="p-button-rounded p-button-text"
-                                            (click)="assignService(service)"
-                                        ></button>
+                                            (click)="assignService(service)"></button>
                                     </div>
                                 </td>
                             </tr>
@@ -388,18 +360,13 @@
                 [(visible)]="deleteServiceDialog"
                 header="Confirm"
                 [modal]="true"
-                [style]="{ width: '450px' }"
-            >
+                [style]="{ width: '450px' }">
                 <div class="flex align-items-center justify-content-center">
                     <i
                         class="pi pi-exclamation-triangle mr-3"
-                        style="font-size: 2rem"
-                    ></i>
-                    <span *ngIf="service"
-                        >Are you sure you want to delete
-                        <b>{{ service.name }}</b
-                        >?</span
-                    >
+                        style="font-size: 2rem"></i>
+                    <span *ngIf="service">Are you sure you want to delete
+                        <b>{{ service.name }}</b>?</span>
                 </div>
                 <ng-template pTemplate="footer">
                     <button
@@ -408,16 +375,14 @@
                         icon="pi pi-times"
                         class="p-button-text"
                         label="No"
-                        (click)="deleteServiceDialog = false"
-                    ></button>
+                        (click)="deleteServiceDialog = false"></button>
                     <button
                         pButton
                         pRipple
                         icon="pi pi-check"
                         class="p-button-text"
                         label="Yes"
-                        (click)="confirmDelete()"
-                    ></button>
+                        (click)="confirmDelete()"></button>
                 </ng-template>
             </p-dialog>
 
@@ -425,17 +390,13 @@
                 [(visible)]="deleteServicesDialog"
                 header="Confirm"
                 [modal]="true"
-                [style]="{ width: '450px' }"
-            >
+                [style]="{ width: '450px' }">
                 <div class="flex align-items-center justify-content-center">
                     <i
                         class="pi pi-exclamation-triangle mr-3"
-                        style="font-size: 2rem"
-                    ></i>
-                    <span
-                        >Are you sure you want to delete selected
-                        services?</span
-                    >
+                        style="font-size: 2rem"></i>
+                    <span>Are you sure you want to delete selected
+                        services?</span>
                 </div>
                 <ng-template pTemplate="footer">
                     <button
@@ -444,16 +405,14 @@
                         icon="pi pi-times"
                         class="p-button-text"
                         label="No"
-                        (click)="deleteServicesDialog = false"
-                    ></button>
+                        (click)="deleteServicesDialog = false"></button>
                     <button
                         pButton
                         pRipple
                         icon="pi pi-check"
                         class="p-button-text"
                         label="Yes"
-                        (click)="confirmDeleteSelected()"
-                    ></button>
+                        (click)="confirmDeleteSelected()"></button>
                 </ng-template>
             </p-dialog>
         </div>

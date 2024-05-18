@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { Table } from 'primeng/table';
@@ -13,11 +13,11 @@ import {
     MessageResult,
 } from 'src/app/data/results/MessageResult';
 import { MessageView, MessageViews } from 'src/app/data/views/MessageView';
-import { CityService } from 'src/app/demo/service/management/city.service';
 import { CountryService } from 'src/app/demo/service/management/country.service';
 import { EventService } from 'src/app/demo/service/management/event.service';
 import { LocationService } from 'src/app/demo/service/management/location.service';
 import { WeddingService } from 'src/app/demo/service/management/wedding.service';
+import headerList from './headerList';
 
 @Component({
     selector: 'app-event-list',
@@ -67,7 +67,7 @@ export class EventListComponent implements OnInit {
         private locationService: LocationService,
         private weddingService: WeddingService,
         private activatedRoute: ActivatedRoute,
-        private router: Router,
+        private router: Router
     ) {}
 
     messageResults!: MessageResults<EventEntity>;
@@ -93,6 +93,8 @@ export class EventListComponent implements OnInit {
     showDetails = false;
 
     statuses: any[] = [];
+
+    _selectedColumns: any[] = [];
     ngOnInit() {
         this.getListEvent();
         this.getListCountry();
@@ -103,7 +105,22 @@ export class EventListComponent implements OnInit {
             { label: 'COMPLETED', value: 'completed' },
             { label: 'DELETED', value: 'deleted' },
         ];
+
+        this.cols = headerList;
+
+        this._selectedColumns = this.cols;
+        console.log(this.cols);
     }
+
+    @Input() get selectedColumns(): any[] {
+        return this._selectedColumns;
+    }
+
+    set selectedColumns(val: any[]) {
+        //restore original order
+        this._selectedColumns = this.cols.filter((col) => val.includes(col));
+    }
+
     getListCityByCountryId() {
         this.cities = this.selectedCountry.cities;
         this.selectedCity = this.cities[0];
@@ -190,6 +207,7 @@ export class EventListComponent implements OnInit {
             this.eventService.deleteData('event', w).subscribe({
                 next: (response) => {
                     this.ngOnInit();
+
                     this.eventService.openMessageSuccess('Event Deleted');
                 },
                 error: (err) => {
@@ -275,7 +293,9 @@ export class EventListComponent implements OnInit {
                     this.eventService.putData('event', this.event).subscribe({
                         next: (response) => {
                             this.ngOnInit();
-                            this.eventService.openMessageSuccess('Updated event');
+                            this.eventService.openMessageSuccess(
+                                'Updated event'
+                            );
                         },
                         error: (err) => {
                             this.eventService.openMessageError(err);

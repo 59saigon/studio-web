@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { EventListRoutingModule } from './event-list-routing.module';
 
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
@@ -18,11 +17,14 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
 import { CalendarModule } from 'primeng/calendar';
-import { EventListComponent } from './event-list.component';
-import { EventServiceListComponent } from '../event-service-list/event-service-list.component';
-import { EventPhotoListComponent } from '../event-photo-list/event-photo-list.component';
+import { EventListComponent } from '../event-list.component';
+import { EventServiceListComponent } from '../../event-service-list/event-service-list.component';
+import { EventPhotoListComponent } from '../../event-photo-list/event-photo-list.component';
 import { PanelModule } from 'primeng/panel';
 import { PanelMenu, PanelMenuModule } from 'primeng/panelmenu';
+import { TooltipModule } from 'primeng/tooltip';
+import { EventListRoutingModule } from './event-list-routing.module';
+import { MultiSelectModule } from 'primeng/multiselect';
 @NgModule({
     declarations: [EventListComponent, EventServiceListComponent, EventPhotoListComponent],
     imports: [
@@ -46,6 +48,8 @@ import { PanelMenu, PanelMenuModule } from 'primeng/panelmenu';
         ToastModule,
         PanelModule,
         PanelMenuModule,
+        TooltipModule,
+        MultiSelectModule
     ],
 })
 export class EventListModule {}

@@ -11,8 +11,7 @@
                             label="Assign"
                             icon="pi pi-plus"
                             class="p-button-success mr-2"
-                            (click)="openNew()"
-                        ></button>
+                            (click)="openNew()"></button>
                     </div>
                 </ng-template>
             </p-toolbar>
@@ -33,12 +32,10 @@
                 [(selection)]="selectedPhotos"
                 selectionMode="multiple"
                 [rowHover]="true"
-                dataKey="id"
-            >
+                dataKey="id">
                 <ng-template pTemplate="caption">
                     <div
-                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
-                    >
+                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
                         <h5 class="m-0">Manage Photos</h5>
                         <span class="block mt-2 md:mt-0 p-input-icon-left">
                             <i class="pi pi-search"></i>
@@ -47,44 +44,43 @@
                                 type="text"
                                 (input)="onGlobalFilter(dt, $event)"
                                 placeholder="Search..."
-                                class="w-full sm:w-auto"
-                            />
+                                class="w-full sm:w-auto" />
                         </span>
                     </div>
                 </ng-template>
                 <ng-template pTemplate="header">
                     <tr>
                         <th pSortableColumn="id">
-                            Id <p-sortIcon field="code"></p-sortIcon>
+                            Id <p-sorticon field="code"></p-sorticon>
                         </th>
                         <th pSortableColumn="photoName">
                             Photo Name
-                            <p-sortIcon field="photoName"></p-sortIcon>
+                            <p-sorticon field="photoName"></p-sorticon>
                         </th>
                         <th>Image</th>
                         <th pSortableColumn="url">
                             Url
-                            <p-sortIcon field="url"></p-sortIcon>
+                            <p-sorticon field="url"></p-sorticon>
                         </th>
                         <th pSortableColumn="createdBy">
                             Created By
-                            <p-sortIcon field="createdBy"></p-sortIcon>
+                            <p-sorticon field="createdBy"></p-sorticon>
                         </th>
                         <th pSortableColumn="createdDate">
                             Created Date
-                            <p-sortIcon field="createdDate"></p-sortIcon>
+                            <p-sorticon field="createdDate"></p-sorticon>
                         </th>
                         <th pSortableColumn="lastUpdatedBy">
                             Last Updated By
-                            <p-sortIcon field="lastUpdatedBy"></p-sortIcon>
+                            <p-sorticon field="lastUpdatedBy"></p-sorticon>
                         </th>
                         <th pSortableColumn="lastUpdatedDate">
                             Last Updated Date
-                            <p-sortIcon field="lastUpdatedDate"></p-sortIcon>
+                            <p-sorticon field="lastUpdatedDate"></p-sorticon>
                         </th>
                         <th pSortableColumn="isDeleted">
                             Availibility
-                            <p-sortIcon field="isDeleted"></p-sortIcon>
+                            <p-sorticon field="isDeleted"></p-sorticon>
                         </th>
                         <!-- Actions column typically does not need sorting -->
                         <th>Actions</th>
@@ -106,8 +102,7 @@
                                 [src]="photo.url"
                                 [alt]="photo.photoName"
                                 width="100"
-                                class="shadow-4"
-                            />
+                                class="shadow-4" />
                         </td>
                         <td style="width: 14%; min-width: 10rem">
                             <span class="p-column-title">Url</span>
@@ -139,8 +134,7 @@
                                         !photo.isDeleted,
                                     'false-icon pi-times-circle':
                                         photo.isDeleted
-                                }"
-                            ></i>
+                                }"></i>
                         </td>
 
                         <td>
@@ -151,8 +145,7 @@
                                     style="color: red"
                                     icon="pi pi-minus"
                                     class="p-button-rounded p-button-text"
-                                    (click)="deletePhoto(photo)"
-                                ></button>
+                                    (click)="deletePhoto(photo)"></button>
                             </div>
                         </td>
                     </tr>
@@ -164,8 +157,7 @@
                 [style]="{ 'min-width': '50rem' }"
                 header="Photo Details"
                 [modal]="true"
-                class="p-fluid"
-            >
+                class="p-fluid">
                 <div class="card px-6 py-6">
                     <p-table
                         #dt
@@ -182,66 +174,59 @@
                         currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
                         selectionMode="multiple"
                         [rowHover]="true"
-                        dataKey="id"
-                    >
+                        dataKey="id">
                         <ng-template pTemplate="caption">
                             <div
-                                class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
-                            >
+                                class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
                                 <h5 class="m-0">Manage Photos</h5>
                                 <span
-                                    class="block mt-2 md:mt-0 p-input-icon-left"
-                                >
+                                    class="block mt-2 md:mt-0 p-input-icon-left">
                                     <i class="pi pi-search"></i>
                                     <input
                                         pInputText
                                         type="text"
                                         (input)="onGlobalFilter(dt, $event)"
                                         placeholder="Search..."
-                                        class="w-full sm:w-auto"
-                                    />
+                                        class="w-full sm:w-auto" />
                                 </span>
                             </div>
                         </ng-template>
                         <ng-template pTemplate="header">
                             <tr>
                                 <th pSortableColumn="id">
-                                    Id <p-sortIcon field="code"></p-sortIcon>
+                                    Id <p-sorticon field="code"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="photoName">
                                     Photo Name
-                                    <p-sortIcon field="photoName"></p-sortIcon>
+                                    <p-sorticon field="photoName"></p-sorticon>
                                 </th>
                                 <th>Image</th>
                                 <th pSortableColumn="url">
                                     Url
-                                    <p-sortIcon field="url"></p-sortIcon>
+                                    <p-sorticon field="url"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="createdBy">
                                     Created By
-                                    <p-sortIcon field="createdBy"></p-sortIcon>
+                                    <p-sorticon field="createdBy"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="createdDate">
                                     Created Date
-                                    <p-sortIcon
-                                        field="createdDate"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="createdDate"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="lastUpdatedBy">
                                     Last Updated By
-                                    <p-sortIcon
-                                        field="lastUpdatedBy"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="lastUpdatedBy"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="lastUpdatedDate">
                                     Last Updated Date
-                                    <p-sortIcon
-                                        field="lastUpdatedDate"
-                                    ></p-sortIcon>
+                                    <p-sorticon
+                                        field="lastUpdatedDate"></p-sorticon>
                                 </th>
                                 <th pSortableColumn="isDeleted">
                                     Availibility
-                                    <p-sortIcon field="isDeleted"></p-sortIcon>
+                                    <p-sorticon field="isDeleted"></p-sorticon>
                                 </th>
                                 <!-- Actions column typically does not need sorting -->
                                 <th>Actions</th>
@@ -254,9 +239,8 @@
                                     {{ photo.id }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >Photo Name</span
-                                    >
+                                    <span class="p-column-title">Photo
+                                        Name</span>
                                     {{ photo.photoName }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
@@ -265,46 +249,40 @@
                                         [src]="photo.url"
                                         [alt]="photo.photoName"
                                         width="100"
-                                        class="shadow-4"
-                                    />
+                                        class="shadow-4" />
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
                                     <span class="p-column-title">Url</span>
                                     {{ photo.url }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >CreateDate</span
-                                    >
+                                    <span
+                                        class="p-column-title">CreateDate</span>
                                     {{ photo.createdBy }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >CreatedDate</span
-                                    >
+                                    <span
+                                        class="p-column-title">CreatedDate</span>
                                     {{
-                                        photo.createdDate | date : "dd/MM/yyyy"
+                                    photo.createdDate | date : "dd/MM/yyyy"
                                     }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >LastUpdatedBy</span
-                                    >
+                                    <span
+                                        class="p-column-title">LastUpdatedBy</span>
                                     {{ photo.lastUpdatedBy }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >lastUpdatedDate</span
-                                    >
+                                    <span
+                                        class="p-column-title">lastUpdatedDate</span>
                                     {{
-                                        photo.lastUpdatedDate
-                                            | date : "dd/MM/yyyy"
+                                    photo.lastUpdatedDate
+                                    | date : "dd/MM/yyyy"
                                     }}
                                 </td>
                                 <td style="width: 14%; min-width: 10rem">
-                                    <span class="p-column-title"
-                                        >Is Deleted</span
-                                    >
+                                    <span class="p-column-title">Is
+                                        Deleted</span>
                                     <i
                                         class="pi"
                                         style="color: green"
@@ -313,8 +291,7 @@
                                                 !photo.isDeleted,
                                             'false-icon pi-times-circle':
                                                 photo.isDeleted
-                                        }"
-                                    ></i>
+                                        }"></i>
                                 </td>
 
                                 <td>
@@ -325,8 +302,7 @@
                                             style="color: greenyellow"
                                             icon="pi pi-plus"
                                             class="p-button-rounded p-button-text"
-                                            (click)="assignPhoto(photo)"
-                                        ></button>
+                                            (click)="assignPhoto(photo)"></button>
                                     </div>
                                 </td>
                             </tr>
@@ -339,17 +315,13 @@
                 [(visible)]="deletePhotoDialog"
                 header="Confirm"
                 [modal]="true"
-                [style]="{ width: '450px' }"
-            >
+                [style]="{ width: '450px' }">
                 <div class="flex align-items-center justify-content-center">
                     <i
                         class="pi pi-exclamation-triangle mr-3"
-                        style="font-size: 2rem"
-                    ></i>
-                    <span *ngIf="photo"
-                        >Are you sure you want to delete <b>{{ photo.name }}</b
-                        >?</span
-                    >
+                        style="font-size: 2rem"></i>
+                    <span *ngIf="photo">Are you sure you want to delete <b>{{
+                            photo.name }}</b>?</span>
                 </div>
                 <ng-template pTemplate="footer">
                     <button
@@ -358,16 +330,14 @@
                         icon="pi pi-times"
                         class="p-button-text"
                         label="No"
-                        (click)="deletePhotoDialog = false"
-                    ></button>
+                        (click)="deletePhotoDialog = false"></button>
                     <button
                         pButton
                         pRipple
                         icon="pi pi-check"
                         class="p-button-text"
                         label="Yes"
-                        (click)="confirmDelete()"
-                    ></button>
+                        (click)="confirmDelete()"></button>
                 </ng-template>
             </p-dialog>
 
@@ -375,16 +345,13 @@
                 [(visible)]="deletePhotosDialog"
                 header="Confirm"
                 [modal]="true"
-                [style]="{ width: '450px' }"
-            >
+                [style]="{ width: '450px' }">
                 <div class="flex align-items-center justify-content-center">
                     <i
                         class="pi pi-exclamation-triangle mr-3"
-                        style="font-size: 2rem"
-                    ></i>
-                    <span
-                        >Are you sure you want to delete selected photos?</span
-                    >
+                        style="font-size: 2rem"></i>
+                    <span>Are you sure you want to delete selected
+                        photos?</span>
                 </div>
                 <ng-template pTemplate="footer">
                     <button
@@ -393,16 +360,14 @@
                         icon="pi pi-times"
                         class="p-button-text"
                         label="No"
-                        (click)="deletePhotosDialog = false"
-                    ></button>
+                        (click)="deletePhotosDialog = false"></button>
                     <button
                         pButton
                         pRipple
                         icon="pi pi-check"
                         class="p-button-text"
                         label="Yes"
-                        (click)="confirmDeleteSelected()"
-                    ></button>
+                        (click)="confirmDeleteSelected()"></button>
                 </ng-template>
             </p-dialog>
         </div>

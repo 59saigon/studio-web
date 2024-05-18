@@ -5,7 +5,7 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forChild([
-    { path: '', data: { breadcrumb: '' }, loadChildren: () => import('./event-list/event-list.module').then(m => m.EventListModule) },
+    { path: '', data: { breadcrumb: '' }, loadChildren: () => import('./event-list/module/event-list.module').then(m => m.EventListModule) },
     { path: '**', redirectTo: '/notfound' }
 ])],
   exports: [RouterModule]
