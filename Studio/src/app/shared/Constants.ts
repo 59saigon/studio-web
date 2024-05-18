@@ -1,5 +1,5 @@
 export enum Constants {
-    BASE_URL = 'https://localhost:7099',
+    BASE_URL = 'https://localhost:7192',
 
     LOGIN = 'login',
     
