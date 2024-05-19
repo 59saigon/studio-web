@@ -1,20 +1,23 @@
-import { AfterViewInit, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Component } from '@angular/core';
 import { LayoutService } from './service/app.layout.service';
 import { UserService } from '../demo/service/management/user.service';
+import { Menu } from 'primeng/menu';
 
 @Component({
     selector: 'app-menu',
     templateUrl: './app.menu.component.html',
+    styleUrl: './app.menu.component.scss',
 })
 export class AppMenuComponent implements OnInit, AfterViewInit {
     model: any[] = [];
     otherModel: any[] = [];
 
+    menuVisible: boolean = false;
     avatarWidth: number = 0;
 
     @ViewChild('avatar') _avatar!: ElementRef;
-    @ViewChild('menu') _menu!: ElementRef;
+    @ViewChild('menu') _menu!: Menu;
 
     @ViewChild('menubutton') menuButton!: ElementRef;
 
@@ -33,6 +36,13 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     ngOnInit() {
         this.setModel();
         this.setOtherModel();
+    }
+
+    showAndHideMenu($ev: Event) {
+        this._menu.show($ev);
+        setTimeout(() => {
+            this._menu.hide();
+        }, 3000);
     }
     openMenu() {
         const menuItem = (

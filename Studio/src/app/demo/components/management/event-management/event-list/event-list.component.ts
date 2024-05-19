@@ -99,17 +99,10 @@ export class EventListComponent implements OnInit {
         this.getListEvent();
         this.getListCountry();
         this.getListWedding();
+        this.getSelectedColumns();
+
         this.setShowDetails();
-        this.statuses = [
-            { label: 'OPEN', value: 'open' },
-            { label: 'COMPLETED', value: 'completed' },
-            { label: 'DELETED', value: 'deleted' },
-        ];
-
-        this.cols = headerList;
-
-        this._selectedColumns = this.cols;
-        console.log(this.cols);
+        this.setStatues();
     }
 
     @Input() get selectedColumns(): any[] {
@@ -117,8 +110,20 @@ export class EventListComponent implements OnInit {
     }
 
     set selectedColumns(val: any[]) {
-        //restore original order
         this._selectedColumns = this.cols.filter((col) => val.includes(col));
+    }
+
+    setStatues() {
+        this.statuses = [
+            { label: 'OPEN', value: 'open' },
+            { label: 'COMPLETED', value: 'completed' },
+            { label: 'DELETED', value: 'deleted' },
+        ];
+    }
+
+    getSelectedColumns() {
+        this.cols = headerList;
+        this._selectedColumns = this.cols.filter((col) => !col.isDisabled);
     }
 
     getListCityByCountryId() {
