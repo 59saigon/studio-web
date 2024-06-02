@@ -1,0 +1,484 @@
+<p-toast></p-toast>
+<p-panel header="Service List" [toggleable]="true">
+    <div class="grid">
+        <div class="col-12">
+            <p-toolbar styleClass="mb-4">
+                <ng-template pTemplate="left">
+                    <div class="my-2">
+                        <button
+                            pButton
+                            pRipple
+                            label="New"
+                            icon="pi pi-plus"
+                            class="p-button-success mr-2"
+                            (click)="openNew()"
+                        ></button>
+                        <button
+                            pButton
+                            pRipple
+                            label="Delete"
+                            icon="pi pi-trash"
+                            class="p-button-danger"
+                            (click)="deleteSelectedServices()"
+                            [disabled]="
+                                !selectedServices || !selectedServices.length
+                            "
+                        ></button>
+                    </div>
+                </ng-template>
+
+                <ng-template pTemplate="right">
+                    <p-fileUpload
+                        mode="basic"
+                        accept="image/*"
+                        [maxFileSize]="1000000"
+                        label="Import"
+                        chooseLabel="Import"
+                        class="mr-2 inline-block"
+                    ></p-fileUpload>
+                    <button
+                        pButton
+                        pRipple
+                        label="Export"
+                        icon="pi pi-upload"
+                        class="p-button-help"
+                        (click)="dt.exportCSV()"
+                    ></button>
+                </ng-template>
+            </p-toolbar>
+
+            <p-table
+                #dt
+                [value]="services"
+                styleClass="p-datatable-sm"
+                responsiveLayout="stack"
+                [breakpoint]="'960px'"
+                [columns]="cols"
+                responsiveLayout="scroll"
+                [rows]="10"
+                [globalFilterFields]="[
+                    'serviceTittle',
+                    'serviceDescription',
+                    'status'
+                ]"
+                [paginator]="true"
+                [rowsPerPageOptions]="[10, 20, 30]"
+                [showCurrentPageReport]="true"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [(selection)]="selectedServices"
+                selectionMode="multiple"
+                [rowHover]="true"
+                dataKey="id"
+            >
+                <ng-template pTemplate="caption">
+                    <div
+                        class="flex flex-column md:flex-row md:justify-content-between md:align-items-center"
+                    >
+                        <h5 class="m-0">Manage Services</h5>
+                        <span class="block mt-2 md:mt-0 p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input
+                                pInputText
+                                type="text"
+                                (input)="onGlobalFilter(dt, $event)"
+                                placeholder="Search..."
+                                class="w-full sm:w-auto"
+                            />
+                        </span>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width: 3rem">
+                            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                        </th>
+                        <th pSortableColumn="id">
+                            Id <p-sortIcon field="code"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="tittle">
+                            Tittle
+                            <p-sortIcon field="tittle"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="description">
+                            Description
+                            <p-sortIcon field="description"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="type">
+                            Type
+                            <p-sortIcon field="type"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="price">
+                            Price
+                            <p-sortIcon field="price"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="status">
+                            Status
+                            <p-sortIcon field="status"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="createdBy">
+                            Created By
+                            <p-sortIcon field="createdBy"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="createdDate">
+                            Created Date
+                            <p-sortIcon field="createdDate"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="lastUpdatedBy">
+                            Last Updated By
+                            <p-sortIcon field="lastUpdatedBy"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="lastUpdatedDate">
+                            Last Updated Date
+                            <p-sortIcon field="lastUpdatedDate"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="isDeleted">
+                            Availibility
+                            <p-sortIcon field="isDeleted"></p-sortIcon>
+                        </th>
+                        <!-- Actions column typically does not need sorting -->
+                        <th>Actions</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-service>
+                    <tr>
+                        <td>
+                            <p-tableCheckbox
+                                [value]="service"
+                            ></p-tableCheckbox>
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Id</span>
+                            {{ service.id }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Tittle</span>
+                            {{ service.serviceTittle }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Description</span>
+                            {{ service.serviceDescription }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Type</span>
+                            {{ service.type }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Price</span>
+                            {{ service.price }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Availibility</span>
+                            <span
+                                [class]="
+                                    'service-status-' +
+                                    (service.status
+                                        ? service.status.toLowerCase()
+                                        : '')
+                                "
+                                >{{ service.status }}</span
+                            >
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">CreateDate</span>
+                            {{ service.createdBy }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">CreatedDate</span>
+                            {{ service.createdDate | date : "dd/MM/yyyy" }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">LastUpdatedBy</span>
+                            {{ service.lastUpdatedBy }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">lastUpdatedDate</span>
+                            {{ service.lastUpdatedDate | date : "dd/MM/yyyy" }}
+                        </td>
+                        <td style="width: 14%; min-width: 10rem">
+                            <span class="p-column-title">Is Deleted</span>
+                            <i
+                                class="pi"
+                                style="color: green"
+                                [ngClass]="{
+                                    'true-icon pi-check-circle':
+                                        !service.isDeleted,
+                                    'false-icon pi-times-circle':
+                                        service.isDeleted
+                                }"
+                            ></i>
+                        </td>
+
+                        <td>
+                            <div class="flex">
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-pencil"
+                                    class="p-button-rounded p-button-text"
+                                    (click)="editService(service)"
+                                ></button>
+                                <button
+                                    pButton
+                                    pRipple
+                                    icon="pi pi-trash"
+                                    class="p-button-rounded p-button-text"
+                                    (click)="deleteService(service)"
+                                ></button>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+
+            <p-dialog
+                [(visible)]="serviceDialog"
+                [style]="{ width: '450px' }"
+                header="Service Details"
+                [modal]="true"
+                class="p-fluid"
+            >
+                <ng-template pTemplate="content">
+                    <img
+                        [src]="'assets/demo/images/service/' + service.image"
+                        [alt]="service.image"
+                        width="150"
+                        class="mt-0 mx-auto mb-5 block shadow-2"
+                        *ngIf="service.image"
+                    />
+                    <div class="field">
+                        <label for="serviceTittle">Tittle</label>
+                        <input
+                            type="text"
+                            pInputText
+                            id="serviceTittle"
+                            [(ngModel)]="service.serviceTittle"
+                            required
+                            autofocus
+                            [ngClass]="{
+                                'ng-invalid ng-dirty':
+                                    submitted && !service.serviceTittle
+                            }"
+                        />
+                        <small
+                            class="ng-dirty ng-invalid"
+                            *ngIf="submitted && !service.serviceTittle"
+                            >Tittle is required.</small
+                        >
+                    </div>
+                    <div class="field">
+                        <label for="serviceDescription">Description</label>
+                        <textarea
+                            id="serviceDescription"
+                            pInputTextarea
+                            [(ngModel)]="service.serviceDescription"
+                            required
+                            rows="3"
+                            cols="20"
+                        ></textarea>
+                    </div>
+
+                    <div class="field">
+                        <label class="mb-3">Type</label>
+                        <div class="formgrid grid">
+                            <div class="field-radiobutton col-6">
+                                <p-radioButton
+                                    id="category1"
+                                    name="category"
+                                    value="Decoration for the ancestral ceremony"
+                                    [(ngModel)]="service.type"
+                                ></p-radioButton>
+                                <label for="category1"
+                                    >Decoration for the ancestral
+                                    ceremony</label
+                                >
+                            </div>
+                            <div class="field-radiobutton col-6">
+                                <p-radioButton
+                                    id="category2"
+                                    name="category"
+                                    value="Restaurant wedding decoration"
+                                    [(ngModel)]="service.type"
+                                ></p-radioButton>
+                                <label for="category2"
+                                    >Restaurant wedding decoration</label
+                                >
+                            </div>
+                            <div class="field-radiobutton col-6">
+                                <p-radioButton
+                                    id="category3"
+                                    name="category"
+                                    value="The engagement ceremony tray"
+                                    [(ngModel)]="service.type"
+                                ></p-radioButton>
+                                <label for="category3"
+                                    >The engagement ceremony tray</label
+                                >
+                            </div>
+                            <div class="field-radiobutton col-6">
+                                <p-radioButton
+                                    id="category4"
+                                    name="category"
+                                    value="Wedding Planner"
+                                    [(ngModel)]="service.type"
+                                ></p-radioButton>
+                                <label for="category4">Wedding Planner</label>
+                            </div>
+                            <div class="field-radiobutton col-6">
+                                <p-radioButton
+                                    id="category4"
+                                    name="category"
+                                    value="Car Flowers & Car Decoration"
+                                    [(ngModel)]="service.type"
+                                ></p-radioButton>
+                                <label for="category4"
+                                    >Car Flowers & Car Decoration</label
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formgrid grid">
+                        <div class="field col">
+                            <label for="price">Price</label>
+                            <p-inputNumber
+                                id="price"
+                                [(ngModel)]="service.price"
+                                mode="currency"
+                                currency="USD"
+                                locale="en-US"
+                            ></p-inputNumber>
+                        </div>
+                        <div class="field">
+                            <label for="status">Status</label>
+                            <p-dropdown
+                                appendTo="body"
+                                [(ngModel)]="service.status"
+                                inputId="status"
+                                optionValue="label"
+                                [options]="statuses"
+                                placeholder="Select"
+                            >
+                                <ng-template pTemplate="selectedItem">
+                                    <span
+                                        *ngIf="service && service.status"
+                                        [class]="
+                                            'service-status-' +
+                                            service.status.toLowerCase()
+                                        "
+                                        >{{ service.status }}</span
+                                    >
+                                </ng-template>
+                                <ng-template let-option pTemplate="item">
+                                    <span
+                                        [class]="
+                                            'service-status-' + option.value
+                                        "
+                                        >{{ option.label }}</span
+                                    >
+                                </ng-template>
+                            </p-dropdown>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <ng-template pTemplate="footer">
+                    <button
+                        pButton
+                        pRipple
+                        label="Cancel"
+                        icon="pi pi-times"
+                        class="p-button-text"
+                        (click)="hideDialog()"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        label="Save"
+                        icon="pi pi-check"
+                        class="p-button-text"
+                        (click)="saveService()"
+                    ></button>
+                </ng-template>
+            </p-dialog>
+
+            <p-dialog
+                [(visible)]="deleteServiceDialog"
+                header="Confirm"
+                [modal]="true"
+                [style]="{ width: '450px' }"
+            >
+                <div class="flex align-items-center justify-content-center">
+                    <i
+                        class="pi pi-exclamation-triangle mr-3"
+                        style="font-size: 2rem"
+                    ></i>
+                    <span *ngIf="service"
+                        >Are you sure you want to delete
+                        <b>{{ service.name }}</b
+                        >?</span
+                    >
+                </div>
+                <ng-template pTemplate="footer">
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-times"
+                        class="p-button-text"
+                        label="No"
+                        (click)="deleteServiceDialog = false"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-check"
+                        class="p-button-text"
+                        label="Yes"
+                        (click)="confirmDelete()"
+                    ></button>
+                </ng-template>
+            </p-dialog>
+
+            <p-dialog
+                [(visible)]="deleteServicesDialog"
+                header="Confirm"
+                [modal]="true"
+                [style]="{ width: '450px' }"
+            >
+                <div class="flex align-items-center justify-content-center">
+                    <i
+                        class="pi pi-exclamation-triangle mr-3"
+                        style="font-size: 2rem"
+                    ></i>
+                    <span
+                        >Are you sure you want to delete selected
+                        services?</span
+                    >
+                </div>
+                <ng-template pTemplate="footer">
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-times"
+                        class="p-button-text"
+                        label="No"
+                        (click)="deleteServicesDialog = false"
+                    ></button>
+                    <button
+                        pButton
+                        pRipple
+                        icon="pi pi-check"
+                        class="p-button-text"
+                        label="Yes"
+                        (click)="confirmDeleteSelected()"
+                    ></button>
+                </ng-template>
+            </p-dialog>
+        </div>
+    </div>
+</p-panel>
+
+<!-- serviceTittle: string; // C# property mapped to TypeScript
+    serviceDescription?: string; // Optional property
+    type?: string; // Optional property
+    price: number; // Non-optional double
+    status?: string; // Optional property -->

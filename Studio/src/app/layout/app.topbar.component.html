@@ -1,0 +1,36 @@
+<div class="layout-topbar">
+    <button
+        #menubutton
+        class="p-link layout-menu-button layout-topbar-button"
+        (click)="layoutService.onMenuToggle()"
+    >
+        <i class="pi pi-bars"></i>
+    </button>
+    <a class="layout-topbar-logo" routerLink="">
+        <span>NHU MY </span>
+        <img
+            src="https://i.im.ge/2024/04/28/ZmHe40.pngwing-com.png"
+            alt="logo"
+        />
+        <span>STUDIO</span>
+    </a>
+
+    <button
+        #topbarmenubutton
+        class="p-link layout-topbar-menu-button layout-topbar-button"
+        (click)="layoutService.showProfileSidebar()"
+    >
+        <i class="pi pi-ellipsis-v"></i>
+    </button>
+
+    <div
+        #topbarmenu
+        class="layout-topbar-menu"
+        [ngClass]="{
+            'layout-topbar-menu-mobile-active':
+                layoutService.state.profileSidebarVisible
+        }"
+    >
+        
+    </div>
+</div>
